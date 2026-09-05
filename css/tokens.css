@@ -1,0 +1,131 @@
+/*
+ * The token system. Three groups, and their separation is what makes a theme cheap:
+ *
+ *   structural  spacing, type, radii, shadows, fonts — never themed
+ *   identity    ground, surfaces, borders, primary, on-primary, text — this IS the theme
+ *   semantic    good / warn / danger, the board and its highlights — retuned per ground,
+ *               never re-hued
+ *
+ * Every colour anywhere in the app is one of these properties. That is the rule that
+ * makes applyTheme() one attribute on <html> with no re-render: the squares and the
+ * piece fills are tokens too.
+ */
+:root {
+  /* Spacing: one 4px-based scale with a 2px and a 6px step, because at this density the
+     gap between a nudge and a gap matters. Pick from the list; if nothing fits, the
+     layout is wrong, not the scale. */
+  --sp-2: 2px;  --sp-4: 4px;  --sp-6: 6px;  --sp-8: 8px;  --sp-12: 12px;
+  --sp-16: 16px; --sp-20: 20px; --sp-24: 24px; --sp-32: 32px; --sp-48: 48px; --sp-64: 64px;
+
+  /* Type. The steps carry meaning rather than just size:
+       xs micro-labels, kbd, badges · sm dense data · base controls · md prose
+       lg card headings · xl the greeting, stat values · 2xl the spoken line */
+  --fs-2xs: 11px; --fs-xs: 12px; --fs-sm: 13px; --fs-base: 14px; --fs-md: 15px;
+  --fs-lg: 17px; --fs-xl: 20px; --fs-2xl: 24px; --fs-3xl: 32px; --fs-4xl: 42px;
+
+  --radius-xs: 4px; --radius-sm: 8px; --radius: 12px; --radius-lg: 18px; --radius-pill: 999px;
+
+  /* One height so buttons, inputs and selects agree in a row. */
+  --control-h: 36px; --control-h-sm: 28px;
+
+  /* Two shadows and both mean "this floats above the page": a toast or a menu takes
+     --shadow, a dialog takes --shadow-lg. Nothing inside a room floats. */
+  --shadow: 0 8px 30px -8px rgba(0,0,0,.8);
+  --shadow-lg: 0 24px 60px -20px rgba(0,0,0,.85);
+
+  /*
+   * Two faces, split by meaning: the serif carries what the app *says*, the sans what
+   * a reader *operates* or reads as data. No webfont — ui-serif is a real book face on
+   * every platform for no request, no flash and no third party.
+   */
+  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-serif: ui-serif, 'Iowan Old Style', 'Palatino Linotype', Palatino,
+                'Book Antiqua', Georgia, 'Times New Roman', serif;
+  --font-mono: 'SF Mono', Consolas, ui-monospace, monospace;
+
+  --rail-w: 168px;
+  --measure: 760px;
+
+  /* Two translucent blacks that are structural rather than themed: the legal-move hint
+     sits on a board square of either colour, and the scrim goes over the whole page. A
+     theme retunes what is under them, not them. */
+  --sq-hint: rgba(0,0,0,.25);
+  --scrim: rgba(0,0,0,.6);
+}
+
+/* ----- Analysis — the default.
+   Pure black because on an OLED panel #000 is an unlit pixel. The washes are off — a
+   radial gradient over black is the one thing that gives a pure ground away — and the
+   surfaces climb in small even steps. Blue is the only identity hue and it means "the
+   app is telling you where to act". The board is cool grey: a wooden board tints every
+   piece and highlight on it, and this theme is for reading an engine line. ----- */
+:root, :root[data-theme="analysis"] {
+  --bg: #000000;
+  --surface: #0a0c0f; --surface2: #12161b; --surface3: #1b2028; --surface-lift: #070809;
+  --border: #1e242c; --border-hi: #303845; --hairline: rgba(220,230,242,.06);
+  --primary: #4d9df0; --primary-hi: #7ab8f6;
+  --on-primary: #000000; --on-primary-dim: rgba(0,0,0,.72);
+  --glow: rgba(77,157,240,.4);
+  --text: #c6ced8; --text-muted: #8792a1; --text-bright: #eef2f7;
+  --wash-a: transparent; --wash-b: transparent;
+  --good: #4cc38a; --warn: #e8a33d; --danger: #ef5f52;
+  --sq-light: #b8c2cc; --sq-dark: #46525e; --hl-from: #cbb04a; --hl-to: #6ea86f;
+  --eval-white: #eef2f7;
+  --pc-w-fill: #f2f5f8; --pc-w-line: #1a1f26;
+  --pc-b-fill: #262d36; --pc-b-line: #000000; --pc-b-detail: #dfe6ee;
+}
+
+/* ----- Midnight board — a study at night. ----- */
+:root[data-theme="midnight"] {
+  --bg: #14120f;
+  --surface: #1c1a16; --surface2: #24211b; --surface3: #2e2a22; --surface-lift: #221f19;
+  --border: #2e2922; --border-hi: #413a2f; --hairline: rgba(236,229,214,.05);
+  --primary: #d3a153; --primary-hi: #e6b96c;
+  --on-primary: #14120f; --on-primary-dim: rgba(20,18,15,.7);
+  --glow: rgba(211,161,83,.45);
+  --text: #c8c0af; --text-muted: #948b79; --text-bright: #ece5d6;
+  --wash-a: rgba(211,161,83,.07); --wash-b: rgba(203,92,62,.05);
+  /* --warn leans orange rather than brass so a mistake mark cannot be mistaken for
+     a piece of interface. */
+  --good: #7fb36a; --warn: #e0913a; --danger: #d2664a;
+  --sq-light: #c3b393; --sq-dark: #6e5d45; --hl-from: #cbb45e; --hl-to: #9db86a;
+  --eval-white: #ece5d6;
+  --pc-w-fill: #f4ece0; --pc-w-line: #2f2c29;
+  --pc-b-fill: #3b3630; --pc-b-line: #14120f; --pc-b-detail: #e6ddcd;
+}
+
+/* ----- Wood & ink — a club, an old book. ----- */
+:root[data-theme="wood"] {
+  --bg: #17110c;
+  --surface: #221913; --surface2: #2c211a; --surface3: #38291e; --surface-lift: #281d15;
+  --border: #38291e; --border-hi: #4a3626; --hairline: rgba(239,224,198,.05);
+  --primary: #c08a3e; --primary-hi: #d6a155;
+  --on-primary: #17110c; --on-primary-dim: rgba(23,17,12,.7);
+  --glow: rgba(192,138,62,.45);
+  --text: #cfbfa5; --text-muted: #93806a; --text-bright: #efe0c6;
+  --wash-a: rgba(192,138,62,.08); --wash-b: rgba(158,59,42,.05);
+  --good: #93ad63; --warn: #dd9038; --danger: #d0603f;
+  --sq-light: #d6be96; --sq-dark: #7c5433; --hl-from: #d8bd5c; --hl-to: #a8bd6b;
+  --eval-white: #efe0c6;
+  --pc-w-fill: #f6ead2; --pc-w-line: #2a1d13;
+  --pc-b-fill: #35251a; --pc-b-line: #150e08; --pc-b-detail: #e8d9bd;
+}
+
+/* ----- Tournament green — a weekend congress. The accent is the pieces, not the
+   board: green is already spoken for by the squares and by a win. ----- */
+:root[data-theme="green"] {
+  --bg: #101512;
+  --surface: #17201a; --surface2: #1e2a21; --surface3: #26332a; --surface-lift: #141d17;
+  --border: #26332a; --border-hi: #35453a; --hairline: rgba(232,234,223,.05);
+  --primary: #dcdfcf; --primary-hi: #eef0e4;
+  --on-primary: #101512; --on-primary-dim: rgba(16,21,18,.68);
+  --glow: rgba(220,223,207,.3);
+  --text: #bfc9bb; --text-muted: #7e8c7c; --text-bright: #e8eadf;
+  --wash-a: rgba(220,223,207,.05); --wash-b: rgba(110,139,91,.07);
+  /* A win has to carry against a green ground: same hue as elsewhere, more of it. */
+  --good: #8fd07a; --warn: #d9a441; --danger: #d2664a;
+  --sq-light: #e4e7d6; --sq-dark: #6e8b5b; --hl-from: #d6c96a; --hl-to: #b7cf7e;
+  --eval-white: #e8eadf;
+  --pc-w-fill: #f2f4e8; --pc-w-line: #232b25;
+  --pc-b-fill: #2b3329; --pc-b-line: #0d110e; --pc-b-detail: #e0e6d6;
+}

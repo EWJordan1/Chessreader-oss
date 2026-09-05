@@ -1,0 +1,103 @@
+{
+  "id": "kings-indian-defence",
+  "name": "The King's Indian Defence",
+  "color": "b",
+  "eco": "E60",
+  "blurb": "Give White the centre, fianchetto, castle — and then throw every kingside pawn at the king.",
+  "steps": [
+    {
+      "moves": ["d4", "Nf6"],
+      "note": "1.d4 Nf6. The Indian defences all begin here: Black develops a knight instead of matching d5 to d4, and keeps the centre pawns back until it is clear where they should go. The King's Indian is the most combative of them."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4"],
+      "note": "2.c4 takes more of the centre. White is being given time, and takes it — which is the King's Indian's whole invitation. The more White claims now, the more there is to attack later."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "g6"],
+      "note": "2...g6 is the King's Indian. The bishop will go to g7, the king behind it, and Black's centre pawns stay on d7 and e7 for now. It is the same idea as the Pirc against 1.e4, and the same bargain: a compact position, a great bishop, and a centre that belongs to White until Black decides otherwise."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "g6", "Nc3"],
+      "note": "3.Nc3 prepares e4. White is going to take the whole centre with pawns — c4, d4, e4 — and the lesson's two roads are the two most common ways of holding it afterwards."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "g6", "Nc3", "Bg7"],
+      "note": "3...Bg7 completes the fianchetto. Note that Black does not play 3...d5 — that is the Grünfeld, a different opening with a different idea. The King's Indian keeps the pawn on d7 and lets e4 come."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "g6", "Nc3", "Bg7", "e4"],
+      "note": "4.e4 takes the centre. Three pawns abreast, and White has the space of a much better position. What White does not have yet is a way to use it, and Black's next move makes sure the pawns stop here."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "g6", "Nc3", "Bg7", "e4", "d6"],
+      "note": "4...d6 stops e5 and prepares ...e5 of Black's own. The King's Indian setup is complete in outline: bishop on g7, pawn on d6, knight on f6, king about to castle. Everything Black does now depends on what White does with the f-pawn and the king's bishop."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "g6", "Nc3", "Bg7", "e4", "d6", "Nf3"],
+      "note": "5.Nf3 is the Classical System. White develops naturally, castles short, and holds the centre with pieces. It is the main line, the most principled, and the one that leads to the most famous position in the opening."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "g6", "Nc3", "Bg7", "e4", "d6", "Nf3", "O-O"],
+      "note": "5...O-O first. The king goes behind the fianchetto before the centre is touched, because the centre is about to be closed and the pawns in front of the king are going to advance — which is only safe once the king is not in the middle."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "g6", "Nc3", "Bg7", "e4", "d6", "Nf3", "O-O", "Be2"],
+      "note": "6.Be2 develops and prepares to castle. White has every piece ready and a big centre. This is as good as it gets for White in the opening, and the next move is the King's Indian's answer to it."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "g6", "Nc3", "Bg7", "e4", "d6", "Nf3", "O-O", "Be2", "e5"],
+      "note": "6...e5 strikes at the centre. The pawn is defended by the d6 pawn and the knight, and it cannot be won: 7.dxe5 dxe5 8.Qxd8 Rxd8 9.Nxe5 runs into 9...Nxe4, and White is not better. So White has to choose what to do with the tension, and the answer decides the whole game."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "g6", "Nc3", "Bg7", "e4", "d6", "Nf3", "O-O", "Be2", "e5", "O-O"],
+      "note": "7.O-O keeps the tension and castles. White could push 7.d5 at once, closing the centre, and often does a move later; castling first keeps the choice open and is the main line."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "g6", "Nc3", "Bg7", "e4", "d6", "Nf3", "O-O", "Be2", "e5", "O-O", "Nc6"],
+      "note": "7...Nc6 develops with an attack on d4 — the third attacker on it, against two defenders. White has to do something about the pawn now, and the only good something is to push it."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "g6", "Nc3", "Bg7", "e4", "d6", "Nf3", "O-O", "Be2", "e5", "O-O", "Nc6", "d5"],
+      "note": "8.d5 closes the centre and kicks the knight. And with that, the game is decided in shape if not in result: the pawn chains point in opposite directions, and each side will attack where its chain points. White's chain — c4, d5 — points at the queenside, and White will play c5 and b4 and come down the c-file. Black's — d6, e5 — points at the kingside, and Black will play ...f5 and everything behind it."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "g6", "Nc3", "Bg7", "e4", "d6", "Nf3", "O-O", "Be2", "e5", "O-O", "Nc6", "d5", "Ne7"],
+      "note": "8...Ne7 is the Mar del Plata main line. The knight retreats toward the kingside, where it will support ...f5 and later come to g6 or f4. From here, White plays Ne1 or Nd2 to get the knight out of the way of the f-pawn, then b4 and c5; Black plays ...Nd7 to clear f6 for the pawn, then ...f5, ...f4, ...g5 and ...g4. Nobody defends. The player who gets there first wins, and it is the most exciting position in club chess — but understand that it is not a trick: if White's queenside attack arrives first, Black's king is not safe, and the whole opening is a bet that it will not."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "g6", "Nc3", "Bg7", "e4", "d6", "f3"],
+      "note": "Back to move five, for the other way of holding the centre. 5.f3 is the Sämisch. The pawn supports e4 so that the king's knight does not have to, and it prepares Be3 and Qd2 with the king going long — a pawn storm against the fianchetto, g4 and h4, which is exactly the fight Black was hoping to pick and now has to survive."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "g6", "Nc3", "Bg7", "e4", "d6", "f3", "O-O"],
+      "note": "5...O-O. Castling into a storm again, and again correct: the pieces Black needs for the counter-attack are on the kingside, and the rook belongs on f8 for ...f5."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "g6", "Nc3", "Bg7", "e4", "d6", "f3", "O-O", "Be3"],
+      "note": "6.Be3 develops behind the pawn wall and defends d4. It also invites ...Ng4, which f3 has stopped — every Sämisch move covers a square Black would like."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "g6", "Nc3", "Bg7", "e4", "d6", "f3", "O-O", "Be3", "e5"],
+      "note": "6...e5 strikes as before. Here 6...c5 is a well-known alternative, a pawn sacrifice for the long diagonal that Black is not required to know — the pawn break in the centre is the King's Indian's own move and it works here too."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "g6", "Nc3", "Bg7", "e4", "d6", "f3", "O-O", "Be3", "e5", "d5"],
+      "note": "7.d5 closes the centre at once. In the Sämisch, White usually does this immediately rather than waiting, because the knight is not on f3 to be attacked and the pawn on d5 shuts the g7 bishop's diagonal before Black's pieces can use it."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "g6", "Nc3", "Bg7", "e4", "d6", "f3", "O-O", "Be3", "e5", "d5", "Nh5"],
+      "note": "7...Nh5 is the Sämisch main line, and it looks odd until the plan is seen: the knight clears f6 for the f-pawn and threatens to land on f4, where it would sit on the best square on the board and could only be removed at the cost of the bishop. White's next move is Qd2 or g3, and Black's are ...f5 and ...Qh4 if allowed — the same kingside attack as the Classical, faster, against a king that has not castled and may go to the queenside. If the Classical is the King's Indian as a plan, the Sämisch is the King's Indian as a fight, and both end with Black's pawns coming down the board at the white king."
+    }
+  ],
+  "lines": [
+    {
+      "name": "King's Indian Defence, Classical, Mar del Plata",
+      "moves": ["d4", "Nf6", "c4", "g6", "Nc3", "Bg7", "e4", "d6", "Nf3", "O-O", "Be2", "e5", "O-O", "Nc6", "d5", "Ne7"]
+    },
+    {
+      "name": "King's Indian Defence, Sämisch",
+      "moves": ["d4", "Nf6", "c4", "g6", "Nc3", "Bg7", "e4", "d6", "f3", "O-O", "Be3", "e5", "d5", "Nh5"]
+    }
+  ]
+}

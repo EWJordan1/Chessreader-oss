@@ -1,0 +1,95 @@
+{
+  "id": "petrov-defence",
+  "name": "Petrov's Defence",
+  "color": "b",
+  "eco": "C42",
+  "blurb": "Do not defend e5 — attack e4 instead, and take the fight out of 1.e4 e5.",
+  "steps": [
+    {
+      "moves": ["e4", "e5", "Nf3"],
+      "note": "1.e4 e5 2.Nf3. White attacks the pawn, and nearly everyone defends it with 2...Nc6. Petrov's Defence — the Russian Game — is for the player who would rather not defend anything."
+    },
+    {
+      "moves": ["e4", "e5", "Nf3", "Nf6"],
+      "note": "2...Nf6 is the Petrov. Black ignores the threat to e5 and makes the same threat against e4. The logic is symmetry: whatever White does to e5, Black does to e4, and White's extra move turns out to be worth less than it looks. The opening's reputation is for solidity, and it is deserved — but it has a trap on move three that every Petrov player has to know before anything else."
+    },
+    {
+      "moves": ["e4", "e5", "Nf3", "Nf6", "Nxe5"],
+      "note": "3.Nxe5 takes the pawn, and here is the trap. The natural 3...Nxe4?, keeping the symmetry, runs into 4.Qe2 — the knight on e4 is pinned to nothing, but if it moves, 5.Nc6+ discovers check and wins the queen. Black has to break the symmetry first."
+    },
+    {
+      "moves": ["e4", "e5", "Nf3", "Nf6", "Nxe5", "d6"],
+      "note": "3...d6 kicks the knight before taking on e4, and it is the move the whole defence rests on. Once the knight has retreated, ...Nxe4 comes with no discovered check to worry about. One quiet pawn move, and the trap is gone."
+    },
+    {
+      "moves": ["e4", "e5", "Nf3", "Nf6", "Nxe5", "d6", "Nf3"],
+      "note": "4.Nf3 retreats. There is nowhere better: 4.Nc4 and 4.Nd3 are playable but put the knight on worse squares, and 4.Nxf7 Kxf7, the Cochrane Gambit, gives a knight for two pawns — a gamble rather than a line."
+    },
+    {
+      "moves": ["e4", "e5", "Nf3", "Nf6", "Nxe5", "d6", "Nf3", "Nxe4"],
+      "note": "4...Nxe4 restores the material, and look at what Black has: the knight in the centre of the board, the pawn on d6 keeping e5 under control, and a position that is Black's mirror of White's. What White has is the move, and the next few are about whether that is enough."
+    },
+    {
+      "moves": ["e4", "e5", "Nf3", "Nf6", "Nxe5", "d6", "Nf3", "Nxe4", "d4"],
+      "note": "5.d4 claims the centre and opens the bishop. The old 5.Qe2 — asking the knight to leave — leads to a quick trade of queens after 5...Qe7 and a level ending, which is fine for Black and not what most White players want."
+    },
+    {
+      "moves": ["e4", "e5", "Nf3", "Nf6", "Nxe5", "d6", "Nf3", "Nxe4", "d4", "d5"],
+      "note": "5...d5 props up the knight with a pawn. This is the Classical Petrov: Black's knight on e4 is now a fixture, and the position is symmetrical except that Black's is one move behind. That is the whole defence — one tempo down and nothing else wrong."
+    },
+    {
+      "moves": ["e4", "e5", "Nf3", "Nf6", "Nxe5", "d6", "Nf3", "Nxe4", "d4", "d5", "Bd3"],
+      "note": "6.Bd3 develops with an attack on the knight, and it is the only real way to make Black do something about it. The knight is defended once and attacked once, so there is no threat yet — but if the bishop is ever joined by another attacker, ...f5 will have to be played, and White would like that."
+    },
+    {
+      "moves": ["e4", "e5", "Nf3", "Nf6", "Nxe5", "d6", "Nf3", "Nxe4", "d4", "d5", "Bd3", "Nc6"],
+      "note": "6...Nc6 develops and attacks d4. Rather than defend the knight on e4, Black makes a counter-threat, which is the Petrov's habit: answer pressure with pressure and keep the position level."
+    },
+    {
+      "moves": ["e4", "e5", "Nf3", "Nf6", "Nxe5", "d6", "Nf3", "Nxe4", "d4", "d5", "Bd3", "Nc6", "O-O", "Be7"],
+      "note": "7.O-O Be7. Both sides get their kings ready. Black's bishop is modest on e7 — it could go to d6 — because the point of the Petrov is not to be ambitious; it is to be safe, and to let White be the one who overreaches."
+    },
+    {
+      "moves": ["e4", "e5", "Nf3", "Nf6", "Nxe5", "d6", "Nf3", "Nxe4", "d4", "d5", "Bd3", "Nc6", "O-O", "Be7", "c4"],
+      "note": "8.c4 is the main line, and it is the first move that asks a real question. The pawn attacks d5, the base of the knight's support, and if d5 goes the knight on e4 goes with it. Black has a good answer, and the answer is a knight on the rim."
+    },
+    {
+      "moves": ["e4", "e5", "Nf3", "Nf6", "Nxe5", "d6", "Nf3", "Nxe4", "d4", "d5", "Bd3", "Nc6", "O-O", "Be7", "c4", "Nb4"],
+      "note": "8...Nb4 attacks the bishop on d3 — the piece that was attacking the knight. White has to spend a move on it, and that move is the one that would have taken on d5."
+    },
+    {
+      "moves": ["e4", "e5", "Nf3", "Nf6", "Nxe5", "d6", "Nf3", "Nxe4", "d4", "d5", "Bd3", "Nc6", "O-O", "Be7", "c4", "Nb4", "Be2", "O-O"],
+      "note": "9.Be2 O-O is the main line of the Classical Petrov. Black has castled, kept the knight on e4, and every piece has a sensible square. White has a little more space and will try cxd5 and Nc3 to unsettle the knight; Black keeps the balance with ...Bf5 or ...Be6. It is a position where the player who wants a draw can usually have one and the player who wants more has to earn it, and that is exactly what people play the Petrov for."
+    },
+    {
+      "moves": ["e4", "e5", "Nf3", "Nf6", "d4"],
+      "note": "Back to move three. 3.d4 is the Steinitz Attack — White declines the pawn on e5 and opens the centre at once. The pawn attacks e5 a second time, and Black's reply is the same as in the main line: take on e4 and see."
+    },
+    {
+      "moves": ["e4", "e5", "Nf3", "Nf6", "d4", "Nxe4"],
+      "note": "3...Nxe4 takes without fear this time — there is no knight on e5 to discover a check. White will win e5 back, and the question is what each side gets for the exchange of pawns."
+    },
+    {
+      "moves": ["e4", "e5", "Nf3", "Nf6", "d4", "Nxe4", "Bd3", "d5"],
+      "note": "4.Bd3 d5. Same shape as the main line: the bishop attacks the knight and the pawn supports it. White now takes on e5, and the pawn count is level with White's pieces slightly more active."
+    },
+    {
+      "moves": ["e4", "e5", "Nf3", "Nf6", "d4", "Nxe4", "Bd3", "d5", "Nxe5", "Nd7"],
+      "note": "5.Nxe5 Nd7 — Black offers a knight trade at once, because the knight on e5 is White's best piece and the knight on d7 was not doing much. The Petrov's method again: remove the active piece, keep the balance."
+    },
+    {
+      "moves": ["e4", "e5", "Nf3", "Nf6", "d4", "Nxe4", "Bd3", "d5", "Nxe5", "Nd7", "Nxd7", "Bxd7"],
+      "note": "6.Nxd7 Bxd7, and that is the Steinitz line resolved: knights traded, both sides with a pawn in the centre, and Black's bishop already developed on d7 with a tempo it did not have to spend. White castles and plays c4; Black castles and plays ...Bd6 and ...Qh4 if allowed. The whole Petrov fits in one sentence — meet every threat with the same threat, and never be the one to break the symmetry without a reason — and this position is that sentence on the board."
+    }
+  ],
+  "lines": [
+    {
+      "name": "Petrov's Defence, Classical",
+      "moves": ["e4", "e5", "Nf3", "Nf6", "Nxe5", "d6", "Nf3", "Nxe4", "d4", "d5", "Bd3", "Nc6", "O-O", "Be7", "c4", "Nb4", "Be2", "O-O"]
+    },
+    {
+      "name": "Petrov's Defence, Steinitz Attack",
+      "moves": ["e4", "e5", "Nf3", "Nf6", "d4", "Nxe4", "Bd3", "d5", "Nxe5", "Nd7", "Nxd7", "Bxd7"]
+    }
+  ]
+}

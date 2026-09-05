@@ -1,0 +1,99 @@
+{
+  "id": "london-system",
+  "name": "The London System",
+  "color": "w",
+  "eco": "D02",
+  "blurb": "One setup against everything: d4, Bf4, e3, and a game you understand before it starts.",
+  "steps": [
+    {
+      "moves": ["d4"],
+      "note": "1.d4. The London is not an opening in the usual sense — it is a formation White reaches against nearly any reply, and it is popular for that reason. What Black plays changes the details; it does not change the plan."
+    },
+    {
+      "moves": ["d4", "d5"],
+      "note": "1...d5 is the classical answer, and the setup that follows is the London in its purest form. Against 1...Nf6 the move order shifts a little, which is the lesson's second road, but the pieces end up on the same squares."
+    },
+    {
+      "moves": ["d4", "d5", "Bf4"],
+      "note": "2.Bf4 is the London's defining move, and its logic is order: the bishop comes out *before* e3 closes the diagonal. In the Queen's Gambit Declined White's dark-squared bishop is the good one; here it is developed on move two, outside the chain, aimed at c7 and the queenside. The bishop on c1 is the piece most 1.d4 players struggle to use. The London solves that on move two and spends the rest of the opening on everything else."
+    },
+    {
+      "moves": ["d4", "d5", "Bf4", "Nf6"],
+      "note": "2...Nf6 develops naturally. Black has many setups here — ...c5 and ...Nc6 is the most active, ...e6 and ...Bd6 the most solid — and the London meets them all with the same next three moves."
+    },
+    {
+      "moves": ["d4", "d5", "Bf4", "Nf6", "e3"],
+      "note": "3.e3 supports d4 and opens the f1 bishop. Note the order again: the pawn goes to e3 only now that the bishop is already outside it. From here White's structure is a triangle — c3, d4, e3 — with a bishop on each side of it."
+    },
+    {
+      "moves": ["d4", "d5", "Bf4", "Nf6", "e3", "e6"],
+      "note": "3...e6 mirrors the idea. Black's light-squared bishop is now behind the pawn, which is the cost of this setup for Black and one of the reasons the London scores well at club level: White has the better bishop pair from move three onward."
+    },
+    {
+      "moves": ["d4", "d5", "Bf4", "Nf6", "e3", "e6", "Nd2"],
+      "note": "4.Nd2 develops the knight toward the centre without blocking the c-pawn. It supports a later e4 and, importantly, it lets White answer ...c5 with c3, keeping the pawn triangle intact. This is the move that distinguishes the London from a Queen's Gambit: no c4, ever."
+    },
+    {
+      "moves": ["d4", "d5", "Bf4", "Nf6", "e3", "e6", "Nd2", "c5"],
+      "note": "4...c5 hits d4, the base of the triangle, and it is Black's most active plan. White does not need to worry: the next move supports d4 with a pawn, and the structure holds."
+    },
+    {
+      "moves": ["d4", "d5", "Bf4", "Nf6", "e3", "e6", "Nd2", "c5", "c3"],
+      "note": "5.c3 completes the triangle. The pawn on c3 also gives the bishop on f4 a retreat square after ...Bd6 — it drops back to g3, keeps the diagonal, and if Black takes on g3 the recapture hxg3 opens the h-file for White's rook. Every piece has its job."
+    },
+    {
+      "moves": ["d4", "d5", "Bf4", "Nf6", "e3", "e6", "Nd2", "c5", "c3", "Nc6"],
+      "note": "5...Nc6 develops and adds pressure on d4. Black's setup is complete; White's has two moves to go."
+    },
+    {
+      "moves": ["d4", "d5", "Bf4", "Nf6", "e3", "e6", "Nd2", "c5", "c3", "Nc6", "Ngf3"],
+      "note": "6.Ngf3 — the king's knight, since the other one could also reach f3 — develops toward the kingside and supports e5, the square White would like a knight on later. Both knights are on their London squares now."
+    },
+    {
+      "moves": ["d4", "d5", "Bf4", "Nf6", "e3", "e6", "Nd2", "c5", "c3", "Nc6", "Ngf3", "Bd6"],
+      "note": "6...Bd6 challenges the London bishop head on. Black wants to trade it, because it is White's best piece, and White wants to keep it — for exactly the same reason."
+    },
+    {
+      "moves": ["d4", "d5", "Bf4", "Nf6", "e3", "e6", "Nd2", "c5", "c3", "Nc6", "Ngf3", "Bd6", "Bg3"],
+      "note": "7.Bg3 keeps the bishop. If Black takes, hxg3 gives White a half-open h-file and a pawn on g3 that shelters the king perfectly well. If Black does not, the bishop sits on the diagonal for the rest of the game, and at some point it will look at a rook on b8 or a queen on c7."
+    },
+    {
+      "moves": ["d4", "d5", "Bf4", "Nf6", "e3", "e6", "Nd2", "c5", "c3", "Nc6", "Ngf3", "Bd6", "Bg3", "O-O", "Bd3"],
+      "note": "7...O-O 8.Bd3 completes the setup. Look at what White has: a pawn triangle nothing can break, two bishops on long diagonals, both knights out, and a king about to castle. The plans from here are Ne5 with f4 behind it for a kingside attack, or Qe2 and e4 to open the centre when Black has played ...b6. Black has a good position too — this is not a trick, and the London does not win by force. It wins because White knows exactly what to do next and Black, often, does not."
+    },
+    {
+      "moves": ["d4", "Nf6", "Bf4"],
+      "note": "Back to move one, for the reply that most changes the London's shape. 1...Nf6 keeps ...d5 in reserve, and Black is often heading for a fianchetto. 2.Bf4 goes ahead anyway: the point of a system is that the answer does not depend on the question."
+    },
+    {
+      "moves": ["d4", "Nf6", "Bf4", "g6"],
+      "note": "2...g6 announces the King's Indian setup, and it is the one that gives London players the most trouble, because the bishop on g7 will look through d4 at the queenside and Black's plan of ...d6 and ...e5 or ...c5 hits the triangle from the other side."
+    },
+    {
+      "moves": ["d4", "Nf6", "Bf4", "g6", "e3", "Bg7"],
+      "note": "3.e3 Bg7. The same triangle, the same order. Black's bishop is out; now the question is whether ...d6 and ...e5 will come with tempo on the f4 bishop."
+    },
+    {
+      "moves": ["d4", "Nf6", "Bf4", "g6", "e3", "Bg7", "Nf3", "O-O"],
+      "note": "4.Nf3 O-O. White develops toward e5 and the kingside; Black castles. The next move is the London's one concession to the fianchetto."
+    },
+    {
+      "moves": ["d4", "Nf6", "Bf4", "g6", "e3", "Bg7", "Nf3", "O-O", "h3"],
+      "note": "5.h3 gives the bishop a retreat square on h2, so that ...Nh5 or ...d6 and ...e5 never win it or force it to a bad square. One pawn move, and Black's main idea against the London bishop is gone."
+    },
+    {
+      "moves": ["d4", "Nf6", "Bf4", "g6", "e3", "Bg7", "Nf3", "O-O", "h3", "d6", "Be2"],
+      "note": "5...d6 6.Be2 is the London against the King's Indian setup. White will castle, play c3 and Nbd2, and meet ...e5 with dxe5 or hold with Bh2 — the same triangle, the same pieces, three moves adjusted. Black's best plan is ...c5 and ...Qb6, hitting b2 and d4 at once, and it is worth knowing that b3 or Qb3 answers it. The whole London is contained in these two lines: one setup, a small number of adjustments, and a middlegame you have played a hundred times before your opponent has played it once."
+    }
+  ],
+  "lines": [
+    {
+      "name": "London System, against ...d5",
+      "moves": ["d4", "d5", "Bf4", "Nf6", "e3", "e6", "Nd2", "c5", "c3", "Nc6", "Ngf3", "Bd6", "Bg3", "O-O", "Bd3"]
+    },
+    {
+      "name": "London System, against the fianchetto",
+      "moves": ["d4", "Nf6", "Bf4", "g6", "e3", "Bg7", "Nf3", "O-O", "h3", "d6", "Be2"]
+    }
+  ]
+}

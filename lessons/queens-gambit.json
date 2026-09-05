@@ -1,0 +1,75 @@
+{
+  "id": "queens-gambit",
+  "name": "The Queen's Gambit",
+  "color": "w",
+  "eco": "D06",
+  "blurb": "Offer a pawn you are not really giving away, to trade a wing pawn for the centre.",
+  "steps": [
+    {
+      "moves": ["d4"],
+      "note": "1.d4. Compared to 1.e4 this is the slower start: the pawn is defended by the queen from move one, so the centre is harder to knock over and the games last longer before anything is decided."
+    },
+    {
+      "moves": ["d4", "d5"],
+      "note": "1...d5 is the symmetrical, principled reply. Both sides have a protected pawn in the centre, and neither can easily be dislodged — so White has to find a way to challenge d5 that does not just trade everything off."
+    },
+    {
+      "moves": ["d4", "d5", "c4"],
+      "note": "2.c4 is the Queen's Gambit, and the name is a bit of a lie: it is not a real gambit. If Black takes with 2...dxc4, White does not have to sacrifice anything — the pawn can be won back at leisure, as the next few moves show. What White is really offering is a trade of a *wing* pawn for a *centre* pawn, which is a good deal even when nothing is sacrificed at all."
+    },
+    {
+      "moves": ["d4", "d5", "c4", "e6"],
+      "note": "2...e6 declines: the Queen's Gambit Declined, one of the most respected defences in chess. Black shores up d5 with a pawn and accepts the same cost the French pays — the light-squared bishop is now behind its own pawns and will need work to free."
+    },
+    {
+      "moves": ["d4", "d5", "c4", "e6", "Nc3"],
+      "note": "3.Nc3 adds a third attacker to d5 and develops toward the centre. White is not in a hurry; every move here does one straightforward job."
+    },
+    {
+      "moves": ["d4", "d5", "c4", "e6", "Nc3", "Nf6"],
+      "note": "3...Nf6 defends d5 a second time and develops. Both sides are simply piling pieces onto the one square the whole opening is about."
+    },
+    {
+      "moves": ["d4", "d5", "c4", "e6", "Nc3", "Nf6", "Bg5"],
+      "note": "4.Bg5 is the classical move, and it is an attack on d5 by indirect means: the bishop pins the knight on f6 against the queen, so the knight has stopped defending d5. Learning to see that a pinned piece is not really defending anything is worth more than memorising this line."
+    },
+    {
+      "moves": ["d4", "d5", "c4", "e6", "Nc3", "Nf6", "Bg5", "Be7"],
+      "note": "4...Be7 breaks the pin the simple way, by putting a piece in between and preparing to castle. Black is solid, slightly passive, and entirely fine — which is the Queen's Gambit Declined in one sentence."
+    },
+    {
+      "moves": ["d4", "d5", "c4", "e6", "Nc3", "Nf6", "Bg5", "Be7", "e3"],
+      "note": "5.e3 is modest and correct: it opens the f1 bishop and reinforces d4. White has a small, durable space advantage and a plan of Nf3, Bd3 and castling. Nothing dramatic — the Queen's Gambit wins games by being slightly better for forty moves."
+    },
+    {
+      "moves": ["d4", "d5", "c4", "dxc4"],
+      "note": "Back to move two, and the other main answer. 2...dxc4 is the Queen's Gambit Accepted. Black takes the pawn, and the honest reason is not greed — it is that giving up the centre buys time to develop quickly and hit d4."
+    },
+    {
+      "moves": ["d4", "d5", "c4", "dxc4", "Nf3"],
+      "note": "3.Nf3 first, and this move order matters. The immediate 3.e3 invites 3...b5, when Black tries to hang on to the extra pawn; the knight move controls e5 and prepares to take the pawn back without that argument."
+    },
+    {
+      "moves": ["d4", "d5", "c4", "dxc4", "Nf3", "Nf6"],
+      "note": "3...Nf6 develops and stops White playing e4 with everything at once. Black is not trying to keep the pawn — holding it with ...b5 and ...c6 costs so much time that the position falls apart."
+    },
+    {
+      "moves": ["d4", "d5", "c4", "dxc4", "Nf3", "Nf6", "e3"],
+      "note": "4.e3 opens the bishop's path to c4, where it will recapture. White has spent no material and no time, and now has two centre pawns against one."
+    },
+    {
+      "moves": ["d4", "d5", "c4", "dxc4", "Nf3", "Nf6", "e3", "e6", "Bxc4"],
+      "note": "4...e6 5.Bxc4, and the pawn is back. Count what the gambit actually achieved: White has pawns on d4 and e3 against Black's on e6, a bishop developed to an active square with tempo, and no material deficit at any point. That is why 2.c4 is not really a gambit, and why it has been the main way to play 1.d4 for a hundred and fifty years."
+    }
+  ],
+  "lines": [
+    {
+      "name": "Queen's Gambit Declined, Classical",
+      "moves": ["d4", "d5", "c4", "e6", "Nc3", "Nf6", "Bg5", "Be7", "e3"]
+    },
+    {
+      "name": "Queen's Gambit Accepted",
+      "moves": ["d4", "d5", "c4", "dxc4", "Nf3", "Nf6", "e3", "e6", "Bxc4"]
+    }
+  ]
+}

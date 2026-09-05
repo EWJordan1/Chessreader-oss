@@ -1,0 +1,240 @@
+{
+  "version": 1,
+  "note": "The catalogue. One row per lesson; the lesson itself is lessons/<id>.json and is fetched only when opened. Groups are drawn in this order, and lessons within a group in this order — they are the shelf's fallback listing when the library fails to load. Each lesson's 'family' is the exact family name in openings/library.json it appears under as the guided entry — hand-mapped, and openings-check asserts the family exists. scripts/openings-check.js validates every file against the shipping chess.js.",
+  "groups": [
+    {
+      "id": "open",
+      "name": "Open games",
+      "blurb": "What happens after 1.e4 e5, and the oldest arguments in chess."
+    },
+    {
+      "id": "semi-open",
+      "name": "Semi-open games",
+      "blurb": "Black answers 1.e4 with something other than 1...e5."
+    },
+    {
+      "id": "closed",
+      "name": "Closed games",
+      "blurb": "1.d4, and the slower fight for the centre."
+    },
+    {
+      "id": "indian",
+      "name": "Indian defences",
+      "blurb": "1.d4 Nf6: Black holds the centre pawns back and fights for e4 with pieces."
+    },
+    {
+      "id": "flank",
+      "name": "Flank openings",
+      "blurb": "White keeps the centre pawns home and attacks the centre from the side."
+    }
+  ],
+  "lessons": [
+    {
+      "id": "italian-game",
+      "group": "open",
+      "name": "The Italian Game",
+      "color": "w",
+      "eco": "C50",
+      "family": "Italian Game",
+      "blurb": "The oldest opening still played at every level: bishop to c4, pointed at f7."
+    },
+    {
+      "id": "ruy-lopez",
+      "group": "open",
+      "name": "The Ruy Lopez",
+      "color": "w",
+      "eco": "C60",
+      "family": "Ruy Lopez",
+      "blurb": "The Spanish bishop on b5: pressure on the knight that defends e5, kept up for forty moves."
+    },
+    {
+      "id": "scotch-game",
+      "group": "open",
+      "name": "The Scotch Game",
+      "color": "w",
+      "eco": "C45",
+      "family": "Scotch Game",
+      "blurb": "Open the centre on move three and make Black solve it at once."
+    },
+    {
+      "id": "vienna-game",
+      "group": "open",
+      "name": "The Vienna Game",
+      "color": "w",
+      "eco": "C25",
+      "family": "Vienna Game",
+      "blurb": "Knight before bishop, so that f4 comes with a pawn behind it: the King's Gambit with the risk taken out."
+    },
+    {
+      "id": "kings-gambit",
+      "group": "open",
+      "name": "The King's Gambit",
+      "color": "w",
+      "eco": "C30",
+      "family": "King's Gambit Accepted",
+      "blurb": "Give a pawn on move two for the centre and the f-file, and accept that your king will never be entirely safe."
+    },
+    {
+      "id": "petrov-defence",
+      "group": "open",
+      "name": "Petrov's Defence",
+      "color": "b",
+      "eco": "C42",
+      "family": "Petrov's Defense",
+      "blurb": "Do not defend e5 — attack e4 instead, and take the fight out of 1.e4 e5."
+    },
+    {
+      "id": "sicilian-defence",
+      "group": "semi-open",
+      "name": "The Sicilian Defence",
+      "color": "b",
+      "eco": "B20",
+      "family": "Sicilian Defense",
+      "blurb": "Answer 1.e4 with 1...c5 and refuse the symmetry: a wing pawn for a centre pawn, and a game where Black plays to win."
+    },
+    {
+      "id": "french-defence",
+      "group": "semi-open",
+      "name": "The French Defence",
+      "color": "b",
+      "eco": "C00",
+      "family": "French Defense",
+      "blurb": "Answer 1.e4 with 1...e6 and 2...d5: a pawn chain, a bad bishop, and a counter-attack that arrives on move three."
+    },
+    {
+      "id": "caro-kann",
+      "group": "semi-open",
+      "name": "The Caro-Kann Defence",
+      "color": "b",
+      "eco": "B12",
+      "family": "Caro-Kann Defense",
+      "blurb": "Answer 1.e4 with 1...c6 and get the solid centre the French wants, without burying the bishop."
+    },
+    {
+      "id": "scandinavian-defence",
+      "group": "semi-open",
+      "name": "The Scandinavian Defence",
+      "color": "b",
+      "eco": "B01",
+      "family": "Scandinavian Defense",
+      "blurb": "Hit e4 on move one, bring the queen out early, and have the whole opening learned by lunchtime."
+    },
+    {
+      "id": "pirc-defence",
+      "group": "semi-open",
+      "name": "The Pirc Defence",
+      "color": "b",
+      "eco": "B07",
+      "family": "Pirc Defense",
+      "blurb": "Let White have the centre, fianchetto, and then attack the centre with pieces from a distance."
+    },
+    {
+      "id": "alekhine-defence",
+      "group": "semi-open",
+      "name": "Alekhine's Defence",
+      "color": "b",
+      "eco": "B02",
+      "family": "Alekhine Defense",
+      "blurb": "Put a knight on f6 and invite the pawns to chase it, on the theory that pawns that have advanced can be attacked."
+    },
+    {
+      "id": "queens-gambit",
+      "group": "closed",
+      "name": "The Queen's Gambit",
+      "color": "w",
+      "eco": "D06",
+      "family": "Queen's Gambit",
+      "blurb": "Offer a pawn you are not really giving away, to trade a wing pawn for the centre."
+    },
+    {
+      "id": "slav-defence",
+      "group": "closed",
+      "name": "The Slav Defence",
+      "color": "b",
+      "eco": "D10",
+      "family": "Slav Defense",
+      "blurb": "Decline the Queen's Gambit with 2...c6 instead of 2...e6, and keep the bishop the Declined gives up."
+    },
+    {
+      "id": "london-system",
+      "group": "closed",
+      "name": "The London System",
+      "color": "w",
+      "eco": "D02",
+      "family": "London System",
+      "blurb": "One setup against everything: d4, Bf4, e3, and a game you understand before it starts."
+    },
+    {
+      "id": "dutch-defence",
+      "group": "closed",
+      "name": "The Dutch Defence",
+      "color": "b",
+      "eco": "A80",
+      "family": "Dutch Defense",
+      "blurb": "Answer 1.d4 with 1...f5, take e4 away for good, and play for a kingside attack from move one."
+    },
+    {
+      "id": "kings-indian-defence",
+      "group": "indian",
+      "name": "The King's Indian Defence",
+      "color": "b",
+      "eco": "E60",
+      "family": "King's Indian Defense",
+      "blurb": "Give White the centre, fianchetto, castle — and then throw every kingside pawn at the king."
+    },
+    {
+      "id": "nimzo-indian-defence",
+      "group": "indian",
+      "name": "The Nimzo-Indian Defence",
+      "color": "b",
+      "eco": "E20",
+      "family": "Nimzo-Indian Defense",
+      "blurb": "Pin the knight on c3, offer to give up the bishop for it, and fight over one square for the rest of the game."
+    },
+    {
+      "id": "grunfeld-defence",
+      "group": "indian",
+      "name": "The Grünfeld Defence",
+      "color": "b",
+      "eco": "D80",
+      "family": "Grünfeld Defense",
+      "blurb": "Fianchetto, then strike with ...d5 on move three: give White a huge centre and spend the whole game attacking it."
+    },
+    {
+      "id": "queens-indian-defence",
+      "group": "indian",
+      "name": "The Queen's Indian Defence",
+      "color": "b",
+      "eco": "E12",
+      "family": "Queen's Indian Defense",
+      "blurb": "When White avoids the Nimzo with 3.Nf3, put the bishop on b7 instead and control e4 from the corner."
+    },
+    {
+      "id": "catalan-opening",
+      "group": "indian",
+      "name": "The Catalan Opening",
+      "color": "w",
+      "eco": "E00",
+      "family": "Catalan Opening",
+      "blurb": "The Queen's Gambit with a bishop on g2: pressure down the long diagonal that lasts the whole game."
+    },
+    {
+      "id": "english-opening",
+      "group": "flank",
+      "name": "The English Opening",
+      "color": "w",
+      "eco": "A10",
+      "family": "English Opening",
+      "blurb": "Start with the c-pawn: a Sicilian with the colours reversed and a move in hand."
+    },
+    {
+      "id": "reti-opening",
+      "group": "flank",
+      "name": "The Réti Opening",
+      "color": "w",
+      "eco": "A09",
+      "family": "Réti Opening",
+      "blurb": "Knight first, then c4 against the d5 pawn: control the centre from a distance before occupying it."
+    }
+  ]
+}

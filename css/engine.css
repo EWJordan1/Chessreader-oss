@@ -1,0 +1,53 @@
+/* engine — styles for this module only. Tokens come from tokens.css; never a raw colour. */
+
+/* ===== The tools beside the transport ===== */
+/* The depth buttons are data, not prose: sans, tabular, and the pressed one wears the
+   primary the same way the theme swatches do. */
+#analysis-tools { display: flex; gap: var(--sp-4); align-items: center; }
+#analysis-tools .btn { height: var(--control-h-sm); padding: 0 var(--sp-8); font-size: var(--fs-xs); font-variant-numeric: tabular-nums; }
+#analysis-tools .btn-depth[aria-pressed=true] { border-color: var(--primary); color: var(--text-bright); }
+#btn-analyse[disabled] { opacity: .6; cursor: default; }
+
+/* The status is the one sentence under the scrubber: quiet, and never taller than a
+   line, so a scan starting does not move the transport under the reader's cursor. */
+.analysis-status { min-height: 1.4em; }
+
+/* ===== The scrubber's marks ===== */
+/* Positioned by percentage along the slider, so they line up with the thumb without
+   knowing the slider's width. The colours are the review's ramp: warn, then danger. */
+.scrub-marks { margin-top: calc(var(--sp-2) * -1); }
+.scrub-mark { transform: translateX(-50%); opacity: .85; }
+.scrub-mark.inaccuracy { opacity: .55; }
+
+/* ===== The Engine panel ===== */
+.eng-lines { display: flex; flex-direction: column; gap: var(--sp-4); }
+.eng-line { display: grid; grid-template-columns: 60px 1fr; gap: var(--sp-8); align-items: baseline; padding: var(--sp-4) var(--sp-6); border-radius: var(--radius-xs); }
+.eng-line:hover { background: var(--surface2); }
+/* The first line is the engine's answer; the others are what it also looked at. */
+.eng-line:first-child .eng-score { color: var(--text-bright); }
+.eng-score { font-variant-numeric: tabular-nums; color: var(--text-muted); font-size: var(--fs-sm); text-align: right; }
+.eng-moves { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.eng-moves .san { cursor: pointer; }
+.eng-moves .san:hover { color: var(--text-bright); text-decoration: underline; }
+.eng-foot { margin-top: var(--sp-8); }
+
+/* ===== The sweep bar ===== */
+#sweep-bar .sweep-label { color: var(--text-bright); white-space: nowrap; }
+#sweep-bar .sweep-count { color: var(--text-muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+#sweep-bar .btn { height: var(--control-h-sm); padding: 0 var(--sp-8); font-size: var(--fs-xs); }
+#sweep-bar .progress { min-width: 120px; }
+
+/* ===== The sweep's settings block and its queue ===== */
+#sweep-settings { display: flex; flex-direction: column; gap: var(--sp-12); }
+.sweep-controls { display: flex; gap: var(--sp-8); align-items: center; flex-wrap: wrap; }
+.sweep-controls .hint { flex: 1; min-width: 200px; }
+.sweep-queue summary { cursor: pointer; font-size: var(--fs-sm); color: var(--text-muted); }
+.sweep-queue summary:hover { color: var(--text); }
+/* Bounded: an archive is two thousand games and the card is not two thousand rows tall. */
+.sweep-list { max-height: 320px; overflow: auto; margin-top: var(--sp-8); display: flex; flex-direction: column; }
+.sweep-row { display: grid; grid-template-columns: 1fr auto auto; gap: var(--sp-8); align-items: center; padding: var(--sp-4) var(--sp-6); border-radius: var(--radius-xs); font-size: var(--fs-sm); }
+.sweep-row + .sweep-row { border-top: 1px solid var(--hairline); }
+.sweep-row.current { background: var(--surface2); color: var(--text-bright); }
+.sweep-game { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.sweep-word { color: var(--text-muted); font-size: var(--fs-xs); font-variant-numeric: tabular-nums; }
+.sweep-row .btn { height: var(--control-h-sm); padding: 0 var(--sp-8); font-size: var(--fs-xs); }

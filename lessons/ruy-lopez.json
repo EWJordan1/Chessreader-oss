@@ -1,0 +1,91 @@
+{
+  "id": "ruy-lopez",
+  "name": "The Ruy Lopez",
+  "color": "w",
+  "eco": "C60",
+  "blurb": "The Spanish bishop on b5: pressure on the knight that defends e5, kept up for forty moves.",
+  "steps": [
+    {
+      "moves": ["e4"],
+      "note": "1.e4. The Ruy Lopez is what 1.e4 becomes when White wants a long game rather than a quick one — the same first move as the Italian, spent on pressure instead of a target."
+    },
+    {
+      "moves": ["e4", "e5"],
+      "note": "1...e5, the classical reply, and the pawn that has to be defended for the rest of the opening. Everything White does in the next eight moves is a question about this pawn."
+    },
+    {
+      "moves": ["e4", "e5", "Nf3"],
+      "note": "2.Nf3 attacks e5. The move is the same as in the Italian and the Scotch; the difference between those openings is entirely what White does with the bishop on move three."
+    },
+    {
+      "moves": ["e4", "e5", "Nf3", "Nc6"],
+      "note": "2...Nc6 defends the pawn with a piece. Note that the knight is now doing a job — and a piece with a job can be attacked, which is the idea White is about to act on."
+    },
+    {
+      "moves": ["e4", "e5", "Nf3", "Nc6", "Bb5"],
+      "note": "3.Bb5 is the Ruy Lopez, or the Spanish. The bishop attacks the knight that defends e5, so it is a threat one step removed: not to take a pawn, but to remove the pawn's defender. It is worth knowing straight away that the threat is not yet real — after 4.Bxc6 dxc6 5.Nxe5, Black plays 5...Qd4, forking the knight and the e4 pawn, and wins the pawn back. Black has one free move before the pressure counts."
+    },
+    {
+      "moves": ["e4", "e5", "Nf3", "Nc6", "Bb5", "a6"],
+      "note": "3...a6 is the Morphy Defence, and it spends the free move asking the bishop a question. Because the capture on c6 wins nothing yet, Black can afford it — and the pawn on a6 will later support ...b5, which is the move that finally pushes the bishop off the diagonal."
+    },
+    {
+      "moves": ["e4", "e5", "Nf3", "Nc6", "Bb5", "a6", "Ba4"],
+      "note": "4.Ba4 keeps the pin along the same diagonal. White retreats rather than exchanges because the bishop is worth more as a long-term nuisance than as a trade — this is the main line, and the exchange is the road this lesson takes second."
+    },
+    {
+      "moves": ["e4", "e5", "Nf3", "Nc6", "Bb5", "a6", "Ba4", "Nf6"],
+      "note": "4...Nf6 develops and attacks e4. Now both centre pawns are under pressure at once, and White has a decision: defend e4, or castle and let Black take it."
+    },
+    {
+      "moves": ["e4", "e5", "Nf3", "Nc6", "Bb5", "a6", "Ba4", "Nf6", "O-O"],
+      "note": "5.O-O leaves e4 hanging on purpose. Taking it — 5...Nxe4 — is the Open Lopez, and it is playable, but after 6.d4 White gets the pawn back with the centre opened and every piece out. Most players decline, and the decline is the next move."
+    },
+    {
+      "moves": ["e4", "e5", "Nf3", "Nc6", "Bb5", "a6", "Ba4", "Nf6", "O-O", "Be7"],
+      "note": "5...Be7 is the Closed Lopez. Black develops modestly, prepares to castle, and keeps the tension. This is the position in which the Ruy Lopez has been argued over for a century, and the argument is still going."
+    },
+    {
+      "moves": ["e4", "e5", "Nf3", "Nc6", "Bb5", "a6", "Ba4", "Nf6", "O-O", "Be7", "Re1"],
+      "note": "6.Re1 defends e4, and this is the moment the threat against e5 becomes real. The trick from move three no longer works: after 7.Bxc6 dxc6 8.Nxe5 Qd4, the knight simply retreats and the e4 pawn is covered by the rook. Black has to do something about it now."
+    },
+    {
+      "moves": ["e4", "e5", "Nf3", "Nc6", "Bb5", "a6", "Ba4", "Nf6", "O-O", "Be7", "Re1", "b5"],
+      "note": "6...b5 is the answer, and the pawn on a6 was put there to support it. The bishop is driven off the diagonal at last, and Black has gained space on the queenside — at the cost of a slightly looser structure that White will probe with a4 later."
+    },
+    {
+      "moves": ["e4", "e5", "Nf3", "Nc6", "Bb5", "a6", "Ba4", "Nf6", "O-O", "Be7", "Re1", "b5", "Bb3", "d6"],
+      "note": "7.Bb3 d6. The bishop keeps its diagonal toward f7, and Black finally supports e5 with a pawn, which frees the knight on c6 from its job. Black is solid. The next few moves are about getting the pieces to their best squares before anything happens."
+    },
+    {
+      "moves": ["e4", "e5", "Nf3", "Nc6", "Bb5", "a6", "Ba4", "Nf6", "O-O", "Be7", "Re1", "b5", "Bb3", "d6", "c3"],
+      "note": "8.c3 does two things. It prepares d4, the pawn break that the whole opening is aimed at, and it gives the bishop a square on c2 for the day Black plays ...Na5 to trade it off. Keeping that bishop is a large part of what playing the Lopez means."
+    },
+    {
+      "moves": ["e4", "e5", "Nf3", "Nc6", "Bb5", "a6", "Ba4", "Nf6", "O-O", "Be7", "Re1", "b5", "Bb3", "d6", "c3", "O-O", "h3"],
+      "note": "8...O-O 9.h3 is the main line of the Closed Ruy Lopez. The little pawn move stops ...Bg4, which would pin the knight against the queen just as White is about to play d4. From here White plans d4 and the long knight walk Nbd2–f1–g3, and Black chooses between ...Na5, ...Nb8 and ...Bb7. Slow, rich and entirely typical: the Lopez is not an opening that wins by move fifteen. It is one that is still slightly better at move forty."
+    },
+    {
+      "moves": ["e4", "e5", "Nf3", "Nc6", "Bb5", "a6", "Bxc6"],
+      "note": "Back to move four, and the other choice. 4.Bxc6 is the Exchange Variation — Lasker's and later Fischer's. White gives up the bishop pair on purpose, for a structural argument that lasts the whole game."
+    },
+    {
+      "moves": ["e4", "e5", "Nf3", "Nc6", "Bb5", "a6", "Bxc6", "dxc6"],
+      "note": "4...dxc6 takes toward the centre and opens the c8 bishop and the queen. The alternative 4...bxc6 keeps the pawns straighter but shuts both pieces in. Look at the structure now: White has four pawns against three on the kingside, and Black's queenside four contain a doubled pair. If every piece came off, the pawn ending would favour White. That is the whole idea, and Black's two bishops are the whole counter-argument."
+    },
+    {
+      "moves": ["e4", "e5", "Nf3", "Nc6", "Bb5", "a6", "Bxc6", "dxc6", "O-O"],
+      "note": "5.O-O rather than 5.Nxe5, because 5...Qd4 still wins the pawn back with a better position. Castled, the threat on e5 is real and Black must meet it — 5...f6 is the solid way, 5...Qd6 and 5...Bg4 the active ones. Where the closed line was about pressure, this one is about the endgame from move five; if you like simple positions with a long-term edge, this is your Ruy Lopez."
+    }
+  ],
+  "lines": [
+    {
+      "name": "Ruy Lopez, Closed",
+      "moves": ["e4", "e5", "Nf3", "Nc6", "Bb5", "a6", "Ba4", "Nf6", "O-O", "Be7", "Re1", "b5", "Bb3", "d6", "c3", "O-O", "h3"]
+    },
+    {
+      "name": "Ruy Lopez, Exchange Variation",
+      "moves": ["e4", "e5", "Nf3", "Nc6", "Bb5", "a6", "Bxc6", "dxc6", "O-O"]
+    }
+  ]
+}

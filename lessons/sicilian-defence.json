@@ -1,0 +1,103 @@
+{
+  "id": "sicilian-defence",
+  "name": "The Sicilian Defence",
+  "color": "b",
+  "eco": "B20",
+  "blurb": "Answer 1.e4 with 1...c5 and refuse the symmetry: a wing pawn for a centre pawn, and a game where Black plays to win.",
+  "steps": [
+    {
+      "moves": ["e4"],
+      "note": "1.e4. Black's most popular answer at every level above beginner is not 1...e5 but a pawn one file over, and the reason is a trade that has not happened yet."
+    },
+    {
+      "moves": ["e4", "c5"],
+      "note": "1...c5 is the Sicilian. The pawn does one concrete thing: it controls d4, so that when White plays d4 — and White nearly always does — Black takes, and a c-pawn has been swapped for a d-pawn. That is the entire opening in one exchange. Black gets a half-open c-file and the extra centre pawn; White gets a lead in development and open lines. Neither side gets a quiet game."
+    },
+    {
+      "moves": ["e4", "c5", "Nf3"],
+      "note": "2.Nf3 prepares d4 with a knight ready to recapture. This is the Open Sicilian, the main road, and the one where the theory lives. The other second moves — 2.c3, 2.Nc3, 2.d4 at once — all try to avoid the trade, and the lesson comes back to the most common of them."
+    },
+    {
+      "moves": ["e4", "c5", "Nf3", "d6"],
+      "note": "2...d6 is the most flexible of Black's second moves. It supports c5, keeps e5 under control, opens the c8 bishop, and — the reason it is chosen here — leads to the Najdorf, which is the Sicilian's most famous line. 2...Nc6 and 2...e6 lead elsewhere and are just as good."
+    },
+    {
+      "moves": ["e4", "c5", "Nf3", "d6", "d4"],
+      "note": "3.d4 offers the trade. White could decline it forever and play a slow game, but the position after the exchange is what 1.e4 players want: a knight in the centre, both bishops open, a lead in development."
+    },
+    {
+      "moves": ["e4", "c5", "Nf3", "d6", "d4", "cxd4"],
+      "note": "3...cxd4, and the trade is made. Count the centre pawns: White has one, on e4; Black has two, on d6 and e7. That imbalance is the reason the Sicilian is worth all the trouble it causes. Black's long-term plans — ...e5 or ...e6, ...d5 one day — all come from having the extra pawn in the middle."
+    },
+    {
+      "moves": ["e4", "c5", "Nf3", "d6", "d4", "cxd4", "Nxd4"],
+      "note": "4.Nxd4. The knight recaptures and sits in the centre. It is White's best piece and Black's first target: ...Nc6 will hit it, and ...e5 in some lines will drive it away entirely."
+    },
+    {
+      "moves": ["e4", "c5", "Nf3", "d6", "d4", "cxd4", "Nxd4", "Nf6"],
+      "note": "4...Nf6 develops and attacks e4. White has to defend the pawn, and the natural move for that is the one that fixes White's knight on c3, where Black will later aim a bishop or a pawn at it."
+    },
+    {
+      "moves": ["e4", "c5", "Nf3", "d6", "d4", "cxd4", "Nxd4", "Nf6", "Nc3"],
+      "note": "5.Nc3 defends e4 and is the standard move. Both sides now have two knights out. Black's next move is one of the most analysed in chess, and it is a pawn move on the edge of the board."
+    },
+    {
+      "moves": ["e4", "c5", "Nf3", "d6", "d4", "cxd4", "Nxd4", "Nf6", "Nc3", "a6"],
+      "note": "5...a6 is the Najdorf. The move takes b5 away from White's pieces — no knight jumping in, no bishop pinning from b5 — and prepares ...b5 to gain space and hit e4 from the side. It does nothing for development, and that is a price the Najdorf pays on purpose: it is a waiting move that improves every plan Black has, and it has been the choice of world champions for seventy years."
+    },
+    {
+      "moves": ["e4", "c5", "Nf3", "d6", "d4", "cxd4", "Nxd4", "Nf6", "Nc3", "a6", "Be3"],
+      "note": "6.Be3 is the English Attack, the most common way to meet the Najdorf today. The bishop develops and White plans f3, Qd2, O-O-O and a pawn storm with g4 and h4 — kings on opposite sides and a race. The older 6.Bg5 and 6.Be2 are still played and lead to different games, but this is the one you will meet most."
+    },
+    {
+      "moves": ["e4", "c5", "Nf3", "d6", "d4", "cxd4", "Nxd4", "Nf6", "Nc3", "a6", "Be3", "e5"],
+      "note": "6...e5 spends the extra centre pawn at once. It kicks the knight off d4, claims the centre, and opens the f8 bishop. The cost is a hole on d5 — a square White's pieces can sit on and Black's pawns can never challenge — and every Najdorf player has to accept that hole and plan around it."
+    },
+    {
+      "moves": ["e4", "c5", "Nf3", "d6", "d4", "cxd4", "Nxd4", "Nf6", "Nc3", "a6", "Be3", "e5", "Nb3"],
+      "note": "7.Nb3 retreats the knight to where it eyes a5 and c5 and stays out of the way. 7.Nf3 is possible too, but blocks the f-pawn White wants to advance."
+    },
+    {
+      "moves": ["e4", "c5", "Nf3", "d6", "d4", "cxd4", "Nxd4", "Nf6", "Nc3", "a6", "Be3", "e5", "Nb3", "Be6"],
+      "note": "7...Be6 develops the bishop to the square that covers d5 — the hole Black just made — and looks at White's queenside, where the king is going. This is the piece that makes the ...e5 structure work."
+    },
+    {
+      "moves": ["e4", "c5", "Nf3", "d6", "d4", "cxd4", "Nxd4", "Nf6", "Nc3", "a6", "Be3", "e5", "Nb3", "Be6", "f3"],
+      "note": "8.f3 supports e4 and prepares g4. It also shuts the f-file and takes the g4 square from Black's knight. White's plan is set: queen to d2, castle long, and push the kingside pawns."
+    },
+    {
+      "moves": ["e4", "c5", "Nf3", "d6", "d4", "cxd4", "Nxd4", "Nf6", "Nc3", "a6", "Be3", "e5", "Nb3", "Be6", "f3", "Be7", "Qd2", "O-O"],
+      "note": "8...Be7 9.Qd2 O-O is the main line of the English Attack against the Najdorf. Black has castled into the storm on purpose, because the counter-attack is faster than it looks: ...b5, ...Nbd7, ...Rc8 and ...b4 come with tempo against the knight on c3, and every one of those moves is a threat against the king White is about to put on c1. This is the Sicilian in its purest form — both sides attacking, nobody defending, and the player who counts more accurately wins."
+    },
+    {
+      "moves": ["e4", "c5", "c3"],
+      "note": "Back to move two, because you will meet this constantly. 2.c3 is the Alapin, the most popular way for White to avoid the Open Sicilian: the pawn prepares d4 with a pawn ready to recapture, so the c-for-d trade never happens. Black has two good answers. The lesson takes the one that hits back in the centre."
+    },
+    {
+      "moves": ["e4", "c5", "c3", "d5"],
+      "note": "2...d5 attacks e4 at once, and the point is that c3 has taken the knight's natural square: White cannot defend the pawn with Nc3, so it has to take, and the queen comes to d5 without the usual kick."
+    },
+    {
+      "moves": ["e4", "c5", "c3", "d5", "exd5", "Qxd5"],
+      "note": "3.exd5 Qxd5. The queen sits in the centre and cannot be driven off by Nc3 — which is exactly what would happen in a Scandinavian. White has to build the centre the slow way."
+    },
+    {
+      "moves": ["e4", "c5", "c3", "d5", "exd5", "Qxd5", "d4", "Nf6"],
+      "note": "4.d4 Nf6. White gets the centre pawn in; Black develops and keeps the pressure on d4, which is now the target — after ...cxd4 and cxd4 it will be isolated, and isolated pawns are what Black plays against in the Alapin."
+    },
+    {
+      "moves": ["e4", "c5", "c3", "d5", "exd5", "Qxd5", "d4", "Nf6", "Nf3", "Bg4"],
+      "note": "5.Nf3 Bg4 is the main line of the Alapin with 2...d5. The bishop pins the knight that defends d4, the queen watches from the centre, and Black is about to play ...e6, ...Nc6 and ...cxd4 to leave White with an isolated pawn. It is nothing like the Najdorf — no race, no storm — and that is the point of the Alapin from White's side. Black's answer is to be comfortable, and this is how."
+    }
+  ],
+  "lines": [
+    {
+      "name": "Sicilian Defence, Najdorf, English Attack",
+      "moves": ["e4", "c5", "Nf3", "d6", "d4", "cxd4", "Nxd4", "Nf6", "Nc3", "a6", "Be3", "e5", "Nb3", "Be6", "f3", "Be7", "Qd2", "O-O"]
+    },
+    {
+      "name": "Sicilian Defence, Alapin, 2...d5",
+      "moves": ["e4", "c5", "c3", "d5", "exd5", "Qxd5", "d4", "Nf6", "Nf3", "Bg4"]
+    }
+  ]
+}

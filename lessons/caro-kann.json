@@ -1,0 +1,71 @@
+{
+  "id": "caro-kann",
+  "name": "The Caro-Kann Defence",
+  "color": "b",
+  "eco": "B12",
+  "blurb": "Answer 1.e4 with 1...c6 and get the solid centre the French wants, without burying the bishop.",
+  "steps": [
+    {
+      "moves": ["e4"],
+      "note": "1.e4, and Black has to decide what kind of game this is. The Caro-Kann is the answer for someone who wants a sound pawn structure and is content to be slightly passive for a few moves in exchange for never being worse."
+    },
+    {
+      "moves": ["e4", "c6"],
+      "note": "1...c6 looks modest and is entirely concrete: it prepares ...d5, hitting e4, with a pawn that cannot be taken for free. That is the same idea as the French (1...e6), and the difference between the two openings is the single most useful thing to understand here."
+    },
+    {
+      "moves": ["e4", "c6", "d4"],
+      "note": "2.d4 takes the full centre. White is happy to be given a move to do it in — the question is whether the time Black spent on c6 buys anything."
+    },
+    {
+      "moves": ["e4", "c6", "d4", "d5"],
+      "note": "2...d5, and here is the whole point of the opening. In the French, Black plays ...e6 first and the light-squared bishop is stuck behind the pawn chain for the rest of the game. Here the c6 pawn does the same job of supporting ...d5, and the bishop on c8 is still free. Black has the French structure and a good bishop."
+    },
+    {
+      "moves": ["e4", "c6", "d4", "d5", "e5"],
+      "note": "3.e5 is the Advance Variation, and the most common move at club level. White closes the centre and takes space. It also, immediately, gives Black a target: the pawn chain d4–e5 has its base on d4, and that is where Black will strike."
+    },
+    {
+      "moves": ["e4", "c6", "d4", "d5", "e5", "Bf5"],
+      "note": "3...Bf5, and this move is the reason to play the Caro-Kann at all. The bishop gets outside the pawn chain *before* Black plays ...e6 and locks it in. Play ...e6 first and you have a worse French. The move order is the opening."
+    },
+    {
+      "moves": ["e4", "c6", "d4", "d5", "e5", "Bf5", "Nf3"],
+      "note": "4.Nf3 is a calm developing move. There are sharper tries — 4.Nc3 and 4.h4 both aim at the bishop on f5 and are worth knowing about — but this is the position you will meet most often."
+    },
+    {
+      "moves": ["e4", "c6", "d4", "d5", "e5", "Bf5", "Nf3", "e6"],
+      "note": "4...e6. *Now* the pawn goes to e6, and it costs nothing, because the bishop it would have trapped is already on f5. Black's structure is solid, the pieces have squares, and there are no weaknesses to play against."
+    },
+    {
+      "moves": ["e4", "c6", "d4", "d5", "e5", "Bf5", "Nf3", "e6", "Be2"],
+      "note": "5.Be2 develops and prepares to castle. White's space advantage is real, so Black should not drift — a good position with no plan turns into a bad one by move twenty-five."
+    },
+    {
+      "moves": ["e4", "c6", "d4", "d5", "e5", "Bf5", "Nf3", "e6", "Be2", "c5"],
+      "note": "5...c5, and this is the plan. The pawn that started the whole opening on move one now attacks d4, the base of White's chain. If White takes, Black recaptures and has freed the position; if White holds, Black adds pressure with ...Nc6 and ...Qb6. The Caro-Kann is not a passive opening — it is a slow one, and this is the move it has been building toward since 1...c6."
+    },
+    {
+      "moves": ["e4", "c6", "d4", "d5", "Nc3"],
+      "note": "Back to move three for the other main road. 3.Nc3 (and 3.Nd2, which usually comes to the same thing) defends e4 with a piece and invites the exchange."
+    },
+    {
+      "moves": ["e4", "c6", "d4", "d5", "Nc3", "dxe4"],
+      "note": "3...dxe4 is the Classical Caro-Kann. Black resolves the centre immediately — no tension, no long-term worries about the d5 pawn — and will develop the bishop outside the chain here too."
+    },
+    {
+      "moves": ["e4", "c6", "d4", "d5", "Nc3", "dxe4", "Nxe4", "Bf5"],
+      "note": "4.Nxe4 Bf5, and there it is again: the light-squared bishop, outside the pawns, before ...e6. Every version of the Caro-Kann is the same idea wearing different clothes, and if you remember one thing from this lesson, remember that the bishop comes out first."
+    }
+  ],
+  "lines": [
+    {
+      "name": "Caro-Kann, Advance Variation",
+      "moves": ["e4", "c6", "d4", "d5", "e5", "Bf5", "Nf3", "e6", "Be2", "c5"]
+    },
+    {
+      "name": "Caro-Kann, Classical",
+      "moves": ["e4", "c6", "d4", "d5", "Nc3", "dxe4", "Nxe4", "Bf5"]
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "name": "chessreader",
+  "version": "0.1.0",
+  "description": "Free, open-source, desktop-only chess analysis and training. Your games read back to you the way a coach would.",
+  "license": "GPL-3.0-only",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "walk": "playwright test",
+    "check": "vitest run && playwright test"
+  },
+  "dependencies": {
+    "chess.js": "^1.4.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "fake-indexeddb": "^6.2.5",
+    "vite": "^8.2.2",
+    "vitest": "^5.0.0",
+    "ws": "^8.21.3"
+  }
+}

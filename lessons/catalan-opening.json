@@ -1,0 +1,91 @@
+{
+  "id": "catalan-opening",
+  "name": "The Catalan Opening",
+  "color": "w",
+  "eco": "E00",
+  "blurb": "The Queen's Gambit with a bishop on g2: pressure down the long diagonal that lasts the whole game.",
+  "steps": [
+    {
+      "moves": ["d4", "Nf6", "c4", "e6"],
+      "note": "1.d4 Nf6 2.c4 e6. Black is ready for a Nimzo-Indian or a Queen's Gambit Declined, and White's third move usually chooses between them. The Catalan chooses neither."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "e6", "g3"],
+      "note": "3.g3 is the Catalan. The bishop is going to g2, and from there it will look down the long diagonal at b7, at the a8 rook, and at every pawn Black puts in the way. It is a Queen's Gambit with one change — the king's bishop on g2 instead of e2 or d3 — and that change is the whole opening: slow, positional, and very hard to play against without knowing why."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "e6", "g3", "d5"],
+      "note": "3...d5 takes the centre, and it is the move that makes this a Catalan rather than something else. Black's pawn on d5 blocks the diagonal for now; the question of the opening is whether it stays there."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "e6", "g3", "d5", "Bg2"],
+      "note": "4.Bg2 develops the bishop to its square. Notice that White has not played Nc3, and will not for some time: the knight on b1 stays flexible, and the c-pawn is not defended by it, which is a choice White makes on purpose."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "e6", "g3", "d5", "Bg2", "Be7"],
+      "note": "4...Be7 develops and prepares to castle. Black has two broad plans in the Catalan: take on c4 and try to keep the pawn, or sit tight with ...c6 and let the diagonal stay closed. The lesson takes the capture first, because it is the main line and because it shows what the bishop on g2 is for."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "e6", "g3", "d5", "Bg2", "Be7", "Nf3", "O-O", "O-O"],
+      "note": "5.Nf3 O-O 6.O-O. Both sides castle, and White has spent nothing on the centre beyond the two pawns already there. The c4 pawn has been hanging for three moves. It is about to be taken."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "e6", "g3", "d5", "Bg2", "Be7", "Nf3", "O-O", "O-O", "dxc4"],
+      "note": "6...dxc4 is the Open Catalan. Black takes the pawn and, in doing so, opens the long diagonal from g2 to b7 — which is exactly what White wanted. The pawn on c4 is a real pawn, though, and if Black can keep it White has given something for nothing. Black will try ...a6 and ...b5 to hold it; White will make holding it cost more than it is worth."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "e6", "g3", "d5", "Bg2", "Be7", "Nf3", "O-O", "O-O", "dxc4", "Qc2"],
+      "note": "7.Qc2 attacks the pawn and prepares to take it back. The queen also eyes the long diagonal's other end and c7. There are alternatives — 7.Ne5, going after c4 with a knight — but the queen move is the classical one and the most instructive."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "e6", "g3", "d5", "Bg2", "Be7", "Nf3", "O-O", "O-O", "dxc4", "Qc2", "a6"],
+      "note": "7...a6 prepares ...b5 to hold the pawn. This is the main line and the honest test: if Black can keep the extra pawn, the Catalan is a gambit that failed. The next two moves show why Black usually cannot."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "e6", "g3", "d5", "Bg2", "Be7", "Nf3", "O-O", "O-O", "dxc4", "Qc2", "a6", "Qxc4"],
+      "note": "8.Qxc4 takes the pawn back before ...b5 can defend it. Material is level, and White's queen is on the open c-file with the bishop behind it on the diagonal. Black now has to spend moves on the queenside that White will spend in the centre."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "e6", "g3", "d5", "Bg2", "Be7", "Nf3", "O-O", "O-O", "dxc4", "Qc2", "a6", "Qxc4", "b5"],
+      "note": "8...b5 gains space with tempo on the queen and prepares ...Bb7 to block the diagonal at last. It also leaves the c6 square and the c-file a little weak, and White's pieces are pointed at both."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "e6", "g3", "d5", "Bg2", "Be7", "Nf3", "O-O", "O-O", "dxc4", "Qc2", "a6", "Qxc4", "b5", "Qc2", "Bb7"],
+      "note": "9.Qc2 Bb7 is the Open Catalan main line. Black has the pawn back to level, the diagonal blocked, and a queenside that looks well set — and yet this is the position Catalan players are happy to reach. White plays Bd2, a4 and Nbd2, and the a4 push cracks the b5 pawn open; the c-file belongs to White's rooks, and the bishop on g2 has been staring at b7 for six moves and is about to be joined. Black's answers are ...Nbd7 and ...c5, which is the freeing break and should come as early as it can. The Catalan's advantage is small and it lasts, which is what 3.g3 promised."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "e6", "g3", "d5", "Bg2", "Be7", "Nf3", "O-O", "O-O", "Nbd7"],
+      "note": "Back to move six for the other approach. 6...Nbd7 — the queen's knight, since the other could also reach d7 — is the Closed Catalan: Black does not take on c4 and does not open the diagonal, and instead builds a compact position with ...c6 and ...b6 and asks White to prove there is anything to attack. It is the solid road, and Catalan players see it often."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "e6", "g3", "d5", "Bg2", "Be7", "Nf3", "O-O", "O-O", "Nbd7", "Qc2"],
+      "note": "7.Qc2 defends c4 and prepares e4. In the Closed Catalan, the long diagonal is blocked by a pawn on d5 that is not going anywhere, so White's plan changes: open the centre with e4 and let the bishop see through the wreckage afterward."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "e6", "g3", "d5", "Bg2", "Be7", "Nf3", "O-O", "O-O", "Nbd7", "Qc2", "c6"],
+      "note": "7...c6 supports d5 and closes the diagonal for good — or so Black hopes. The setup is the Semi-Slav's, with pawns on c6, d5 and e6, and it is as solid as any in chess. Its weakness is that the b7 bishop has nowhere to go until ...b6 is played, and that takes time."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "e6", "g3", "d5", "Bg2", "Be7", "Nf3", "O-O", "O-O", "Nbd7", "Qc2", "c6", "Nbd2"],
+      "note": "8.Nbd2 — the queen's knight to d2, so that e4 is supported by a piece and the c-pawn is still free to move. The knight is modest here on purpose: on c3 it would block the c-file and get in the way of the queen's work, and on d2 it supports the push White is about to make."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "e6", "g3", "d5", "Bg2", "Be7", "Nf3", "O-O", "O-O", "Nbd7", "Qc2", "c6", "Nbd2", "b6"],
+      "note": "8...b6 prepares ...Bb7 and gives the bishop a life. It is the standard plan and a slightly slow one, which is why White's next move is possible."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "e6", "g3", "d5", "Bg2", "Be7", "Nf3", "O-O", "O-O", "Nbd7", "Qc2", "c6", "Nbd2", "b6", "e4"],
+      "note": "9.e4 is the Closed Catalan main line, and it is the point of everything White has done. The centre opens: after 9...Bb7 10.e5 the knight is kicked and White has space, and after 9...dxe4 10.Nxe4 the long diagonal is open again and the g2 bishop is the best piece on the board. Black is solid and slightly passive, White is slightly better and knows what to do next — and that, in a sentence, is the Catalan. It does not win quickly. It wins because the bishop on g2 never stops asking a question, and Black eventually runs out of answers."
+    }
+  ],
+  "lines": [
+    {
+      "name": "Catalan Opening, Open",
+      "moves": ["d4", "Nf6", "c4", "e6", "g3", "d5", "Bg2", "Be7", "Nf3", "O-O", "O-O", "dxc4", "Qc2", "a6", "Qxc4", "b5", "Qc2", "Bb7"]
+    },
+    {
+      "name": "Catalan Opening, Closed",
+      "moves": ["d4", "Nf6", "c4", "e6", "g3", "d5", "Bg2", "Be7", "Nf3", "O-O", "O-O", "Nbd7", "Qc2", "c6", "Nbd2", "b6", "e4"]
+    }
+  ]
+}

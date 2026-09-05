@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ChessReader</title>
+<meta name="description" content="Free, open-source chess analysis and training. Your games read back to you the way a coach would: what you got wrong, what you keep getting wrong, and what to do about it.">
+<meta name="theme-color" content="#000000">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 45 45'%3E%3Crect width='45' height='45' rx='10' fill='%23000'/%3E%3Ctext x='50%25' y='58%25' text-anchor='middle' dominant-baseline='middle' font-size='30' fill='%234d9df0'%3E%E2%99%9E%3C/text%3E%3C/svg%3E">
+<script>
+/*
+ * The theme, before anything paints. main.js runs far too late — a user on Wood would
+ * see a frame of Analysis first. These lines duplicate the storage key and the theme
+ * list on purpose (state.js has the other copies); if they throw, :root's default stands.
+ */
+try {
+  var st = JSON.parse(localStorage.getItem('chessReaderSettings') || '{}');
+  var t = st.theme;
+  if (t === 'wood' || t === 'green' || t === 'midnight' || t === 'analysis') document.documentElement.dataset.theme = t;
+} catch (e) { /* the default is already on :root */ }
+</script>
+<link rel="stylesheet" href="./css/tokens.css">
+<link rel="stylesheet" href="./css/layout.css">
+<link rel="stylesheet" href="./css/components.css">
+<link rel="stylesheet" href="./css/home.css">
+<link rel="stylesheet" href="./css/sources.css">
+<link rel="stylesheet" href="./css/engine.css">
+<link rel="stylesheet" href="./css/review.css">
+<link rel="stylesheet" href="./css/insights.css">
+<link rel="stylesheet" href="./css/deck.css">
+<link rel="stylesheet" href="./css/learn.css">
+<link rel="stylesheet" href="./css/prep.css">
+</head>
+<body>
+
+<p id="too-narrow">ChessReader is a desktop app: make the window at least 1100 pixels wide and it will appear.</p>
+
+<div id="app">
+  <aside class="rail" id="site-rail">
+    <a class="brand" href="#/" title="Home">
+      <span class="brand-mark" aria-hidden="true">&#9822;&#xFE0E;</span>
+      <h1>Chess<span>Reader</span></h1>
+    </a>
+    <nav class="site-nav" id="site-nav" aria-label="Rooms">
+      <a class="nav-link" href="#/" data-room="home">
+        <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5.5 9.5V20h13V9.5"/></svg>
+        <span class="nav-label">Home</span><span class="nav-badge" id="badge-home"></span>
+      </a>
+      <a class="nav-link" href="#/learn" data-room="learn">
+        <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 6.6C10.4 5.1 7.9 4.6 4 4.8v13.4c3.9-.2 6.4.3 8 1.8 1.6-1.5 4.1-2 8-1.8V4.8c-3.9-.2-6.4.3-8 1.8Z"/><path d="M12 6.6v13.4"/></svg>
+        <span class="nav-label">Learn</span><span class="nav-badge" id="badge-learn"></span>
+      </a>
+      <a class="nav-link" href="#/insights" data-room="insights">
+        <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V11"/><path d="M10 20V4"/><path d="M16 20v-6"/><path d="M21 20H3"/></svg>
+        <span class="nav-label">Insights</span>
+      </a>
+      <a class="nav-link" href="#/prep" data-room="prep">
+        <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.6"/><path d="M5 20c0-3.6 3.1-5.6 7-5.6s7 2 7 5.6"/></svg>
+        <span class="nav-label">Prep</span><span class="nav-badge" id="badge-prep"></span>
+      </a>
+      <a class="nav-link" href="#/play" data-room="play">
+        <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 0 1 16 0"/><path d="M4 12v5a2 2 0 0 0 2 2h1v-7H4Z"/><path d="M20 12v5a2 2 0 0 1-2 2h-1v-7h3Z"/></svg>
+        <span class="nav-label">Listen</span><span class="nav-badge" id="badge-play"></span>
+      </a>
+    </nav>
+    <div class="rail-foot">
+      <button class="btn btn-primary" id="btn-import" type="button">Import games</button>
+      <button class="btn btn-ghost" id="btn-settings" type="button" aria-label="Settings">⚙︎ Settings</button>
+      <button class="btn btn-ghost" id="btn-keys" type="button" aria-label="Keyboard map"><kbd>?</kbd> Keys</button>
+      <p class="rail-status" id="rail-status"></p>
+    </div>
+  </aside>
+
+  <main id="room">
+    <div class="room-inner">
+      <div id="sweep-bar" class="hidden" role="status"></div>
+
+      <!-- The board pair: one board serves every room. Board left, the score and the
+           board's own bar right, nothing else horizontal. -->
+      <section class="hidden" id="board-pair" aria-label="Board">
+        <div id="stage">
+          <p class="stage-caption" id="stage-caption"></p>
+          <div id="board-wrap">
+            <!-- A sibling of the board, not a child: the board is rebuilt with innerHTML on every ply. -->
+            <div id="eval-bar" class="hidden" aria-hidden="true"><div id="eval-fill"></div></div>
+            <div id="board-stack">
+              <div id="chess-board" role="img" aria-label="Chess position"></div>
+              <svg id="board-overlay" viewBox="0 0 8 8" aria-hidden="true"></svg>
+            </div>
+          </div>
+          <p class="stage-legend" aria-hidden="true">
+            <span class="stage-legend-best">green: what the engine plays here</span>
+            <span class="stage-legend-missed">amber: what it wanted instead</span>
+          </p>
+        </div>
+        <div id="board-side">
+          <section class="panel" id="notation-section">
+            <header class="panel-head">
+              <h2>Score</h2>
+              <div class="turn-strip" id="turn-strip"></div>
+              <div class="tools" id="notation-tools"></div>
+            </header>
+            <div class="panel-body"><div id="move-tree" aria-label="Moves"></div></div>
+          </section>
+          <div id="board-bar">
+            <div id="now-playing">
+              <span id="game-label"></span>
+              <span id="players-label"></span>
+              <span id="move-label"></span>
+            </div>
+            <p id="spoken-text" class="spoken" aria-live="polite"></p>
+            <div class="transport" role="toolbar" aria-label="Transport">
+              <button class="btn" id="btn-prev-game" type="button" aria-label="Previous game">⏮︎</button>
+              <button class="btn" id="btn-restart" type="button" aria-label="Start">⏹︎</button>
+              <button class="btn" id="btn-prev-move" type="button" aria-label="Previous move">◀︎</button>
+              <button class="btn btn-primary" id="btn-play" type="button" aria-label="Play">▶︎</button>
+              <button class="btn" id="btn-next-move" type="button" aria-label="Next move">▶︎▶︎</button>
+              <button class="btn" id="btn-next-game" type="button" aria-label="Next game">⏭︎</button>
+              <button class="btn" id="btn-flip" type="button" aria-label="Flip board">⇅ Flip</button>
+              <button class="btn hidden" id="btn-analyse" type="button">Analyse</button>
+              <span id="analysis-tools" class="tools"></span>
+            </div>
+            <div class="scrub" id="scrub">
+              <input type="range" id="ply-slider" min="0" max="0" value="0" aria-label="Move">
+              <span class="count" id="ply-count"></span>
+            </div>
+            <div class="scrub-marks" id="scrub-marks" aria-hidden="true"></div>
+            <p class="analysis-status" id="analysis-status"></p>
+          </div>
+        </div>
+      </section>
+
+      <div id="views">
+        <section class="view" id="view-home"><div id="home-body"></div></section>
+
+        <section class="view" id="view-learn">
+          <div class="tabs" id="learn-tabs">
+            <button class="tab" data-sect="openings" type="button">Openings</button>
+            <button class="tab" data-sect="tactics" type="button">Tactics</button>
+            <button class="tab" data-sect="drills" type="button">Drills</button>
+          </div>
+          <div id="learn-body"></div>
+        </section>
+
+        <section class="view" id="view-insights"><div id="insights-body"></div></section>
+
+        <section class="view" id="view-prep"><div id="prep-body"></div></section>
+
+        <section class="view" id="view-play">
+          <div class="cards">
+            <section class="panel" id="queue-section">
+              <header class="panel-head"><h2>Up next</h2><div class="tools" id="queue-tools"></div></header>
+              <div class="panel-body"><div class="queue" id="queue-list"></div></div>
+            </section>
+            <section class="panel" id="reading-section">
+              <header class="panel-head"><h2>Reading</h2><span class="muted" id="voice-chip"></span></header>
+              <div class="panel-body">
+                <div class="field-row">
+                  <label>Moves are read
+                    <select id="set-verbosity"><option value="full">In full — “White knight from g1 to f3.”</option><option value="natural">Naturally — “Knight f3.”</option><option value="short">As notation — “Nf3”</option></select>
+                  </label>
+                  <label>Pause between moves
+                    <select id="set-interval"><option value="1000">1 second</option><option value="2000">2 seconds</option><option value="3000">3 seconds</option><option value="5000">5 seconds</option><option value="8000">8 seconds</option></select>
+                  </label>
+                  <label>Repeat
+                    <select id="set-repeat"><option value="off">Off</option><option value="game">This game</option><option value="queue">The queue</option></select>
+                  </label>
+                </div>
+                <label class="switch"><input type="checkbox" id="set-black-pause"> Longer pause after Black’s move</label>
+                <label class="switch"><input type="checkbox" id="set-announce"> Announce the players and the result</label>
+              </div>
+            </section>
+            <div id="review-mount"></div>
+            <div id="analysis-mount"></div>
+            <div id="explain-mount"></div>
+            <section class="panel" id="drill-section"><header class="panel-head"><h2>Drill</h2></header><div class="panel-body" id="drill-body"><p class="hint">Choose a drill in Learn → Drills and it runs here, beside the board.</p></div></section>
+          </div>
+        </section>
+
+        <!-- Settings: a child of the view container, not of any one view. -->
+        <section class="view hidden" id="view-settings">
+          <section class="panel"><header class="panel-head"><h2>Appearance</h2></header>
+            <div class="panel-body">
+              <div class="theme-group" id="theme-mount" role="group" aria-label="Theme"></div>
+              <label class="switch"><input type="checkbox" id="set-coords"> Rank and file letters on the board</label>
+            </div>
+          </section>
+          <section class="panel"><header class="panel-head"><h2>Your accounts</h2></header>
+            <div class="panel-body">
+              <p class="hint">Public usernames only. The browser asks the site directly; nothing is signed in to.</p>
+              <div class="field-row">
+                <label>Chess.com username <input type="text" id="set-chesscom" autocomplete="off"></label>
+                <label>Lichess username <input type="text" id="set-lichess" autocomplete="off"></label>
+              </div>
+            </div>
+          </section>
+          <section class="panel"><header class="panel-head"><h2>Reading</h2></header>
+            <div class="panel-body">
+              <p class="hint">Move phrases are a closed vocabulary and are read freely. Unique text — a finding, a card, a briefing — is a Speak button, and by default those buttons live only in Listen.</p>
+              <label class="switch"><input type="checkbox" id="set-speak-everywhere"> Speak buttons in every room</label>
+            </div>
+          </section>
+          <section class="panel" id="settings-memory"><header class="panel-head"><h2>Memory</h2></header>
+            <div class="panel-body">
+              <label class="switch"><input type="checkbox" id="set-remember"> Keep my games on this device</label>
+              <p class="hint" id="mem-usage"></p>
+              <div class="field-row">
+                <button class="btn btn-danger" id="btn-erase" type="button">Erase everything on this device</button>
+                <button class="btn" id="btn-export" type="button">Export everything</button>
+                <label class="btn">Import a backup<input type="file" id="file-import" accept="application/json,.json" hidden></label>
+              </div>
+            </div>
+          </section>
+          <section class="panel" id="settings-engine"><header class="panel-head"><h2>Engine</h2></header>
+            <div class="panel-body">
+              <p class="hint">Stockfish runs in this browser by default; the 7 MB is fetched the first time you press Analyse. Point a remote engine here and the long jobs can run elsewhere — see docs/engine.md for the two transports and the reference server.</p>
+              <label>Which engine answers
+                <select id="set-engine-mode"><option value="local">Local only</option><option value="remote">Remote only</option><option value="split">Remote for the archive sweep, local for questions</option></select>
+              </label>
+              <div class="field-row">
+                <label>Remote engine URL <input type="url" id="set-engine-url" placeholder="http://spare-machine:8020 or ws://…"></label>
+                <label>Bearer token (optional) <input type="password" id="set-engine-token" autocomplete="off"></label>
+                <button class="btn" id="btn-engine-test" type="button">Test</button>
+              </div>
+              <p class="hint" id="engine-test-result"></p>
+              <label>Archive sweep pace <select id="set-sweep-pace"></select></label>
+              <div id="sweep-settings"></div>
+            </div>
+          </section>
+          <section class="panel" id="settings-ai"><header class="panel-head"><h2>AI provider</h2></header>
+            <div class="panel-body">
+              <p class="hint">One block serving both the voice and the “Why?” explanations. Any OpenAI-compatible server works: OpenAI itself, a local LM Studio or Ollama, OpenRouter, your own proxy. The browser calls it directly, so the endpoint has to allow that (CORS) — the README has a four-line proxy for the ones that do not.</p>
+              <div class="field-row">
+                <label>Base URL <input type="url" id="set-ai-base"></label>
+                <label>API key <input type="password" id="set-ai-key" autocomplete="off"></label>
+              </div>
+              <p class="hint">The key is stored in this browser’s localStorage, in plain text, and is sent only to the base URL above.</p>
+              <div class="field-row">
+                <label>Voice <select id="set-tts-backend"><option value="browser">Browser voice (no setup)</option><option value="api">Configured API voice</option></select></label>
+                <label>Speech model <input type="text" id="set-ai-speech-model"></label>
+                <label>Voice name <input type="text" id="set-ai-voice" list="ai-voices"></label>
+                <datalist id="ai-voices"><option value="alloy"><option value="ash"><option value="ballad"><option value="coral"><option value="echo"><option value="fable"><option value="nova"><option value="onyx"><option value="sage"><option value="shimmer"></datalist>
+                <label>Chat model (for “Why?”) <input type="text" id="set-ai-chat-model"></label>
+              </div>
+              <div class="field-row"><button class="btn" id="btn-ai-test" type="button">Test the connection</button><p class="hint" id="ai-test-result"></p></div>
+            </div>
+          </section>
+          <section class="panel" id="settings-sync"><header class="panel-head"><h2>Sync (optional)</h2></header>
+            <div class="panel-body">
+              <p class="hint">Off by default; the app is complete without it. A self-hosted server that stores five blobs — see docs/sync.md for the contract and the reference server.</p>
+              <label class="switch"><input type="checkbox" id="set-sync-on"> Sync my deck, tactics, book and games</label>
+              <div class="field-row">
+                <label>Server URL <input type="url" id="set-sync-url"></label>
+                <label>Token <input type="password" id="set-sync-token" autocomplete="off"></label>
+                <button class="btn" id="btn-sync-now" type="button">Sync now</button>
+              </div>
+              <p class="hint" id="sync-status"></p>
+            </div>
+          </section>
+          <section class="panel"><header class="panel-head"><h2>About</h2></header>
+            <div class="panel-body about">
+              <p class="hint">ChessReader is free software under the GNU GPL v3. Everything is computed in this browser; nothing leaves it unless you configure an endpoint above.</p>
+              <p class="hint">Engine: Stockfish 17.1 (GPL v3). Rules: chess.js. Pieces: the Cburnett set by Colin M.L. Burnett, CC BY-SA 3.0. Opening names: the Lichess chess-openings database.</p>
+            </div>
+          </section>
+        </section>
+      </div>
+    </div>
+  </main>
+</div>
+
+<!-- Importing is a dialog over whichever room you are in: not a place you can be. -->
+<dialog id="dlg-import" aria-labelledby="dlg-import-title">
+  <h2 id="dlg-import-title">Import games</h2>
+  <div class="tabs" id="import-tabs">
+    <button class="tab active" data-tab="paste" type="button">Paste</button>
+    <button class="tab" data-tab="url" type="button">URL</button>
+    <button class="tab" data-tab="chesscom" type="button">Chess.com</button>
+    <button class="tab" data-tab="lichess" type="button">Lichess</button>
+  </div>
+  <div class="dialog-body">
+    <div data-pane="paste" class="dialog-body">
+      <textarea id="pgn-text" rows="10" placeholder="[Event &quot;…&quot;]&#10;1. e4 e5 2. Nf3 …" aria-label="PGN text"></textarea>
+      <div class="field-row">
+        <button class="btn btn-primary" id="btn-paste-load" type="button">Read these games</button>
+        <label class="btn">Open a .pgn file<input type="file" id="pgn-file" accept=".pgn,text/plain" hidden></label>
+      </div>
+    </div>
+    <div data-pane="url" class="dialog-body hidden" id="pane-url"></div>
+    <div data-pane="chesscom" class="dialog-body hidden" id="pane-chesscom"></div>
+    <div data-pane="lichess" class="dialog-body hidden" id="pane-lichess"></div>
+    <div id="source-browser" class="hidden"></div>
+  </div>
+  <div class="dialog-foot"><button class="btn btn-ghost" id="dlg-import-close" type="button">Close</button></div>
+</dialog>
+
+<dialog id="dlg-keys" aria-labelledby="dlg-keys-title">
+  <h2 id="dlg-keys-title">Keyboard</h2>
+  <div class="keymap"></div>
+  <div class="dialog-foot"><button class="btn btn-ghost" id="dlg-keys-close" type="button">Close</button></div>
+</dialog>
+
+<div id="toast" class="hidden" role="status" aria-live="polite">
+  <span id="toast-text"></span>
+  <button class="btn btn-sm hidden" id="toast-action" type="button"></button>
+  <button class="btn btn-sm btn-ghost" id="toast-close" type="button" aria-label="Dismiss">✕</button>
+</div>
+
+<!-- A dialog rather than a div, so it sits in the top layer above the import dialog. -->
+<dialog id="loading" aria-live="polite">
+  <div class="card"><p id="loading-text"></p><div class="progress"><i id="loading-bar"></i></div></div>
+</dialog>
+
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>

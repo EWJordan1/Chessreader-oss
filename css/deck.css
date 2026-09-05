@@ -1,0 +1,18 @@
+/* deck — styles for this module only. Tokens come from tokens.css; never a raw colour. */
+
+/*
+ * The card is a question about a position, and the position is on the stage — so the
+ * card itself is prose with a row of controls under it, not a second board.
+ */
+.deck-card { display: flex; flex-direction: column; gap: var(--sp-8); min-width: 0; }
+.deck-card p { margin: 0; }
+.deck-card .card-label { font-family: var(--font-sans); font-size: var(--fs-xs); color: var(--text-muted); text-transform: uppercase; letter-spacing: .04em; }
+/* What the app says: the question and the verdict carry the serif. */
+.deck-card .card-question, .deck-card .card-answer { font-family: var(--font-serif); font-size: var(--fs-lg); color: var(--text-bright); line-height: 1.45; }
+.deck-card .card-evals { font-family: var(--font-sans); font-size: var(--fs-sm); color: var(--text-muted); }
+.deck-card .card-evals .num { color: var(--text); }
+.deck-card .card-why:empty { display: none; }
+.deck-card .card-actions { display: flex; gap: var(--sp-8); flex-wrap: wrap; align-items: center; padding-top: var(--sp-4); }
+/* The grade buttons read as a pair: the pass leads, the miss is quieter. */
+.deck-card [data-grade="fail"] { border-color: var(--warn); color: var(--warn); }
+.deck-card [data-grade="fail"]:hover { background: var(--warn); color: var(--bg); }

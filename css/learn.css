@@ -1,0 +1,203 @@
+/*
+ * learn — the shelf, the lesson walker, the editor, the book list, the tactics table
+ * and the drill prompt. Every colour is a token from tokens.css; never a raw hex.
+ *
+ * Two rules from the contract run through the whole file:
+ *  · the serif says, the sans operates. Nothing here declares a font-family except
+ *    where a textarea has to be monospaced to show a PGN honestly — the prose classes
+ *    (.hint, .empty, .prose, .panel-head h2) already carry the serif from components.css.
+ *  · everything in the column beside the board must shrink in BOTH axes or it steals
+ *    the board's width. Hence `min-width: 0` throughout and `overflow-x: auto` on the
+ *    two genuinely wide things: a long move run and the tactics table.
+ */
+
+/* ===== The book ===== */
+
+.book-color {
+  font-size: var(--fs-2xs); text-transform: uppercase; letter-spacing: .06em;
+  color: var(--text-muted); margin: var(--sp-8) 0 0;
+}
+.book-color .count { color: var(--text); margin-left: var(--sp-4); }
+
+.book-table { width: 100%; border-collapse: collapse; font-size: var(--fs-sm); }
+.book-table td { padding: var(--sp-6) var(--sp-8); border-bottom: 1px solid var(--hairline); vertical-align: baseline; }
+.book-table tr:hover td { background: var(--surface2); }
+.book-name { color: var(--text-bright); min-width: 0; }
+/* The line itself is data and can be long; it scrolls inside its own cell rather than
+   widening the table and pushing the board. */
+.book-line { max-width: 40ch; overflow-x: auto; }
+.book-line .book-run { display: block; white-space: nowrap; }
+.book-due { color: var(--text-muted); white-space: nowrap; font-variant-numeric: tabular-nums; }
+.book-due.due { color: var(--primary); }
+.book-tools { white-space: nowrap; text-align: right; }
+
+/* ===== The lesson shelf ===== */
+
+.shelf-group { display: flex; flex-direction: column; gap: var(--sp-6); min-width: 0; }
+.shelf-group h3 { font-size: var(--fs-md); color: var(--text-bright); margin: var(--sp-8) 0 0; }
+.shelf-group .hint { max-width: var(--measure); }
+.shelf-rows { display: flex; flex-direction: column; gap: var(--sp-6); min-width: 0; }
+
+.shelf-label {
+  font-size: var(--fs-2xs); text-transform: uppercase; letter-spacing: .06em;
+  color: var(--text-muted); margin: var(--sp-12) 0 var(--sp-4);
+}
+
+/* A row is a button: the whole thing is the press, so the name, the sentence and the
+   ECO are one target rather than a link hidden inside a paragraph. */
+.shelf-row {
+  display: grid; grid-template-columns: minmax(0, 14rem) minmax(0, 1fr) auto;
+  align-items: baseline; gap: var(--sp-12); text-align: left; min-width: 0;
+  padding: var(--sp-8) var(--sp-12);
+  background: var(--surface2); border: 1px solid var(--border);
+  border-radius: var(--radius-sm); cursor: pointer;
+}
+.shelf-row:hover { background: var(--surface3); border-color: var(--border-hi); }
+.shelf-name { color: var(--text-bright); font-weight: 600; min-width: 0; }
+.shelf-blurb { color: var(--text-muted); font-size: var(--fs-sm); min-width: 0; }
+.shelf-meta { color: var(--text-muted); font-size: var(--fs-xs); white-space: nowrap; }
+/* The authored lesson standing on its family's shelf, marked so the reader can tell
+   what we wrote from what the library merely lists. */
+.shelf-row.guided { grid-template-columns: minmax(0, 1fr); border-left: 2px solid var(--primary); }
+.pill, .in-book {
+  display: inline-block; font-size: var(--fs-2xs); line-height: 18px; padding: 0 var(--sp-8);
+  border-radius: var(--radius-pill); border: 1px solid var(--border-hi); color: var(--text-muted);
+  white-space: nowrap;
+}
+.pill { border-color: var(--primary); color: var(--primary); }
+.eco { font-variant-numeric: tabular-nums; letter-spacing: .02em; }
+
+/* ===== The library ===== */
+
+.fam-row {
+  display: grid; grid-template-columns: minmax(0, 1fr) auto auto; align-items: baseline;
+  gap: var(--sp-12); width: 100%; text-align: left; min-width: 0;
+  padding: var(--sp-6) var(--sp-12); background: none; border: 0;
+  border-bottom: 1px solid var(--hairline); cursor: pointer; color: var(--text);
+}
+.fam-row:hover { background: var(--surface2); }
+.fam-row.open { background: var(--surface2); color: var(--text-bright); }
+.fam-name { min-width: 0; }
+.fam-count { font-size: var(--fs-xs); color: var(--primary); white-space: nowrap; }
+.fam-eco { font-size: var(--fs-xs); color: var(--text-muted); white-space: nowrap; }
+
+.fam-lines {
+  display: flex; flex-direction: column; gap: var(--sp-4); min-width: 0;
+  padding: var(--sp-8) 0 var(--sp-12) var(--sp-12);
+  border-left: 2px solid var(--border); margin-bottom: var(--sp-8);
+}
+.lib-line {
+  display: grid; grid-template-columns: minmax(0, 16rem) minmax(0, 1fr) auto;
+  align-items: baseline; gap: var(--sp-12); min-width: 0;
+  padding: var(--sp-4) var(--sp-8); border-radius: var(--radius-xs);
+}
+.lib-line:hover { background: var(--surface2); }
+.lib-line-name { color: var(--text); font-size: var(--fs-sm); min-width: 0; }
+.lib-line .book-run { display: block; overflow-x: auto; white-space: nowrap; }
+.lib-line-tools { white-space: nowrap; text-align: right; }
+.in-book { color: var(--good); border-color: var(--good); }
+
+/* ===== The lesson walker ===== */
+
+.lesson .panel-head > div:first-child { min-width: 0; }
+.lesson-note { max-width: var(--measure); }
+.lesson-nav { display: flex; align-items: center; gap: var(--sp-12); flex-wrap: wrap; }
+.lesson-nav .count { color: var(--text-muted); font-size: var(--fs-sm); }
+.lesson-offers {
+  display: flex; flex-direction: column; gap: var(--sp-8); min-width: 0;
+  padding-top: var(--sp-12); border-top: 1px solid var(--hairline);
+}
+.lesson-offers h3 { font-size: var(--fs-md); color: var(--text-bright); margin: var(--sp-8) 0 0; }
+
+/* ===== The editor ===== */
+
+#learn-editor .hint { max-width: var(--measure); }
+.ed-run {
+  padding: var(--sp-8) var(--sp-12); border-radius: var(--radius-sm);
+  background: var(--surface2); border: 1px solid var(--border);
+  overflow-x: auto; white-space: nowrap; min-height: calc(var(--fs-base) + var(--sp-16));
+}
+.ed-msg { color: var(--warn); }
+/* Every legal move as a button: authoring is playing, and this is the board's second
+   input. It is a long list by nature, so it scrolls itself rather than the room. */
+.legal { display: flex; flex-wrap: wrap; gap: var(--sp-4); align-items: baseline; max-height: 128px; overflow-y: auto; }
+.legal .btn { padding: 0 var(--sp-6); }
+
+/* ===== Bringing lines in ===== */
+
+#learn-import textarea {
+  width: 100%; min-width: 0; resize: vertical; min-height: 140px;
+  font-family: var(--font-mono); font-size: var(--fs-sm);
+  background: var(--surface); color: var(--text);
+  border: 1px solid var(--border-hi); border-radius: var(--radius-xs); padding: var(--sp-8);
+}
+#learn-import .err { color: var(--danger); }
+
+/* ===== Tactics ===== */
+
+/* Five columns of data next to a board: wide by nature, so the body scrolls sideways
+   and the pair keeps its width. */
+#learn-tactics .panel-body { overflow-x: auto; }
+.tactics-table { width: 100%; border-collapse: collapse; font-size: var(--fs-sm); min-width: 420px; }
+.tactics-table th {
+  text-align: left; font-size: var(--fs-2xs); text-transform: uppercase; letter-spacing: .04em;
+  color: var(--text-muted); font-weight: 600;
+  padding: var(--sp-6) var(--sp-8); border-bottom: 1px solid var(--border);
+}
+.tactics-table td { padding: var(--sp-6) var(--sp-8); border-bottom: 1px solid var(--hairline); }
+.tactics-table th.num, .tactics-table td.num { text-align: right; }
+.tactics-table tr.clickable { cursor: pointer; }
+.tactics-table tr.clickable:hover td { background: var(--surface2); }
+.tactics-table tr.current td { background: var(--surface3); color: var(--text-bright); }
+
+/* ===== Drills: choosing (Learn) ===== */
+
+.drill-card { min-width: 0; }
+.drill-card h3 { font-size: var(--fs-md); color: var(--text-bright); margin: 0; }
+.drill-card .stat { font-size: var(--fs-3xl); color: var(--text-bright); line-height: 1.1; }
+.drill-card .btn { align-self: start; margin-top: auto; }
+
+/* ===== Drills: being asked (Listen's #drill-body) ===== */
+
+#drill-body { min-width: 0; }
+.drill-head {
+  display: flex; align-items: center; gap: var(--sp-12); min-width: 0;
+  padding-bottom: var(--sp-8); border-bottom: 1px solid var(--hairline);
+}
+.drill-title { font-size: var(--fs-md); color: var(--text-bright); margin: 0; flex: 1; min-width: 0; }
+.drill-head .num { color: var(--text); }
+
+/* The pips are the only progress this panel shows. No percentage: five questions have
+   no meaningful percentage, and pips are countable at a glance. */
+.drill-pips, .drill-plies { display: inline-flex; gap: var(--sp-4); align-items: center; flex-wrap: wrap; }
+.pip {
+  width: 8px; height: 8px; border-radius: 50%; display: inline-block; flex: none;
+  background: var(--surface3); border: 1px solid var(--border-hi);
+}
+.pip.done { background: var(--good); border-color: var(--good); }
+.pip.bad { background: var(--danger); border-color: var(--danger); }
+.pip.now { background: var(--primary); border-color: var(--primary); }
+
+.drill-card-wrap, .drill-line { display: flex; flex-direction: column; gap: var(--sp-8); min-width: 0; }
+.drill-line .card-label {
+  font-size: var(--fs-xs); color: var(--text-muted);
+  text-transform: uppercase; letter-spacing: .04em;
+}
+.drill-line .card-question { font-family: var(--font-serif); font-size: var(--fs-lg); color: var(--text-bright); }
+
+.drill-answer { display: flex; gap: var(--sp-8); align-items: center; min-width: 0; }
+.drill-input {
+  flex: 1; min-width: 0; height: var(--control-h); padding: 0 var(--sp-8);
+  background: var(--surface); color: var(--text-bright);
+  border: 1px solid var(--border-hi); border-radius: var(--radius-xs);
+}
+.drill-input:focus-visible { outline: 2px solid var(--primary); outline-offset: -1px; }
+
+/* The verdict, and its three colours are the three verdicts: right, legal-but-not-it,
+   and nothing at all. */
+.drill-msg { font-size: var(--fs-sm); color: var(--text-muted); min-height: 1.2em; }
+.drill-msg.good { color: var(--good); }
+.drill-msg.warn { color: var(--warn); }
+
+.drill-aside { display: flex; gap: var(--sp-8); align-items: center; flex-wrap: wrap; }
+.drill-done { display: flex; flex-direction: column; gap: var(--sp-12); align-items: start; }

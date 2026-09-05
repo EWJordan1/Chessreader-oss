@@ -1,0 +1,18 @@
+{
+  "name": "chessreader-engine-server",
+  "version": "0.1.0",
+  "description": "Reference remote engine for ChessReader: HTTP and WebSocket over a native Stockfish.",
+  "license": "GPL-3.0-only",
+  "private": true,
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "ws": "^8.21.3"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

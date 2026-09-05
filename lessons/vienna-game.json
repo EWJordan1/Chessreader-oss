@@ -1,0 +1,91 @@
+{
+  "id": "vienna-game",
+  "name": "The Vienna Game",
+  "color": "w",
+  "eco": "C25",
+  "blurb": "Knight before bishop, so that f4 comes with a pawn behind it: the King's Gambit with the risk taken out.",
+  "steps": [
+    {
+      "moves": ["e4", "e5"],
+      "note": "1.e4 e5. The open game, and the point at which almost everyone plays 2.Nf3. The Vienna is the argument that the knight is better on the other side of the board first."
+    },
+    {
+      "moves": ["e4", "e5", "Nc3"],
+      "note": "2.Nc3 is the Vienna Game. It develops, defends e4, and — the real reason — keeps the f-pawn free to advance. The King's Gambit plays f4 on move two with nothing behind it; the Vienna prepares the same push with a knight already covering e4 and d5, and that one difference removes most of the gambit's danger while keeping its energy."
+    },
+    {
+      "moves": ["e4", "e5", "Nc3", "Nf6"],
+      "note": "2...Nf6 is the most natural reply: develop and attack e4. It is also the reply that lets White show the opening's real idea, which is why it is the road this lesson takes first."
+    },
+    {
+      "moves": ["e4", "e5", "Nc3", "Nf6", "f4"],
+      "note": "3.f4 is the Vienna Gambit. The pawn attacks e5, and unlike the King's Gambit proper, taking it is a mistake: after 3...exf4 4.e5 the knight on f6 has to move, and White gets the centre and the initiative for a pawn that will be won back. Black's correct answer is the counter-strike in the centre."
+    },
+    {
+      "moves": ["e4", "e5", "Nc3", "Nf6", "f4", "d5"],
+      "note": "3...d5 is the only good move, and it is a lesson in itself: when your opponent attacks on the wing, hit back in the centre. Black ignores the f-pawn entirely and attacks e4, which is defended once and about to be attacked twice."
+    },
+    {
+      "moves": ["e4", "e5", "Nc3", "Nf6", "f4", "d5", "fxe5"],
+      "note": "4.fxe5 takes the pawn and hits the knight. White cannot hold e4 anyway, so the pawn goes forward and does some work on the way."
+    },
+    {
+      "moves": ["e4", "e5", "Nc3", "Nf6", "f4", "d5", "fxe5", "Nxe4"],
+      "note": "4...Nxe4. The knight takes the pawn rather than retreating, and now sits in the middle of White's position, defended by the d5 pawn. Material is level and the centre is open. What White has is the pawn on e5, which cramps Black's kingside, and the half-open f-file pointing at f7 once White castles."
+    },
+    {
+      "moves": ["e4", "e5", "Nc3", "Nf6", "f4", "d5", "fxe5", "Nxe4", "Nf3"],
+      "note": "5.Nf3 develops, guards the e5 pawn and prepares to castle. The tempting 5.Qf3 — attacking the knight and f7 at once — is answered by 5...Nc6, when the knight is defended and the queen is in the way. Develop first."
+    },
+    {
+      "moves": ["e4", "e5", "Nc3", "Nf6", "f4", "d5", "fxe5", "Nxe4", "Nf3", "Be7"],
+      "note": "5...Be7 is the sound choice. The knight on e4 cannot be driven off yet, so Black simply gets ready to castle. The sharper 5...Bc5 and 5...Nc6 are also known, but this is what a careful opponent plays."
+    },
+    {
+      "moves": ["e4", "e5", "Nc3", "Nf6", "f4", "d5", "fxe5", "Nxe4", "Nf3", "Be7", "d4"],
+      "note": "6.d4 claims the centre and supports e5. Both bishops now have open diagonals, and the knight on e4 is starting to feel the absence of squares to retreat to."
+    },
+    {
+      "moves": ["e4", "e5", "Nc3", "Nf6", "f4", "d5", "fxe5", "Nxe4", "Nf3", "Be7", "d4", "O-O", "Bd3"],
+      "note": "6...O-O 7.Bd3 finally asks the knight to leave. It has no retreat square that is not a concession: back to f6 or g5 loses time, so Black usually supports it instead."
+    },
+    {
+      "moves": ["e4", "e5", "Nc3", "Nf6", "f4", "d5", "fxe5", "Nxe4", "Nf3", "Be7", "d4", "O-O", "Bd3", "f5"],
+      "note": "7...f5 is the main line, and it is the moment the Vienna Gambit resolves into a middlegame. Black props up the knight with a pawn; White takes en passant with exf6 to break it up, or castles and prepares to. The material is level, both kings are castled, and the fight is about whether White's centre or Black's active knight counts for more. A gambit that ends with the material back and the initiative kept — that is what the Vienna promises, and it usually delivers."
+    },
+    {
+      "moves": ["e4", "e5", "Nc3", "Nf6", "g3"],
+      "note": "Back to move three for the quiet Vienna. 3.g3 plans a fianchetto, and it is what Vienna players choose when they would rather have a good position than a sharp one. The bishop on g2 will look down the long diagonal at Black's queenside."
+    },
+    {
+      "moves": ["e4", "e5", "Nc3", "Nf6", "g3", "d5"],
+      "note": "3...d5 is the freeing move again. Because White has not attacked e5, Black has time for it, and the exchange that follows opens the centre before the bishop has arrived on g2."
+    },
+    {
+      "moves": ["e4", "e5", "Nc3", "Nf6", "g3", "d5", "exd5", "Nxd5"],
+      "note": "4.exd5 Nxd5. White takes because holding e4 would mean a passive move; the knight recaptures and sits in the centre, where it is about to be tempted into a trade."
+    },
+    {
+      "moves": ["e4", "e5", "Nc3", "Nf6", "g3", "d5", "exd5", "Nxd5", "Bg2"],
+      "note": "5.Bg2 develops the bishop to the square the whole line was built for. It attacks the knight, and it will keep looking at b7 and the queenside for the rest of the game."
+    },
+    {
+      "moves": ["e4", "e5", "Nc3", "Nf6", "g3", "d5", "exd5", "Nxd5", "Bg2", "Nxc3", "bxc3"],
+      "note": "5...Nxc3 6.bxc3 is the Mieses Variation of the Vienna, and it is a trade White is happy with. The pawn on c3 looks like a weakness; it also supports d4, and the b-file is half open for the rook. White will play Nf3, O-O, d4 and Rb1, and Black has to prove that the doubled pawns matter more than White's open lines."
+    },
+    {
+      "moves": ["e4", "e5", "Nc3", "Nf6", "g3", "d5", "exd5", "Nxd5", "Bg2", "Nxc3", "bxc3", "Bd6"],
+      "note": "6...Bd6 keeps e5 protected and is the standard setup. From here both sides develop and castle, and the game is a normal one — which is exactly what the quiet Vienna is for. If you liked the gambit's energy but not its risk, play 3.f4; if you would rather have a plan than a fight, this is the line."
+    }
+  ],
+  "lines": [
+    {
+      "name": "Vienna Gambit",
+      "moves": ["e4", "e5", "Nc3", "Nf6", "f4", "d5", "fxe5", "Nxe4", "Nf3", "Be7", "d4", "O-O", "Bd3", "f5"]
+    },
+    {
+      "name": "Vienna Game, Mieses Variation",
+      "moves": ["e4", "e5", "Nc3", "Nf6", "g3", "d5", "exd5", "Nxd5", "Bg2", "Nxc3", "bxc3", "Bd6"]
+    }
+  ]
+}

@@ -1,0 +1,175 @@
+/*
+ * insights — styles for this module only. Tokens come from tokens.css; never a raw colour.
+ *
+ * Two decisions run through the whole file:
+ *
+ *  - The report is read top to bottom, so the panes are one column wide by default and
+ *    only the two narrow ones share a row. A record split into eight equal tiles is a
+ *    dashboard, and a dashboard is read as decoration.
+ *  - Every figure is a token, and the same three carry results everywhere: --good is a
+ *    win, --danger a loss, --text-muted a draw. The form strip, the score bars, the
+ *    result marks in the explorer and the tier chips in the pattern report all use that
+ *    one ramp, so a green in one card means the same thing as a green in another.
+ *
+ * Type follows the contract: sentences in the serif (.lede, .hint, caption, h2 — set in
+ * components.css), numbers and SAN in the sans. Where a number sits inside a sentence,
+ * or a data row is marked .hint for its colour, the sans is put back by name below.
+ */
+
+#insights-body { display: flex; flex-direction: column; gap: var(--sp-20); }
+
+/* ===== The header: who this is about, and the picker that overrides it ===== */
+.ins-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: var(--sp-8) var(--sp-16); }
+.ins-subject { font-size: var(--fs-2xl); color: var(--text-bright); }
+/* label is a column elsewhere; here it reads as one sentence with a control in it. */
+.ins-picker { flex-direction: row; align-items: center; gap: var(--sp-8); font-size: var(--fs-base); }
+.ins-picker select { height: var(--control-h-sm); max-width: 220px; }
+.ins-head .hint { flex-basis: 100%; max-width: var(--measure); }
+.ins-head .hint .num { font-family: var(--font-sans); color: var(--text-bright); }
+
+/* ===== The eight panes =====
+   Two columns, and everything spans both but Habits and Compare — the two whose tables
+   are narrow enough to sit side by side. */
+.ins-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; }
+.ins-pane { grid-column: 1 / -1; }
+.ins-habits, .ins-compare { grid-column: auto; }
+.ins-pane .panel-body { gap: var(--sp-16); }
+/* A pane's own controls: the explorer's Back, a pattern row's two doors. */
+.ins-pane .panel-body .tools { display: flex; gap: var(--sp-8); flex-wrap: wrap; align-items: center; }
+.ins-pane .panel-body .tools:empty { display: none; }
+.ins-pane .panel-head select { height: var(--control-h-sm); max-width: 200px; }
+
+/* The sentence at the top of a card, with its figures in the sans. */
+.ins-line { color: var(--text); max-width: var(--measure); }
+.ins-line .num { font-family: var(--font-sans); color: var(--text-bright); font-weight: 600; }
+/* The last line of every card: how many of the loaded games it counted. */
+.ins-note { font-size: var(--fs-sm); max-width: var(--measure); }
+.ins-note .num { font-family: var(--font-sans); }
+.ins-sub { font-size: var(--fs-xs); color: var(--text-muted); }
+
+/* ===== Tables: the record, the endings, the bands, the months =====
+   .panel-body.scroll-x already scrolls; cells are nowrap in components.css, so a table
+   too wide for the pane scrolls the body rather than squeezing the figures. */
+.ins-table { width: 100%; }
+.ins-table caption { font-size: var(--fs-sm); color: var(--text-muted); }
+.ins-table td:first-child, .ins-table th:first-child { color: var(--text); }
+.ins-table tbody tr:last-child td { border-bottom: 0; }
+.ins-table td.num { font-family: var(--font-sans); }
+/* Two ending tables side by side, each free to scroll inside its own column. */
+.ins-cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: var(--sp-16) var(--sp-24); }
+.ins-cols > table { min-width: 0; }
+
+/* Won–drawn–lost as one figure: the wins and the losses carry the colour, the dash and
+   the draws stay text, so a record reads as a shape before it reads as three numbers. */
+.wdl { white-space: nowrap; color: var(--text-muted); }
+.wdl .w { color: var(--good); }
+.wdl .l { color: var(--danger); }
+
+/* The score bar. A track that is always the same width, so two rows compare by eye. */
+.ins-bar { display: inline-block; vertical-align: middle; width: 72px; height: 6px; border-radius: var(--radius-pill); background: var(--surface3); overflow: hidden; }
+.ins-bar > i { display: block; height: 100%; background: var(--primary); }
+.ins-barcell { width: 80px; }
+
+/* ===== Charts: one construction, data across and a hundred down ===== */
+.ins-chartbox { display: flex; flex-direction: column; gap: var(--sp-6); }
+.ins-cap { font-size: var(--fs-xs); color: var(--text-muted); text-transform: uppercase; letter-spacing: .04em; }
+.ins-foot { display: flex; justify-content: space-between; gap: var(--sp-12); font-size: var(--fs-2xs); color: var(--text-muted); font-variant-numeric: tabular-nums; }
+.ins-chart { display: block; width: 100%; background: var(--surface2); border: 1px solid var(--border); border-radius: var(--radius-xs); }
+
+/* Form: one bar per game, oldest first. Thin enough that a run reads as a block. */
+.ins-strip { height: 44px; }
+.ins-strip .ins-w { fill: var(--good); }
+.ins-strip .ins-d { fill: var(--text-muted); }
+.ins-strip .ins-l { fill: var(--danger); }
+
+/* The clock's bands, and the hours of the day. The worst bar is the one being named in
+   the sentence above it, so it takes the warn hue and the rest recede. */
+.ins-bars { height: 96px; }
+.ins-bar-fill { fill: var(--primary); opacity: .5; }
+.ins-bar-hi { fill: var(--warn); opacity: 1; }
+
+/* The rolling score. The stroke is non-scaling because the viewBox is stretched to the
+   panel's width — without it the line thins out as the archive grows. */
+.ins-series { height: 120px; }
+.ins-series .ins-path { fill: none; stroke: var(--primary); stroke-width: 2; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
+.ins-series .ins-area { fill: var(--primary); opacity: .1; stroke: none; }
+.ins-series .ins-rule { stroke: var(--border-hi); stroke-width: 1; stroke-dasharray: 4 4; vector-effect: non-scaling-stroke; }
+
+/* ===== Compare ===== */
+.ins-compare th:first-child, .ins-compare td:first-child { color: var(--text-muted); }
+.ins-compare th.num { color: var(--text-bright); text-transform: none; letter-spacing: 0; font-size: var(--fs-sm); }
+.ins-compare td.num { font-family: var(--font-sans); color: var(--text); }
+
+/* ===== The opening explorer ===== */
+/* The breadcrumbs: Start, then the SAN of the path. moveRunHTML writes .san for each
+   move, so the crumb IS the SAN — one spelling of a move, everywhere. */
+.ins-path-row { display: flex; flex-wrap: wrap; align-items: center; gap: var(--sp-2); font-size: var(--fs-base); line-height: 1.8; }
+.ins-path-row .crumb, .ins-path-row .san {
+  padding: var(--sp-2) var(--sp-6); border-radius: var(--radius-xs); cursor: pointer; color: var(--text);
+}
+.ins-path-row .crumb:hover, .ins-path-row .san:hover { background: var(--surface2); color: var(--text-bright); }
+.ins-path-row .crumb:focus-visible, .ins-path-row .san:focus-visible { outline: 2px solid var(--primary); outline-offset: 1px; }
+.ins-path-row .crumb.current { color: var(--text-bright); background: var(--surface3); }
+.ins-path-row .crumb-num { padding-left: var(--sp-4); }
+
+/* The moves from here: a grid of doors, each one a move, a count, a bar and a score. */
+.ins-moves { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: var(--sp-6); }
+.ins-move {
+  display: grid; grid-template-columns: minmax(3.2em, auto) 1fr auto auto; align-items: center; gap: var(--sp-8);
+  background: var(--surface2); border: 1px solid var(--border); border-radius: var(--radius-sm);
+  padding: var(--sp-6) var(--sp-8); cursor: pointer; text-align: left; color: var(--text); min-width: 0;
+}
+.ins-move:hover { background: var(--surface3); border-color: var(--border-hi); }
+.ins-move:focus-visible { outline: 2px solid var(--primary); outline-offset: 1px; }
+.ins-move .san { color: var(--text-bright); }
+.ins-move .num { font-size: var(--fs-xs); white-space: nowrap; }
+.ins-move .ins-bar { width: 48px; }
+
+/* The games that reached this node. A row is a door when the report is about the
+   reader's own archive, and a flat row when Prep is pointing it at somebody else. */
+.ins-games { display: flex; flex-direction: column; gap: var(--sp-2); }
+.ins-games > .hint { font-size: var(--fs-sm); margin-bottom: var(--sp-4); }
+.ins-game {
+  display: grid; grid-template-columns: 1.2em minmax(0, 1fr) auto; align-items: center; gap: var(--sp-8);
+  background: none; border: 0; border-radius: var(--radius-xs); padding: var(--sp-4) var(--sp-6);
+  color: var(--text); font-size: var(--fs-sm); text-align: left; cursor: pointer; width: 100%;
+}
+.ins-game:hover { background: var(--surface2); color: var(--text-bright); }
+.ins-game:focus-visible { outline: 2px solid var(--primary); outline-offset: 1px; }
+.ins-game-flat { cursor: default; }
+.ins-game-flat:hover { background: none; color: var(--text); }
+.ins-opp { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+/* The result mark, in the same three colours the form strip uses. */
+.ins-res { font-weight: 700; font-variant-numeric: tabular-nums; }
+.ins-res-w { color: var(--good); }
+.ins-res-l { color: var(--danger); }
+.ins-res-d { color: var(--text-muted); }
+
+/* ===== The pattern report ===== */
+.ins-pat {
+  display: flex; flex-direction: column; gap: var(--sp-8);
+  background: var(--surface2); border: 1px solid var(--border); border-radius: var(--radius-sm);
+  padding: var(--sp-12) var(--sp-16);
+}
+.ins-pat + .ins-pat { margin-top: var(--sp-4); }
+.ins-pat-line { font-size: var(--fs-md); color: var(--text-bright); }
+.ins-pat-line .muted { font-size: var(--fs-sm); }
+.ins-san .crumb-num { padding-right: var(--sp-2); }
+.ins-pat .hint { font-size: var(--fs-sm); max-width: var(--measure); }
+.ins-pat .hint .num { font-family: var(--font-sans); color: var(--text-bright); }
+/* The tiers apart, on the review's ramp: an inaccuracy is muted, a blunder is danger. */
+.ins-tiers { display: flex; flex-wrap: wrap; gap: var(--sp-6); }
+.ins-tiers .chip { cursor: default; font-family: var(--font-sans); }
+.ins-tier-blunder { border-color: var(--danger); color: var(--danger); }
+.ins-tier-mistake { border-color: var(--warn); color: var(--warn); }
+.ins-tier-inaccuracy { color: var(--text-muted); }
+
+/* ===== What to work on =====
+   A row is advice, so it is set as prose with a rule down its edge rather than as a
+   card: eight cards of advice all shouting at once is the horoscope the floors exist
+   to prevent. The numbers under it are data and go back to the sans. */
+.ins-rec { display: flex; flex-direction: column; gap: var(--sp-6); border-left: 2px solid var(--primary); padding: var(--sp-2) 0 var(--sp-2) var(--sp-16); }
+.ins-rec + .ins-rec { margin-top: var(--sp-16); }
+.ins-rec .ins-line { color: var(--text-bright); font-size: var(--fs-md); }
+.ins-rec-nums { font-family: var(--font-sans); font-size: var(--fs-sm); color: var(--text-muted); }
+.ins-recs .ins-note { margin-top: var(--sp-12); }

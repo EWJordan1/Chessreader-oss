@@ -1,0 +1,40 @@
+/* sources — styles for this module only. Tokens come from tokens.css; never a raw colour. */
+
+/* ----- The three fetching panes: one field, one button, one sentence ----- */
+.src-form { display: flex; gap: var(--sp-12); align-items: end; }
+.src-form .src-field { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: var(--sp-4); font-size: var(--fs-sm); color: var(--text-muted); }
+.src-form .src-field input { width: 100%; }
+.src-status { min-height: 1.55em; margin: 0; }
+.src-status.src-err { color: var(--danger); }
+
+/* ----- The source browser ----- */
+#source-browser { display: flex; flex-direction: column; gap: var(--sp-12); margin-top: var(--sp-16); padding-top: var(--sp-16); border-top: 1px solid var(--border); font-family: var(--font-sans); }
+.src-bar { display: flex; justify-content: space-between; align-items: baseline; gap: var(--sp-12); }
+.src-title { color: var(--text-bright); font-weight: 600; }
+.src-meta, .src-count { color: var(--text-muted); font-size: var(--fs-sm); }
+
+.src-filters { display: flex; gap: var(--sp-12); align-items: end; }
+.src-filters label { display: flex; flex-direction: column; gap: var(--sp-4); font-size: var(--fs-xs); color: var(--text-muted); text-transform: uppercase; letter-spacing: .04em; }
+.src-filters .src-f-opp { flex: 1; min-width: 0; }
+.src-filters .src-f-opp input { width: 100%; }
+
+.src-actions { display: flex; gap: var(--sp-8); align-items: center; }
+.src-actions .src-count { margin-left: auto; }
+
+/* Rows are data (contract: sans, tabular numerals); the list scrolls inside the dialog
+   rather than growing it past the viewport. */
+.src-list { max-height: 44vh; overflow: auto; border: 1px solid var(--border); border-radius: var(--radius-sm); }
+.src-table th { position: sticky; top: 0; background: var(--surface2); color: var(--text-muted); font-weight: 500; font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: .04em; z-index: 1; }
+.src-table td, .src-table th { white-space: nowrap; }
+.src-table td.src-check, .src-table th.src-check { width: 28px; padding-right: 0; }
+.src-table input[type="checkbox"] { accent-color: var(--primary); margin: 0; vertical-align: middle; }
+.src-table tr:hover td { background: var(--surface2); }
+.src-rating { color: var(--text-muted); font-size: var(--fs-xs); }
+.src-reason { color: var(--text-muted); }
+.src-result { font-weight: 600; }
+.src-w .src-result { color: var(--good); }
+.src-l .src-result { color: var(--danger); }
+.src-d .src-result { color: var(--text-muted); }
+.src-list .empty { padding: var(--sp-16); margin: 0; }
+
+.src-table .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }

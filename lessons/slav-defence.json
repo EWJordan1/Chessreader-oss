@@ -1,0 +1,99 @@
+{
+  "id": "slav-defence",
+  "name": "The Slav Defence",
+  "color": "b",
+  "eco": "D10",
+  "blurb": "Decline the Queen's Gambit with 2...c6 instead of 2...e6, and keep the bishop the Declined gives up.",
+  "steps": [
+    {
+      "moves": ["d4", "d5"],
+      "note": "1.d4 d5. The closed game, and White's next move is the Queen's Gambit in nine games out of ten. Black's two ways to decline it differ by one square, and that square decides the fate of a bishop."
+    },
+    {
+      "moves": ["d4", "d5", "c4"],
+      "note": "2.c4 attacks d5 with a wing pawn. The classical answer, 2...e6, holds the pawn and shuts the c8 bishop behind it — the same problem the French has. The Slav holds the pawn from the other side."
+    },
+    {
+      "moves": ["d4", "d5", "c4", "c6"],
+      "note": "2...c6 is the Slav. The pawn supports d5, and the bishop on c8 still has its diagonal, which is the whole reason to prefer this move to 2...e6. The costs are real too: the c-pawn is no longer available for ...c5, the natural break against d4, and the knight on b8 has lost its best square. The Slav is the Caro-Kann of 1.d4 — same pawn, same bishop, same bargain."
+    },
+    {
+      "moves": ["d4", "d5", "c4", "c6", "Nf3"],
+      "note": "3.Nf3 develops and keeps every option. The other main move is 3.Nc3, and both usually reach the same position; the exchange on d5, which is the lesson's second road, can come at either moment."
+    },
+    {
+      "moves": ["d4", "d5", "c4", "c6", "Nf3", "Nf6"],
+      "note": "3...Nf6 develops toward the centre. Black is in no hurry to take on c4 — the pawn is not going anywhere — and wants White's knight on c3 first, so that the capture comes with a threat."
+    },
+    {
+      "moves": ["d4", "d5", "c4", "c6", "Nf3", "Nf6", "Nc3"],
+      "note": "4.Nc3 adds a second attacker on d5 and is the main line. It also puts the knight where ...dxc4 followed by ...b5 will hit it, which is exactly what Black was waiting for."
+    },
+    {
+      "moves": ["d4", "d5", "c4", "c6", "Nf3", "Nf6", "Nc3", "dxc4"],
+      "note": "4...dxc4 takes the pawn, and now the Slav's point is on the board: Black threatens ...b5 to keep it, supported by the c6 pawn, and White cannot win it back at leisure the way the Queen's Gambit Accepted allows. White has to deal with ...b5 first, and the move that does it is a concession."
+    },
+    {
+      "moves": ["d4", "d5", "c4", "c6", "Nf3", "Nf6", "Nc3", "dxc4", "a4"],
+      "note": "5.a4 stops ...b5, and it is the main line because nothing else does the job. The cost is the b4 square, which White's pawn can no longer cover, and Black will put a bishop on it before long. This one pawn move is the reason the Slav is respected: to get the pawn back, White has to weaken the queenside."
+    },
+    {
+      "moves": ["d4", "d5", "c4", "c6", "Nf3", "Nf6", "Nc3", "dxc4", "a4", "Bf5"],
+      "note": "5...Bf5 — the bishop comes out before ...e6, the move the whole opening was arranged to allow. It also covers e4, so that White cannot take the centre with e4 in one go. The pawn on c4 will be given back; what Black keeps is this bishop, outside the chain, forever."
+    },
+    {
+      "moves": ["d4", "d5", "c4", "c6", "Nf3", "Nf6", "Nc3", "dxc4", "a4", "Bf5", "e3"],
+      "note": "6.e3 opens the bishop's road to c4, where it will take the pawn back. The more ambitious 6.Ne5, heading for f3 and e4, is a serious alternative — but this is the main line and the one that leads to a position every Slav player should know."
+    },
+    {
+      "moves": ["d4", "d5", "c4", "c6", "Nf3", "Nf6", "Nc3", "dxc4", "a4", "Bf5", "e3", "e6"],
+      "note": "6...e6 — now, with the bishop already out, the pawn goes to e6 and the f8 bishop's diagonal opens. It also strengthens the f5 bishop's support and prepares the move Black has been building toward since a4 was played."
+    },
+    {
+      "moves": ["d4", "d5", "c4", "c6", "Nf3", "Nf6", "Nc3", "dxc4", "a4", "Bf5", "e3", "e6", "Bxc4"],
+      "note": "7.Bxc4, and the pawn is back. Material is level. Count what each side has: White has a pawn on d4 against Black's on c6 and e6, and slightly more space; Black has both bishops developed outside the pawns and a queenside where a4 has left a hole."
+    },
+    {
+      "moves": ["d4", "d5", "c4", "c6", "Nf3", "Nf6", "Nc3", "dxc4", "a4", "Bf5", "e3", "e6", "Bxc4", "Bb4"],
+      "note": "7...Bb4 takes the square a4 gave up. The bishop pins the knight on c3, so White cannot play e4 without preparation, and it is entirely safe there: no pawn can ever attack it. This is the move that makes 5.a4 a concession rather than a free move."
+    },
+    {
+      "moves": ["d4", "d5", "c4", "c6", "Nf3", "Nf6", "Nc3", "dxc4", "a4", "Bf5", "e3", "e6", "Bxc4", "Bb4", "O-O", "O-O"],
+      "note": "8.O-O O-O is the Slav main line. Both sides are castled and developed, and the argument is about e4: White wants to play it, with Qe2 and e4, and Black's pieces — the pin on c3, the bishop on f5 — are arranged to make it expensive. Black's own plans are ...Nbd7 and ...c5 to open the position, or ...Bg4 and ...Nbd7 to sit tight. It is a sound, slightly passive, very hard-to-beat position, and the bishop on f5 is the difference between it and the Queen's Gambit Declined."
+    },
+    {
+      "moves": ["d4", "d5", "c4", "c6", "cxd5"],
+      "note": "Back to move three, for the road White takes to avoid all of that. 3.cxd5 is the Exchange Slav, and its reputation is for being drawish. The reputation is not quite deserved: the position is symmetrical, but the side that develops better has a real edge, and Black should know how to be that side."
+    },
+    {
+      "moves": ["d4", "d5", "c4", "c6", "cxd5", "cxd5"],
+      "note": "3...cxd5 recaptures with the pawn, keeping the structure symmetrical and the c-file open for both sides. Taking with anything else leaves White a pawn in the centre for a wing pawn, which is the Queen's Gambit's whole idea."
+    },
+    {
+      "moves": ["d4", "d5", "c4", "c6", "cxd5", "cxd5", "Bf4"],
+      "note": "4.Bf4 develops the bishop before e3 shuts it in — the same order the London System uses, for the same reason. It is the most testing move in the Exchange Slav, because it takes the c7 square and the b8–h2 diagonal away from Black at once."
+    },
+    {
+      "moves": ["d4", "d5", "c4", "c6", "cxd5", "cxd5", "Bf4", "Nc6"],
+      "note": "4...Nc6 develops toward the centre and prepares ...Bf5 to match White's bishop. The knight on c6 is better placed here than in most Slav lines, because the c-pawn is gone and it has nothing to block."
+    },
+    {
+      "moves": ["d4", "d5", "c4", "c6", "cxd5", "cxd5", "Bf4", "Nc6", "e3", "Nf6"],
+      "note": "5.e3 Nf6. Both sides develop, and the position is symmetrical apart from the bishop on f4. Black's next move removes that difference."
+    },
+    {
+      "moves": ["d4", "d5", "c4", "c6", "cxd5", "cxd5", "Bf4", "Nc6", "e3", "Nf6", "Nc3", "Bf5"],
+      "note": "6.Nc3 Bf5 is the Exchange Slav main line, and it is the mirror image of White's setup. From here the fight is about the c-file and the queenside: Qb3 hitting b7 and d5 is White's most direct try, ...a6 and ...e6 the solid answer, and whoever gets a rook to the c-file first has the initiative. It is a position to play for a win against a weaker opponent and for a draw against a stronger one — and to reach with a good bishop on f5 either way, which is what every Slav line is for."
+    }
+  ],
+  "lines": [
+    {
+      "name": "Slav Defence, Main Line",
+      "moves": ["d4", "d5", "c4", "c6", "Nf3", "Nf6", "Nc3", "dxc4", "a4", "Bf5", "e3", "e6", "Bxc4", "Bb4", "O-O", "O-O"]
+    },
+    {
+      "name": "Slav Defence, Exchange Variation",
+      "moves": ["d4", "d5", "c4", "c6", "cxd5", "cxd5", "Bf4", "Nc6", "e3", "Nf6", "Nc3", "Bf5"]
+    }
+  ]
+}

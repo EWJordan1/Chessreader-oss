@@ -1,0 +1,91 @@
+{
+  "id": "queens-indian-defence",
+  "name": "The Queen's Indian Defence",
+  "color": "b",
+  "eco": "E12",
+  "blurb": "When White avoids the Nimzo with 3.Nf3, put the bishop on b7 instead and control e4 from the corner.",
+  "steps": [
+    {
+      "moves": ["d4", "Nf6", "c4", "e6"],
+      "note": "1.d4 Nf6 2.c4 e6. The position the Nimzo-Indian starts from, and Black is hoping for 3.Nc3 so the bishop can pin it. Many White players know that, and avoid it."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "e6", "Nf3"],
+      "note": "3.Nf3 sidesteps the Nimzo-Indian. There is no knight on c3 to pin, so 3...Bb4+ is only a check, and White can answer it with Bd2 and trade the bishop off. Black needs a different way to stop e4, and the Queen's Indian finds one on the other side of the board."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "e6", "Nf3", "b6"],
+      "note": "3...b6 is the Queen's Indian. The bishop is going to b7, where it looks down the long diagonal at e4 and g2, and from there it does the Nimzo's job — keeping White out of e4 — without ever being exchanged. It is the calmest of the Indian defences, solid to the point of being hard to beat, and the price is that Black has very little to attack with."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "e6", "Nf3", "b6", "g3"],
+      "note": "4.g3 is the Fianchetto, the classical reply. White puts a bishop on g2 to meet Black's on b7 on the same diagonal, so that the argument over e4 and the long diagonal is between equals. It is the main line and the one that leads to the most typical Queen's Indian positions."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "e6", "Nf3", "b6", "g3", "Bb7"],
+      "note": "4...Bb7 develops to the diagonal. The modern 4...Ba6, hitting c4 and forcing White to defend it awkwardly, is a strong alternative worth knowing — but the bishop on b7 is what the opening is named for, and it teaches the idea best."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "e6", "Nf3", "b6", "g3", "Bb7", "Bg2"],
+      "note": "5.Bg2 meets bishop with bishop. The long diagonal now has one of each at either end, and neither side can use it freely. White's plan is Nc3 and e4 anyway, supported by everything; Black's is to make that impossible."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "e6", "Nf3", "b6", "g3", "Bb7", "Bg2", "Be7"],
+      "note": "5...Be7 develops modestly and prepares to castle. The Nimzo bishop's aggressive square is not available here — with the knight on f3, ...Bb4+ achieves little — so the bishop takes the solid one, and the Queen's Indian's character is set: nothing loose, nothing forced, and every piece on a sensible square."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "e6", "Nf3", "b6", "g3", "Bb7", "Bg2", "Be7", "O-O", "O-O"],
+      "note": "6.O-O O-O. Both kings go behind their fianchettos, and the position is as quiet as any in the book. What happens next depends on White's knight, and Black has an answer ready for the moment it reaches c3."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "e6", "Nf3", "b6", "g3", "Bb7", "Bg2", "Be7", "O-O", "O-O", "Nc3"],
+      "note": "7.Nc3 prepares e4 at last. If White gets it in, the g2 bishop is shut behind its own pawn, but the centre is White's and Black is cramped. This is the moment the Queen's Indian has been waiting for."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "e6", "Nf3", "b6", "g3", "Bb7", "Bg2", "Be7", "O-O", "O-O", "Nc3", "Ne4"],
+      "note": "7...Ne4 occupies the square rather than guard it. The knight sits on e4 supported by the bishop, and it offers to trade itself for the c3 knight — the piece that was going to make e4 possible. White can decline, but the trade is coming one way or another."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "e6", "Nf3", "b6", "g3", "Bb7", "Bg2", "Be7", "O-O", "O-O", "Nc3", "Ne4", "Qc2"],
+      "note": "8.Qc2 attacks the knight and prepares to recapture on c3 with the queen, keeping the pawn structure clean. It is the main line; 8.Bd2 is the alternative, and after 8...Bf6 Black keeps the pressure on d4 instead."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "e6", "Nf3", "b6", "g3", "Bb7", "Bg2", "Be7", "O-O", "O-O", "Nc3", "Ne4", "Qc2", "Nxc3", "Qxc3"],
+      "note": "8...Nxc3 9.Qxc3 is the classical Queen's Indian main line. A pair of knights has gone, White's e4 push is delayed again, and Black's bishop on b7 is still the best minor piece on the board. From here Black plays ...c5 to hit d4, or ...f5 to fix e4 for good and get the rook into the game, or ...d6 and ...Nd7 and simply wait. White will try e4 anyway, with Rd1 and Qd3 behind it, and the game is a long argument about whether one square can be held by pieces alone. It can, usually — which is why the Queen's Indian is the defence for players who would rather be sound than sharp."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "e6", "Nf3", "b6", "a3"],
+      "note": "Back to move four for the sharper road. 4.a3 is the Petrosian System — Kasparov's weapon — and its one idea is to play Nc3 next without allowing ...Bb4. A whole tempo on a pawn move at the edge of the board, spent so that the knight can come to c3 and e4 can be forced through. It is slow, and it works."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "e6", "Nf3", "b6", "a3", "Bb7"],
+      "note": "4...Bb7 develops to the long diagonal as before. Black cannot stop Nc3 and does not try; the plan is to meet e4 with the centre pawns instead of with pieces."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "e6", "Nf3", "b6", "a3", "Bb7", "Nc3"],
+      "note": "5.Nc3 arrives on its square, unpinnable. White now threatens d5 to shut the b7 bishop in, as well as e4 with the whole centre. Black has one move that answers both."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "e6", "Nf3", "b6", "a3", "Bb7", "Nc3", "d5"],
+      "note": "5...d5 takes a share of the centre with a pawn, since pieces alone would not hold it against Nc3 and e4. It also opens the diagonal from b7 through d5 toward White's king, once the pawns are exchanged. The Queen's Indian has become a Queen's Gambit Declined with the bishop on b7 rather than c8 — a better version."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "e6", "Nf3", "b6", "a3", "Bb7", "Nc3", "d5", "cxd5", "Nxd5"],
+      "note": "6.cxd5 Nxd5. White exchanges to open the centre and to free the g2 square for a bishop later; Black takes with the knight, keeping the b7 bishop's diagonal open all the way to g2. The knight on d5 is a good piece and it invites a trade on c3 that Black is happy with either way."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "e6", "Nf3", "b6", "a3", "Bb7", "Nc3", "d5", "cxd5", "Nxd5", "Qc2"],
+      "note": "7.Qc2 is the Petrosian main line. The queen supports e4 — which is coming next, and cannot be stopped — and it is ready to recapture on c3 with a piece if Black trades. Black's answers are 7...Nxc3 8.bxc3 Be7, accepting the big centre and planning ...c5 against it, or 7...c5 at once, hitting d4 before e4 arrives. This is the Queen's Indian that Kasparov made famous: White gets the centre after all, and the question is whether the bishop on b7 and the strike on c5 are enough to attack it. They usually are, just — and that 'just' is the difference between this line and the calm one before it. Play the Fianchetto if you want quiet, and know the Petrosian because your opponent may not give you the choice."
+    }
+  ],
+  "lines": [
+    {
+      "name": "Queen's Indian Defence, Fianchetto",
+      "moves": ["d4", "Nf6", "c4", "e6", "Nf3", "b6", "g3", "Bb7", "Bg2", "Be7", "O-O", "O-O", "Nc3", "Ne4", "Qc2", "Nxc3", "Qxc3"]
+    },
+    {
+      "name": "Queen's Indian Defence, Petrosian System",
+      "moves": ["d4", "Nf6", "c4", "e6", "Nf3", "b6", "a3", "Bb7", "Nc3", "d5", "cxd5", "Nxd5", "Qc2"]
+    }
+  ]
+}

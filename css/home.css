@@ -1,0 +1,60 @@
+/*
+ * home — the greeting, the news, the last seven days. Tokens only; never a raw colour.
+ *
+ * Home borrows almost everything: .panel, .cards-report, .stat-tile, .hint, .meta and
+ * .empty are the shell's. What is here is the handful of arrangements that are Home's
+ * own — the news row, the worst-move pairing, the queue strip — plus the two places a
+ * number sits inside a serif sentence and has to be lifted back into the sans.
+ */
+
+#view-home { padding-bottom: var(--sp-24); }
+#home-body { display: flex; flex-direction: column; gap: var(--sp-16); }
+#home-body .greeting { margin-bottom: calc(var(--sp-4) * -1); }
+.home-grid { align-items: start; }
+
+/* A number inside a serif sentence is still data: the sans, named here, is the same
+   rule .meta makes for a muted row. Without it the count would set in the book face. */
+.home-news-line .num,
+.home-week .hint .num {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  color: var(--text-bright);
+}
+
+/* ----- The news: one line per site, its import button on the same baseline ----- */
+.home-news-row {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: var(--sp-12); flex-wrap: wrap;
+}
+.home-news-row + .home-news-row { border-top: 1px solid var(--hairline); padding-top: var(--sp-12); }
+.home-news-line { color: var(--text); flex: 1 1 220px; min-width: 0; }
+
+/* ----- The week: the worst move is a figure and the sentence that earned it ----- */
+.home-worst {
+  display: flex; align-items: flex-start; gap: var(--sp-20);
+  border-top: 1px solid var(--hairline); padding-top: var(--sp-12);
+}
+.home-worst .stat-tile { flex: none; min-width: 110px; }
+.home-worst .stat { color: var(--warn); }
+.home-worst button.stat-tile:hover .stat { color: var(--primary); }
+.home-worst-say { display: flex; flex-direction: column; gap: var(--sp-4); min-width: 0; }
+
+/* ----- The queue strip: rows of data, each one a door into Listen ----- */
+.home-recent .panel-body { gap: var(--sp-2); }
+.home-game {
+  display: flex; align-items: baseline; justify-content: space-between; gap: var(--sp-12);
+  width: 100%; min-width: 0; text-align: left; cursor: pointer;
+  background: none; border: 0; border-radius: var(--radius-xs);
+  padding: var(--sp-6) var(--sp-8); margin: 0 calc(var(--sp-8) * -1);
+  color: var(--text); font-family: var(--font-sans); font-size: var(--fs-sm);
+}
+.home-game:hover { background: var(--surface2); color: var(--text-bright); }
+.home-game-who { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.home-game-facts { flex: none; }
+.home-res-w { color: var(--good); }
+.home-res-l { color: var(--danger); }
+.home-res-d { color: var(--text-muted); }
+
+/* The badge is a dot, not a count (§6). .nav-badge:empty is display:none, so the dot
+   carries a glyph the shape hides rather than an empty node the rail would drop. */
+#badge-home.nav-dot { overflow: hidden; color: transparent; }

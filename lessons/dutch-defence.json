@@ -1,0 +1,87 @@
+{
+  "id": "dutch-defence",
+  "name": "The Dutch Defence",
+  "color": "b",
+  "eco": "A80",
+  "blurb": "Answer 1.d4 with 1...f5, take e4 away for good, and play for a kingside attack from move one.",
+  "steps": [
+    {
+      "moves": ["d4"],
+      "note": "1.d4. Most answers to this move are about the centre. The Dutch is about the kingside, and it declares that on move one."
+    },
+    {
+      "moves": ["d4", "f5"],
+      "note": "1...f5 is the Dutch. The pawn takes e4 away from White permanently — no pawn will ever sit there — and it is the first move of an attack: Black's plan is ...Nf6, ...e6, ...O-O and then the f-pawn and the pieces behind it come at the white king. The cost is on the board too: the diagonal to Black's own king is open, and every Dutch player has lost a game to a check on h5 they did not see. Play it knowing that."
+    },
+    {
+      "moves": ["d4", "f5", "g3"],
+      "note": "2.g3 is White's classical answer. The bishop goes to g2 to sit on the diagonal the f-pawn has just left open — the a8–h1 diagonal — and to keep an eye on e4, the square Black has claimed. Nearly every main line of the Dutch has this bishop in it."
+    },
+    {
+      "moves": ["d4", "f5", "g3", "Nf6"],
+      "note": "2...Nf6 develops and adds a second piece to the fight for e4. The knight will be the centre of Black's attack; it goes to e4 itself in many lines, and it is the piece that supports ...e5 when that becomes possible."
+    },
+    {
+      "moves": ["d4", "f5", "g3", "Nf6", "Bg2"],
+      "note": "3.Bg2 takes its diagonal. It is aimed at b7 and the queenside, and it is also the piece that will contest e4 for the rest of the game: Black's whole plan is to keep that square, and White's bishop is looking straight at it."
+    },
+    {
+      "moves": ["d4", "f5", "g3", "Nf6", "Bg2", "e6"],
+      "note": "3...e6 opens the f8 bishop and supports d5 for later. The choice here decides which Dutch this is: ...e6 leads to the Classical and the Stonewall, and ...g6 leads to the Leningrad. The lesson takes the two ...e6 systems, because they share every move up to the sixth and then become different openings."
+    },
+    {
+      "moves": ["d4", "f5", "g3", "Nf6", "Bg2", "e6", "Nf3"],
+      "note": "4.Nf3 develops toward e5, the square White wants a knight on. In the Dutch, e5 is White's outpost as e4 is Black's, and the knight on f3 is the piece that will occupy it."
+    },
+    {
+      "moves": ["d4", "f5", "g3", "Nf6", "Bg2", "e6", "Nf3", "Be7"],
+      "note": "4...Be7 is the Classical Dutch. The bishop develops to the square from which it can later come to d6 or stay to defend, and Black keeps the d-pawn on d7 for the moment so that it can go to d6 and support ...e5. That break — ...e5 — is the Classical's goal, and everything Black does is aimed at it."
+    },
+    {
+      "moves": ["d4", "f5", "g3", "Nf6", "Bg2", "e6", "Nf3", "Be7", "O-O", "O-O"],
+      "note": "5.O-O O-O. Both kings castle, and both have fianchetto-shaped shelters — White's real, Black's a little draughty, because the f-pawn has gone. Black is going to attack anyway."
+    },
+    {
+      "moves": ["d4", "f5", "g3", "Nf6", "Bg2", "e6", "Nf3", "Be7", "O-O", "O-O", "c4"],
+      "note": "6.c4 takes space on the queenside and controls d5. White's plan is Nc3, and then either d5 to cramp Black in the centre or b4 and c5 to attack on the queenside — the side where Black's pieces are not."
+    },
+    {
+      "moves": ["d4", "f5", "g3", "Nf6", "Bg2", "e6", "Nf3", "Be7", "O-O", "O-O", "c4", "d6"],
+      "note": "6...d6 prepares ...e5. The pawn on d6 supports the e5 square, and once a queen or knight adds to it, the push comes and Black's f-pawn has a target behind it."
+    },
+    {
+      "moves": ["d4", "f5", "g3", "Nf6", "Bg2", "e6", "Nf3", "Be7", "O-O", "O-O", "c4", "d6", "Nc3", "Qe8"],
+      "note": "7.Nc3 Qe8 is the Classical Dutch main line, and the queen move is the opening's signature. From e8 the queen supports ...e5, and after the push it swings to h5 or g6 and joins the attack on the white king; ...Qe8–h5 with ...Nf6–e4 and ...Rf6–h6 behind it is the Dutch's mating pattern, and it has ended a great many games. White's answer is on the other wing: e4 to break the bind, or b4 and c5 to open the queenside before the attack lands. The Classical Dutch is a race with the whole board as the track, and Black's advantage is that Black's side of it is the one with a king on it."
+    },
+    {
+      "moves": ["d4", "f5", "g3", "Nf6", "Bg2", "e6", "Nf3", "d5"],
+      "note": "Back to move four for the Dutch's other shape. 4...d5 is the Stonewall. The pawns go to d5, e6 and f5 — a wall on the light squares — and Black takes e4 as an outpost for good. Nothing White does with pawns can ever remove a knight from e4. The wall's cost is the c8 bishop, which is shut behind three pawns on its own colour, and the Stonewall is a lifetime's argument about whether the outpost is worth the bishop."
+    },
+    {
+      "moves": ["d4", "f5", "g3", "Nf6", "Bg2", "e6", "Nf3", "d5", "O-O", "Bd6"],
+      "note": "5.O-O Bd6 — the Modern Stonewall's bishop, on d6 rather than e7. From d6 it points at the white king along the b8–h2 diagonal and supports ...e5, which the Stonewall rarely plays but always threatens. It is the piece White will try to trade with Bf4 or Ba3."
+    },
+    {
+      "moves": ["d4", "f5", "g3", "Nf6", "Bg2", "e6", "Nf3", "d5", "O-O", "Bd6", "c4", "c6"],
+      "note": "6.c4 c6. White hits the wall's base; Black shores it up. The pawn on c6 also gives the queen a route to e7 and c7, and takes b5 and d5 away from White's pieces — the wall is complete, from c6 to f5."
+    },
+    {
+      "moves": ["d4", "f5", "g3", "Nf6", "Bg2", "e6", "Nf3", "d5", "O-O", "Bd6", "c4", "c6", "b3"],
+      "note": "7.b3 prepares Ba3, the move the Stonewall fears. If White can trade the d6 bishop, Black is left with the bad bishop on c8 and no attacking piece, and the wall becomes a prison. Black's next move is about stopping that."
+    },
+    {
+      "moves": ["d4", "f5", "g3", "Nf6", "Bg2", "e6", "Nf3", "d5", "O-O", "Bd6", "c4", "c6", "b3", "Qe7"],
+      "note": "7...Qe7 is the Stonewall main line, and it does one job: after 8.Ba3, the queen is defending d6, so the bishop can be exchanged only at the cost of a tempo and the a3 bishop's own diagonal. From here Black plays ...b6 and ...Bb7 to give the bad bishop a life, or ...Bd7–e8–h5 to bring it round the long way, and ...Ne4 whenever it is safe; White plays Bb2 and Nbd2 and Ne5, and Qc2 and cxd5 to open the c-file. Compare the two roads: the Classical keeps the d-pawn back and plays for ...e5, and the Stonewall pushes it and plays for e4. Both begin with 1...f5, and both are for players who would rather attack than argue — which is the only reason to play the Dutch, and a good one."
+    }
+  ],
+  "lines": [
+    {
+      "name": "Dutch Defence, Classical",
+      "moves": ["d4", "f5", "g3", "Nf6", "Bg2", "e6", "Nf3", "Be7", "O-O", "O-O", "c4", "d6", "Nc3", "Qe8"]
+    },
+    {
+      "name": "Dutch Defence, Stonewall",
+      "moves": ["d4", "f5", "g3", "Nf6", "Bg2", "e6", "Nf3", "d5", "O-O", "Bd6", "c4", "c6", "b3", "Qe7"]
+    }
+  ]
+}

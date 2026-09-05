@@ -1,0 +1,91 @@
+{
+  "id": "pirc-defence",
+  "name": "The Pirc Defence",
+  "color": "b",
+  "eco": "B07",
+  "blurb": "Let White have the centre, fianchetto, and then attack the centre with pieces from a distance.",
+  "steps": [
+    {
+      "moves": ["e4"],
+      "note": "1.e4. Every defence so far has argued with this pawn straight away. The Pirc does not argue; it lets White build the whole centre and then goes after it."
+    },
+    {
+      "moves": ["e4", "d6"],
+      "note": "1...d6 is the Pirc's first move, and it is deliberately modest. It prepares ...Nf6 without allowing e5 to kick the knight, and it says nothing else — Black has not chosen where the pawns will go, only that the king's bishop will be on g7."
+    },
+    {
+      "moves": ["e4", "d6", "d4"],
+      "note": "2.d4 takes the full centre, which is what Black expected and is content to allow. The Pirc's idea is that a big centre is a big target, and pieces aimed at it from a distance are harder to hit than pawns standing in front of it."
+    },
+    {
+      "moves": ["e4", "d6", "d4", "Nf6"],
+      "note": "2...Nf6 develops and attacks e4. White has to defend the pawn, and the move that defends it puts a knight on c3, where it will block the c-pawn for the rest of the opening."
+    },
+    {
+      "moves": ["e4", "d6", "d4", "Nf6", "Nc3"],
+      "note": "3.Nc3 defends e4. It is the natural move and the main line, and it commits White to a structure without c4 — which matters, because it means d4 can only be supported by pieces, and pieces can be exchanged."
+    },
+    {
+      "moves": ["e4", "d6", "d4", "Nf6", "Nc3", "g6"],
+      "note": "3...g6 announces the fianchetto. The bishop is going to g7, and from there it will look through e5 to d4 and b2. This is the whole of Black's opening plan, and everything else is about making that diagonal work."
+    },
+    {
+      "moves": ["e4", "d6", "d4", "Nf6", "Nc3", "g6", "Nf3"],
+      "note": "4.Nf3 is the Classical Pirc, the calm choice. White develops, prepares to castle, and plans to hold the centre with pieces rather than push it forward. The alternative — 4.f4, the Austrian Attack — is the lesson's second road, and it could not be more different."
+    },
+    {
+      "moves": ["e4", "d6", "d4", "Nf6", "Nc3", "g6", "Nf3", "Bg7"],
+      "note": "4...Bg7 completes the fianchetto. The bishop is Black's best piece and the reason the opening exists; it is never traded willingly, and the rest of Black's play is arranged so that the diagonal stays open."
+    },
+    {
+      "moves": ["e4", "d6", "d4", "Nf6", "Nc3", "g6", "Nf3", "Bg7", "Be2"],
+      "note": "5.Be2 develops modestly and prepares to castle. Nothing here threatens anything; White is simply getting the king safe before deciding whether to advance in the centre or on the kingside."
+    },
+    {
+      "moves": ["e4", "d6", "d4", "Nf6", "Nc3", "g6", "Nf3", "Bg7", "Be2", "O-O"],
+      "note": "5...O-O. Black castles first, and this is the Pirc's usual order: the king goes to the fianchetto side, and only then does Black decide how to hit the centre — with ...c6 and ...b5, with ...e5, or with ...c5."
+    },
+    {
+      "moves": ["e4", "d6", "d4", "Nf6", "Nc3", "g6", "Nf3", "Bg7", "Be2", "O-O", "O-O"],
+      "note": "6.O-O. Both kings are safe and both sides have a plan. White's is to use the space: Re1, Bf1, h3 and a slow squeeze, or a4 and Be3 to stop what Black is about to do on the queenside."
+    },
+    {
+      "moves": ["e4", "d6", "d4", "Nf6", "Nc3", "g6", "Nf3", "Bg7", "Be2", "O-O", "O-O", "c6"],
+      "note": "6...c6 is the main line of the Classical Pirc, and it is the queenside plan. The pawn prepares ...b5 to gain space and hit the knight on c3, gives the queen a route to c7 or a5, and takes d5 away from White's pieces. Black's centre pawns are still on d6 and e7 — held back, as the Pirc always holds them, until the moment ...e5 or ...d5 can be played with everything ready. It is an opening for players who like to be told nothing and decide everything themselves, and this quiet position is exactly that."
+    },
+    {
+      "moves": ["e4", "d6", "d4", "Nf6", "Nc3", "g6", "f4"],
+      "note": "Back to move four, and the reason some players will not touch the Pirc. 4.f4 is the Austrian Attack: White takes the whole centre with a third pawn and intends to push it, e5 and f5, at Black's king. It is the most direct answer to letting White have the centre, and Black has to know what to do about it."
+    },
+    {
+      "moves": ["e4", "d6", "d4", "Nf6", "Nc3", "g6", "f4", "Bg7"],
+      "note": "4...Bg7 completes the fianchetto as before. The bishop is even more important here than in the Classical: it is the piece that holds e5 against the pawn advance."
+    },
+    {
+      "moves": ["e4", "d6", "d4", "Nf6", "Nc3", "g6", "f4", "Bg7", "Nf3"],
+      "note": "5.Nf3 develops and supports e5. White's pawns and pieces are all pointing the same way, and if Black does nothing, e5 comes with real force."
+    },
+    {
+      "moves": ["e4", "d6", "d4", "Nf6", "Nc3", "g6", "f4", "Bg7", "Nf3", "O-O"],
+      "note": "5...O-O castles into it, and it is correct to. The king is safer behind the fianchetto than anywhere else, and Black needs the rook on f8 for the fight over e5 and f5 that is coming."
+    },
+    {
+      "moves": ["e4", "d6", "d4", "Nf6", "Nc3", "g6", "f4", "Bg7", "Nf3", "O-O", "Bd3"],
+      "note": "6.Bd3 develops toward the kingside, supporting e4 and eyeing the h7 square the king is now behind. It is the most popular move, and it walks into Black's best answer."
+    },
+    {
+      "moves": ["e4", "d6", "d4", "Nf6", "Nc3", "g6", "f4", "Bg7", "Nf3", "O-O", "Bd3", "Nc6"],
+      "note": "6...Nc6 is the main line against the Austrian, and it is a counter-attack on d4. The knight threatens ...e5 — with the pawn on f4, White cannot take on e5 without opening the g7 bishop's diagonal — and it hits d4 directly, so that 7.e5 is answered by 7...dxe5 8.fxe5 Nd5 and White's centre is falling apart rather than advancing. White's best is 7.O-O, and then 7...Bg4, pinning the knight that holds d4. Compare this with the Classical: same bishop, same king, and a completely different game — the Pirc is one setup that meets two kinds of White player, and this is how it meets the aggressive one."
+    }
+  ],
+  "lines": [
+    {
+      "name": "Pirc Defence, Classical",
+      "moves": ["e4", "d6", "d4", "Nf6", "Nc3", "g6", "Nf3", "Bg7", "Be2", "O-O", "O-O", "c6"]
+    },
+    {
+      "name": "Pirc Defence, Austrian Attack",
+      "moves": ["e4", "d6", "d4", "Nf6", "Nc3", "g6", "f4", "Bg7", "Nf3", "O-O", "Bd3", "Nc6"]
+    }
+  ]
+}

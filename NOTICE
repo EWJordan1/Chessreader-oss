@@ -1,0 +1,37 @@
+ChessReader
+Copyright (C) 2026 Elliott Jordan
+
+This program is free software: you can redistribute it and/or modify it under the
+terms of the GNU General Public License as published by the Free Software
+Foundation, either version 3 of the License, or (at your option) any later version.
+See LICENSE for the full text.
+
+The repository is licensed GPL v3 as a whole because it vendors and distributes a
+GPL v3 build of Stockfish (engine/). The app's own code, the lesson content and the
+opening tables are the author's and are relicensed here under the same terms.
+
+--------------------------------------------------------------------------------
+Third-party work distributed with this repository
+--------------------------------------------------------------------------------
+
+Stockfish 17.1 Lite (engine/stockfish-17.1-lite-single.js, .wasm)
+  Copyright (C) T. Romstad, M. Costalba, J. Kiiski, G. Linscott and contributors.
+  WebAssembly build: Stockfish.js (c) 2025 Chess.com, LLC — https://github.com/nmrugg/stockfish.js
+  Engine source: https://github.com/official-stockfish/Stockfish
+  NNUE nets by Linmiao Xu (linrock).
+  License: GNU General Public License v3 — engine/LICENSE.txt
+  The two files are unmodified upstream builds; only the filenames were changed,
+  consistently (see docs/engine.md).
+
+chess.js (npm dependency)
+  Copyright (c) Jeff Hlywa — https://github.com/jhlywa/chess.js
+  License: BSD 2-Clause
+
+Cburnett chess piece set (inlined as SVG paths in src/board.js)
+  Copyright (c) Colin M.L. Burnett — https://en.wikipedia.org/wiki/User:Cburnett
+  License: CC BY-SA 3.0 (also offered under BSD and GFDL by the author).
+  Attribution is required and is shown inside the app (Settings → About).
+
+ECO opening names (openings/eco.json, openings/library.json)
+  Derived from the Lichess chess-openings database — https://github.com/lichess-org/chess-openings
+  License: CC0 1.0 Universal

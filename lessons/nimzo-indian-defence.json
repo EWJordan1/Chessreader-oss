@@ -1,0 +1,91 @@
+{
+  "id": "nimzo-indian-defence",
+  "name": "The Nimzo-Indian Defence",
+  "color": "b",
+  "eco": "E20",
+  "blurb": "Pin the knight on c3, offer to give up the bishop for it, and fight over one square for the rest of the game.",
+  "steps": [
+    {
+      "moves": ["d4", "Nf6"],
+      "note": "1.d4 Nf6. The Indian move, and the beginning of the defence that Nimzowitsch built around a single idea: control e4 with pieces, and never let White have it for free."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "e6"],
+      "note": "2.c4 e6. Black opens the f8 bishop and keeps ...d5 in hand. The pawn on e6 says nothing yet about where Black's centre will be; what it says is that the bishop is coming out next move, and where it goes depends on what White does."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "e6", "Nc3"],
+      "note": "3.Nc3 prepares e4, and this is the move the Nimzo-Indian exists to punish. If White gets e4 in, the centre is big and Black is cramped. So Black stops it — not with a pawn, but by pinning the piece that would support it."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "e6", "Nc3", "Bb4"],
+      "note": "3...Bb4 is the Nimzo-Indian. The bishop pins the knight to the king, so e4 cannot be played — the knight would not be defending it. Black is also offering to take on c3 and leave White with doubled pawns, and White's fourth move is nearly always about that offer: accept it, avoid it, or prepare to recapture with a piece."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "e6", "Nc3", "Bb4", "e3"],
+      "note": "4.e3 is the Rubinstein System, the most common and most flexible reply. White opens the f1 bishop, supports d4, and does not decide yet about the doubled pawns: if Black takes on c3, bxc3 gives White a big centre; if not, White develops and plays on. Nothing is committed, which is why so many players choose it."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "e6", "Nc3", "Bb4", "e3", "O-O"],
+      "note": "4...O-O castles first. Black has several good plans here — ...c5, ...b6, ...d5 — and castling keeps all of them, while making sure the king is safe before the centre opens."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "e6", "Nc3", "Bb4", "e3", "O-O", "Bd3"],
+      "note": "5.Bd3 develops the bishop to its best diagonal, pointing at h7, and supports e4 a second time. White would like to play Nf3, O-O and e4 and have the centre after all; Black's next moves are about making sure that never comes for free."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "e6", "Nc3", "Bb4", "e3", "O-O", "Bd3", "d5"],
+      "note": "5...d5 takes a share of the centre. The pawn controls e4 directly, so that even when the pin is broken, White cannot advance without a fight. Black's structure is now the Queen's Gambit Declined's — with the bishop on b4 instead of e7, which is a much better place for it."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "e6", "Nc3", "Bb4", "e3", "O-O", "Bd3", "d5", "Nf3"],
+      "note": "6.Nf3 develops the last minor piece and prepares to castle. White's setup is complete and harmonious. The question is what Black does with the two moves before White's e4 becomes possible."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "e6", "Nc3", "Bb4", "e3", "O-O", "Bd3", "d5", "Nf3", "c5"],
+      "note": "6...c5 attacks d4 and opens the game in the centre. Black now has pawns on c5, d5 and e6 against White's on c4, d4 and e3 — a symmetrical fight in which the pinned knight on c3 is the one piece that is not doing its job."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "e6", "Nc3", "Bb4", "e3", "O-O", "Bd3", "d5", "Nf3", "c5", "O-O", "Nc6"],
+      "note": "7.O-O Nc6 is the Rubinstein main line, and it is one of the most analysed positions in chess. Black's pieces all bear on d4; White's all bear on e4. The usual continuation is 8.a3, asking the bishop its question — 8...Bxc3 9.bxc3 dxc4 10.Bxc4 Qc7 gives White the bishop pair and a centre that Black will attack with ...e5, and Black a structure with no weaknesses and the c4 pawn as a target. Every Nimzo-Indian comes down to that trade: Black's dark-squared bishop for a permanent pawn weakness. Whether it is a good trade is the argument, and it has been going for a hundred years."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "e6", "Nc3", "Bb4", "Qc2"],
+      "note": "Back to move four for the other main system. 4.Qc2 is the Classical, and its idea is refusal: if Black takes on c3, the queen recaptures and there are no doubled pawns at all. The queen also supports e4. The cost is a tempo — White has developed nothing — and Black uses it."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "e6", "Nc3", "Bb4", "Qc2", "O-O"],
+      "note": "4...O-O castles and waits. Black knows a3 is coming and will take on c3 when it does; in the meantime the king goes to safety and every plan is still open."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "e6", "Nc3", "Bb4", "Qc2", "O-O", "a3"],
+      "note": "5.a3 asks the question at once. The bishop must retreat or take, and retreating hands White e4 for nothing, so the exchange follows."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "e6", "Nc3", "Bb4", "Qc2", "O-O", "a3", "Bxc3+", "Qxc3"],
+      "note": "5...Bxc3+ 6.Qxc3. White has the bishop pair and a clean pawn structure, which is everything 4.Qc2 was for. Black has castled and has two moves in hand while the queen has moved twice and nothing else has moved at all. The Classical Nimzo-Indian is that trade: structure for time."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "e6", "Nc3", "Bb4", "Qc2", "O-O", "a3", "Bxc3+", "Qxc3", "b6"],
+      "note": "6...b6 prepares ...Bb7, and the bishop is going to the long diagonal to do the job the pin used to do: control e4. Without the dark-squared bishop, Black's whole game is on the light squares, and this is where it starts."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "e6", "Nc3", "Bb4", "Qc2", "O-O", "a3", "Bxc3+", "Qxc3", "b6", "Bg5"],
+      "note": "7.Bg5 pins the knight on f6 — the other piece controlling e4 — and it is White's most ambitious move. If the knight can be removed or pinned in place, e4 finally comes."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "e6", "Nc3", "Bb4", "Qc2", "O-O", "a3", "Bxc3+", "Qxc3", "b6", "Bg5", "Bb7"],
+      "note": "7...Bb7 is the Classical main line. The bishop takes the diagonal and looks straight at e4 and g2. From here Black plays ...d6 and ...Nbd7 and then ...h6 to ask the bishop on g5 its question, or ...c5 to open the centre; White plays e3, f3 and e4 if it can be arranged, or Nf3 and e3 and a slow squeeze with the bishops. Compare the two roads: in the Rubinstein Black gave up the bishop and got a weakness to attack; here Black gave it up and got time. The Nimzo-Indian is the same bargain made two ways, and the only defence to 1.d4 that world champions have never stopped playing."
+    }
+  ],
+  "lines": [
+    {
+      "name": "Nimzo-Indian Defence, Rubinstein",
+      "moves": ["d4", "Nf6", "c4", "e6", "Nc3", "Bb4", "e3", "O-O", "Bd3", "d5", "Nf3", "c5", "O-O", "Nc6"]
+    },
+    {
+      "name": "Nimzo-Indian Defence, Classical",
+      "moves": ["d4", "Nf6", "c4", "e6", "Nc3", "Bb4", "Qc2", "O-O", "a3", "Bxc3+", "Qxc3", "b6", "Bg5", "Bb7"]
+    }
+  ]
+}

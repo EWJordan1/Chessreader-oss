@@ -1,0 +1,91 @@
+{
+  "id": "reti-opening",
+  "name": "The Réti Opening",
+  "color": "w",
+  "eco": "A09",
+  "blurb": "Knight first, then c4 against the d5 pawn: control the centre from a distance before occupying it.",
+  "steps": [
+    {
+      "moves": ["Nf3"],
+      "note": "1.Nf3 is the most flexible first move in chess. It develops, it controls e5 and d4, and it commits no pawn to anything — White can still play d4 next and be in a Queen's Pawn game, or c4 and be in an English, or the move this lesson is about."
+    },
+    {
+      "moves": ["Nf3", "d5"],
+      "note": "1...d5 takes the centre, and it is the reply that gives the Réti its name and its point. Black has a pawn in the middle; White is about to attack it with a wing pawn rather than meet it with a centre one."
+    },
+    {
+      "moves": ["Nf3", "d5", "c4"],
+      "note": "2.c4 is the Réti. The pawn hits d5 with a pawn from the side — the Queen's Gambit's idea without the pawn on d4 to go with it — and White's plan is to fianchetto one or both bishops and attack the centre from a distance. Réti's own idea, a hundred years ago, was that a centre occupied by pawns is a centre that can be attacked; this is the opening that made the argument."
+    },
+    {
+      "moves": ["Nf3", "d5", "c4", "e6"],
+      "note": "2...e6 supports d5 the classical way. Black can also take on c4, or push to d4 and gain space, or play ...c6; the lesson takes ...e6 first because it leads to the most typical Réti structure, and ...c6 second because it is what solid players choose."
+    },
+    {
+      "moves": ["Nf3", "d5", "c4", "e6", "g3"],
+      "note": "3.g3 prepares the king's bishop's fianchetto. It will go to g2 and look at d5 down the long diagonal, which is the whole point of not putting a pawn on d4: the diagonal stays open and the bishop is the piece that fights for the centre."
+    },
+    {
+      "moves": ["Nf3", "d5", "c4", "e6", "g3", "Nf6", "Bg2"],
+      "note": "3...Nf6 4.Bg2. Both sides develop, and the Réti's first bishop reaches its square. It sees the d5 pawn already, and behind it b7 and the a8 rook."
+    },
+    {
+      "moves": ["Nf3", "d5", "c4", "e6", "g3", "Nf6", "Bg2", "Be7", "O-O", "O-O"],
+      "note": "4...Be7 5.O-O O-O. Both kings castle early, and White has still not played a pawn to d4 or e4. This is on purpose, and the next move shows what White has been waiting for."
+    },
+    {
+      "moves": ["Nf3", "d5", "c4", "e6", "g3", "Nf6", "Bg2", "Be7", "O-O", "O-O", "b3"],
+      "note": "6.b3 prepares the second fianchetto. The bishop will go to b2 and look down the other long diagonal, at e5 and the black king's corner. Two bishops on two diagonals, both aimed through the centre from the wings — that is the Réti setup, and it is the reason the centre pawns have been held back."
+    },
+    {
+      "moves": ["Nf3", "d5", "c4", "e6", "g3", "Nf6", "Bg2", "Be7", "O-O", "O-O", "b3", "c5"],
+      "note": "6...c5 takes space and claims the centre with a second pawn. It is Black's most natural plan against the Réti: if White will not occupy the middle, Black will, and the bishops can look at pawns that are defended."
+    },
+    {
+      "moves": ["Nf3", "d5", "c4", "e6", "g3", "Nf6", "Bg2", "Be7", "O-O", "O-O", "b3", "c5", "Bb2"],
+      "note": "7.Bb2 completes the setup. Look at what White has: two bishops on the long diagonals, a knight on f3, a castled king, and a pawn on c4 that is the only one past the second rank. It looks like nothing has happened. Every piece is on the square it was meant for."
+    },
+    {
+      "moves": ["Nf3", "d5", "c4", "e6", "g3", "Nf6", "Bg2", "Be7", "O-O", "O-O", "b3", "c5", "Bb2", "Nc6"],
+      "note": "7...Nc6 develops the last minor piece, and the Réti main line is on the board. Black has the classical centre — pawns on c5, d5 and e6 — and White has the pieces pointed at it. From here White plays e3 and d4 to open the centre when the bishops are ready, or cxd5 and d4 to fix the structure, or Qe2 and Rd1 and a slow build. Black plays ...b6 and ...Bb7 to match, or ...d4 to gain space and shut the b2 bishop in. It is the most modern-looking position in the book and it was invented in 1924: the idea that you do not need a pawn in the centre to fight for it, only pieces that look at it, is the Réti's, and this is what it looks like."
+    },
+    {
+      "moves": ["Nf3", "d5", "c4", "c6"],
+      "note": "Back to move two for the reply solid players choose. 2...c6 is the Slav setup against the Réti — the pawn supports d5, the c8 bishop keeps its diagonal, and Black intends to play ...Bf5 or ...Bg4 before ...e6 shuts the bishop in."
+    },
+    {
+      "moves": ["Nf3", "d5", "c4", "c6", "b3"],
+      "note": "3.b3 prepares Bb2 first this time, because against ...c6 the b2 bishop matters more: it will look at e5 and down toward the kingside, and it stops Black's ...d4 from ever being comfortable. White is also keeping the option of taking on d5 and playing against the c6 pawn later."
+    },
+    {
+      "moves": ["Nf3", "d5", "c4", "c6", "b3", "Bf5"],
+      "note": "3...Bf5 brings the bishop out before ...e6 — the same idea as the Caro-Kann and the Slav, and the whole reason for 2...c6. Black's position is now hard to fault: every piece will have a square and the centre is held."
+    },
+    {
+      "moves": ["Nf3", "d5", "c4", "c6", "b3", "Bf5", "Bb2", "e6"],
+      "note": "4.Bb2 e6. White's queenside bishop reaches its diagonal; Black's pawn goes to e6 now that the bishop is outside it. Both sides have done the thing they were building toward."
+    },
+    {
+      "moves": ["Nf3", "d5", "c4", "c6", "b3", "Bf5", "Bb2", "e6", "g3", "Nf6"],
+      "note": "5.g3 Nf6. White prepares the second fianchetto; Black develops. The setups are nearly complete on both sides, and nothing has been exchanged."
+    },
+    {
+      "moves": ["Nf3", "d5", "c4", "c6", "b3", "Bf5", "Bb2", "e6", "g3", "Nf6", "Bg2", "Nbd7"],
+      "note": "6.Bg2 Nbd7 — the queen's knight to d7, since the other could also reach it. Both of White's bishops are on the long diagonals; Black's knight goes to d7 rather than c6 because the c6 square is taken by the pawn, and from d7 it supports ...c5 and ...e5 later."
+    },
+    {
+      "moves": ["Nf3", "d5", "c4", "c6", "b3", "Bf5", "Bb2", "e6", "g3", "Nf6", "Bg2", "Nbd7", "O-O", "h6"],
+      "note": "7.O-O h6 is the Réti against the Slav setup, and the little pawn move is worth understanding: it gives the f5 bishop a retreat on h7, so that Nh4 can never win it or force a trade. Black's setup is complete and it is the most solid position Black can have against the Réti. White's plans are d3 and Nbd2 and e4, striking in the centre at last with everything ready — or Nc3 and Qc2 and a queenside squeeze. It is a slow game in which neither side has a weakness, and the Réti player's job is to be patient: the bishops on b2 and g2 are aimed at a centre that will open eventually, and when it does, they will be the best pieces on the board."
+    }
+  ],
+  "lines": [
+    {
+      "name": "Réti Opening, Main Line",
+      "moves": ["Nf3", "d5", "c4", "e6", "g3", "Nf6", "Bg2", "Be7", "O-O", "O-O", "b3", "c5", "Bb2", "Nc6"]
+    },
+    {
+      "name": "Réti Opening, against the Slav setup",
+      "moves": ["Nf3", "d5", "c4", "c6", "b3", "Bf5", "Bb2", "e6", "g3", "Nf6", "Bg2", "Nbd7", "O-O", "h6"]
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "id": "english-opening",
+  "name": "The English Opening",
+  "color": "w",
+  "eco": "A10",
+  "blurb": "Start with the c-pawn: a Sicilian with the colours reversed and a move in hand.",
+  "steps": [
+    {
+      "moves": ["c4"],
+      "note": "1.c4 is the English. The pawn controls d5 from the side, the same way the Sicilian's 1...c5 controls d4 — and that comparison is the best way to understand the opening. White is playing a Sicilian a move up, and the centre pawns wait to see what Black does before they commit."
+    },
+    {
+      "moves": ["c4", "e5"],
+      "note": "1...e5 is the most direct reply, and the one that most makes the reversed Sicilian real: Black takes the centre and dares White to attack it. The resulting positions are Sicilians with the colours swapped, and the extra move matters less than you would think — it is usually spent on the quiet side of the board."
+    },
+    {
+      "moves": ["c4", "e5", "Nc3"],
+      "note": "2.Nc3 develops toward d5, the square the opening is about. White does not play d4 — that would be a different opening — and does not hurry the king's knight, because the e5 pawn is not a target yet."
+    },
+    {
+      "moves": ["c4", "e5", "Nc3", "Nf6"],
+      "note": "2...Nf6 develops and prepares ...d5 to fight for the square White is claiming. Black's most common alternative is 2...Nc6, which keeps ...d5 in reserve and leads to a different fight; the knight move is the one that tests the English most directly."
+    },
+    {
+      "moves": ["c4", "e5", "Nc3", "Nf6", "Nf3"],
+      "note": "3.Nf3 attacks e5 and asks Black to defend it. Now the e5 pawn needs a defender, and Black's reply also develops a piece toward d4."
+    },
+    {
+      "moves": ["c4", "e5", "Nc3", "Nf6", "Nf3", "Nc6"],
+      "note": "3...Nc6 defends e5 and looks at d4. This is the Four Knights of the English, and both sides have their knights out before any bishop has moved — the sign of an opening in which the pawn structure has not been decided."
+    },
+    {
+      "moves": ["c4", "e5", "Nc3", "Nf6", "Nf3", "Nc6", "g3"],
+      "note": "4.g3 prepares Bg2, the English bishop. It will sit on the long diagonal aimed at d5 and b7, and it is the piece White's whole setup is built around — the same bishop the Catalan uses, doing the same job from the same square."
+    },
+    {
+      "moves": ["c4", "e5", "Nc3", "Nf6", "Nf3", "Nc6", "g3", "d5"],
+      "note": "4...d5 is the freeing move, and it is what Black has been building toward. The pawn attacks c4 and takes d5 for itself; White takes and the game becomes a reversed Dragon, with Black's e5 pawn standing where a Dragon player's e4 would be."
+    },
+    {
+      "moves": ["c4", "e5", "Nc3", "Nf6", "Nf3", "Nc6", "g3", "d5", "cxd5", "Nxd5"],
+      "note": "5.cxd5 Nxd5. The pawn on c4 has done its job — it traded itself for a centre pawn, the Sicilian's own bargain reversed — and Black's knight comes to the centre, where the g2 bishop will soon be looking at it."
+    },
+    {
+      "moves": ["c4", "e5", "Nc3", "Nf6", "Nf3", "Nc6", "g3", "d5", "cxd5", "Nxd5", "Bg2"],
+      "note": "6.Bg2 develops to the long diagonal, and the bishop sees the knight on d5 with only the c3 knight's exchange between them. It will keep looking at that diagonal — at d5, at c6, at b7 — for as long as the game lasts."
+    },
+    {
+      "moves": ["c4", "e5", "Nc3", "Nf6", "Nf3", "Nc6", "g3", "d5", "cxd5", "Nxd5", "Bg2", "Nb6"],
+      "note": "6...Nb6 retreats before it can be exchanged or pinned. The knight on b6 covers c4 and d5 and stays out of the bishop's line; this is the standard square, and the reversed-Dragon structure is now set."
+    },
+    {
+      "moves": ["c4", "e5", "Nc3", "Nf6", "Nf3", "Nc6", "g3", "d5", "cxd5", "Nxd5", "Bg2", "Nb6", "O-O", "Be7"],
+      "note": "7.O-O Be7. White castles; Black develops and will castle next. Both sides have their fianchetto-side kings and their knights out. The plan for White is on the queenside: a3 and b4, Rb1, the pawn coming to b5 to hit the c6 knight and open the diagonal. Black's plan is on the kingside, with ...f5 and ...Be6 and everything behind the e5 pawn."
+    },
+    {
+      "moves": ["c4", "e5", "Nc3", "Nf6", "Nf3", "Nc6", "g3", "d5", "cxd5", "Nxd5", "Bg2", "Nb6", "O-O", "Be7", "d3", "O-O"],
+      "note": "8.d3 O-O is the reversed Dragon main line, and it is the English at its most typical. White has a compact position with no weaknesses, a bishop on the long diagonal, and a queenside pawn advance that plays itself — a3, b4, b5. Black has the centre and the more active pieces, and the extra tempo Sicilian players always envy belongs to White this time. Neither side is in any danger for a while. If you like to be the one with the plan and let your opponent be the one with the pieces, this is your opening."
+    },
+    {
+      "moves": ["c4", "c5"],
+      "note": "Back to move one for the other reply you will meet. 1...c5 is the Symmetrical English — Black copies the move and refuses to give White anything to attack. The position is level by definition, and the side that breaks the symmetry at the right moment gets the initiative. White, having the move, gets to choose the moment."
+    },
+    {
+      "moves": ["c4", "c5", "Nc3", "Nc6"],
+      "note": "2.Nc3 Nc6. Both knights come to their queen's-side squares, both controlling d5 and d4 respectively. The mirror holds."
+    },
+    {
+      "moves": ["c4", "c5", "Nc3", "Nc6", "g3", "g6"],
+      "note": "3.g3 g6. Both sides prepare a fianchetto on the same diagonal — White's bishop toward b7, Black's toward b2 — and the game becomes a question of which bishop gets to do more."
+    },
+    {
+      "moves": ["c4", "c5", "Nc3", "Nc6", "g3", "g6", "Bg2", "Bg7"],
+      "note": "4.Bg2 Bg7. The bishops are out and pointing at each other's queensides. In the Symmetrical, the long diagonals are the whole game: whoever opens the centre first opens both diagonals, and the one whose bishop hits something wins the argument."
+    },
+    {
+      "moves": ["c4", "c5", "Nc3", "Nc6", "g3", "g6", "Bg2", "Bg7", "Nf3", "Nf6"],
+      "note": "5.Nf3 Nf6. The last knights develop. Every piece on the board has a twin now, and the only difference between the sides is that White is to move — and the next two moves are how White uses that."
+    },
+    {
+      "moves": ["c4", "c5", "Nc3", "Nc6", "g3", "g6", "Bg2", "Bg7", "Nf3", "Nf6", "O-O", "O-O"],
+      "note": "6.O-O O-O. Both kings castled, and both positions perfectly sound. White breaks the symmetry now, because if Black is allowed to break it first with ...d5, the advantage of the move is gone."
+    },
+    {
+      "moves": ["c4", "c5", "Nc3", "Nc6", "g3", "g6", "Bg2", "Bg7", "Nf3", "Nf6", "O-O", "O-O", "d4"],
+      "note": "7.d4 is the Symmetrical English main line, and it is the move that turns the opening into something. After 7...cxd4 8.Nxd4 the position is a Maróczy Bind with colours reversed — White's pawn on c4 and knight on d4 clamp down on d5, and Black's g7 bishop looks at a knight that is not going to move. Black's answers are ...Nxd4 and ...d6, or ...Qa5 and ...d6, and the slow fight over d5 and the queenside begins. Compare it with the reversed Dragon: there Black had the centre and White had the plan; here nobody has the centre, and White has the move. Both are the English, and both come down to the same square — d5 — and the same bishop, on g2, looking at it."
+    }
+  ],
+  "lines": [
+    {
+      "name": "English Opening, Reversed Dragon",
+      "moves": ["c4", "e5", "Nc3", "Nf6", "Nf3", "Nc6", "g3", "d5", "cxd5", "Nxd5", "Bg2", "Nb6", "O-O", "Be7", "d3", "O-O"]
+    },
+    {
+      "name": "English Opening, Symmetrical",
+      "moves": ["c4", "c5", "Nc3", "Nc6", "g3", "g6", "Bg2", "Bg7", "Nf3", "Nf6", "O-O", "O-O", "d4"]
+    }
+  ]
+}

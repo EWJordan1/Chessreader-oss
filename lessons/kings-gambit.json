@@ -1,0 +1,95 @@
+{
+  "id": "kings-gambit",
+  "name": "The King's Gambit",
+  "color": "w",
+  "eco": "C30",
+  "blurb": "Give a pawn on move two for the centre and the f-file, and accept that your king will never be entirely safe.",
+  "steps": [
+    {
+      "moves": ["e4", "e5"],
+      "note": "1.e4 e5. The oldest position in the book, and White is about to play the oldest attacking idea in it — one that was the main line of chess for two hundred years and is now a choice rather than an assumption."
+    },
+    {
+      "moves": ["e4", "e5", "f4"],
+      "note": "2.f4 is the King's Gambit. The pawn attacks e5, and the offer is real: if Black takes, White is a pawn down with no immediate way to get it back. What White buys is a pawn on d4 next, an open f-file, and a game in which Black has to know exactly what to do. What White pays, apart from the pawn, is the diagonal to the king that the f-pawn used to cover — remember that, because it is the theme of everything Black does."
+    },
+    {
+      "moves": ["e4", "e5", "f4", "exf4"],
+      "note": "2...exf4 accepts. The pawn on f4 is now Black's, and holding on to it is the whole question of the opening: if Black can keep it, White has given something for nothing; if White can win it back, the open lines were free."
+    },
+    {
+      "moves": ["e4", "e5", "f4", "exf4", "Nf3"],
+      "note": "3.Nf3 is the King's Knight Gambit, and it is played first for one reason above all others: it stops 3...Qh4+. Without the knight, the check on h4 forces the king to f1 and White has lost the right to castle on move three. The knight also eyes e5 and prepares d4."
+    },
+    {
+      "moves": ["e4", "e5", "f4", "exf4", "Nf3", "g5"],
+      "note": "3...g5 is the classical defence, and it is exactly what it looks like: Black tries to keep the pawn by supporting it with another one. It also threatens ...g4, kicking the knight, and every old main line of the King's Gambit begins here."
+    },
+    {
+      "moves": ["e4", "e5", "f4", "exf4", "Nf3", "g5", "h4"],
+      "note": "4.h4 attacks the chain at its head. Black cannot let the g-pawn be taken — that would hand the f-pawn back — and defending it with ...h6 walks into hxg5 anyway. So the pawn has to advance."
+    },
+    {
+      "moves": ["e4", "e5", "f4", "exf4", "Nf3", "g5", "h4", "g4"],
+      "note": "4...g4 kicks the knight, and now White's choice defines the variation. The knight can go to e5 or, in the wild old Allgaier, to g5 to be sacrificed on f7. The lesson takes the sound one."
+    },
+    {
+      "moves": ["e4", "e5", "f4", "exf4", "Nf3", "g5", "h4", "g4", "Ne5"],
+      "note": "5.Ne5 is the Kieseritzky Gambit, the main line of the King's Gambit for a century and a half. The knight sits in the centre, attacks g4, and cannot easily be driven away. Black's pawns on f4 and g4 have gone a long way forward and are now the targets rather than the trophies."
+    },
+    {
+      "moves": ["e4", "e5", "f4", "exf4", "Nf3", "g5", "h4", "g4", "Ne5", "Nf6"],
+      "note": "5...Nf6 develops with an attack on e4, and it is the modern answer. The old 5...d6 kicks the knight but hands back g4 after 6.Nxg4, when White has the pawn and the open lines both. Black is happy to give the g-pawn back for development — the f4 pawn is the one worth keeping."
+    },
+    {
+      "moves": ["e4", "e5", "f4", "exf4", "Nf3", "g5", "h4", "g4", "Ne5", "Nf6", "d4"],
+      "note": "6.d4 takes the centre and opens the bishop's road to f4. White now has two pawns in the middle, a knight on e5 and the c1 bishop about to win the f-pawn back. The gambit is turning into what it was supposed to be."
+    },
+    {
+      "moves": ["e4", "e5", "f4", "exf4", "Nf3", "g5", "h4", "g4", "Ne5", "Nf6", "d4", "d6"],
+      "note": "6...d6 kicks the knight at last. White cannot keep it on e5, and where it goes decides whether the f4 pawn comes back."
+    },
+    {
+      "moves": ["e4", "e5", "f4", "exf4", "Nf3", "g5", "h4", "g4", "Ne5", "Nf6", "d4", "d6", "Nd3"],
+      "note": "7.Nd3 is the modern retreat: the knight defends f4's capture square from behind, so that Bxf4 next move regains the pawn under cover. It looks passive. It is the move that turned the Kieseritzky from a museum piece back into an opening."
+    },
+    {
+      "moves": ["e4", "e5", "f4", "exf4", "Nf3", "g5", "h4", "g4", "Ne5", "Nf6", "d4", "d6", "Nd3", "Nxe4", "Bxf4"],
+      "note": "7...Nxe4 8.Bxf4, and the material is level again. White has the centre, the bishop pair's better half, and the f-file half open toward Black's king, which has no easy home — the g- and h-pawns have gone. Black has an active knight and a queenside that has not moved. This is the King's Gambit as it is played today: not a sacrifice for a mating attack, but an argument about who has the safer king, made with the material even. If you play it, play it for the position, not the fireworks."
+    },
+    {
+      "moves": ["e4", "e5", "f4", "Bc5"],
+      "note": "Back to move two, because your opponent will often decline. 2...Bc5 is the Classical Declined, and it makes the point that White's f-pawn was covering the a7–g1 diagonal: the bishop takes it, and now 3.fxe5?? loses to 3...Qh4+, when both answers are bad: 4.g3 Qxe4+ picks up the rook on h1, and 4.Ke2 Qxe4+ leaves White a pawn down with the king in the open. White cannot castle short until that bishop is dealt with."
+    },
+    {
+      "moves": ["e4", "e5", "f4", "Bc5", "Nf3"],
+      "note": "3.Nf3 covers h4 and stops the check. The threat on e5 is renewed, and Black has to defend it."
+    },
+    {
+      "moves": ["e4", "e5", "f4", "Bc5", "Nf3", "d6"],
+      "note": "3...d6 supports e5 with a pawn, keeps the bishop's diagonal open and prepares to develop calmly. Black's position is simply a good one: nothing is loose, and White's f-pawn has committed itself for no immediate reward."
+    },
+    {
+      "moves": ["e4", "e5", "f4", "Bc5", "Nf3", "d6", "Nc3", "Nf6"],
+      "note": "4.Nc3 Nf6. Both sides develop knights, and White is still not castled. The plan for White is to trade off the bishop on c5 — Na4 followed by Nxc5 — or to block the diagonal with d4 once it is supported. Until one of those happens, the king stays in the centre."
+    },
+    {
+      "moves": ["e4", "e5", "f4", "Bc5", "Nf3", "d6", "Nc3", "Nf6", "Bc4", "Nc6"],
+      "note": "5.Bc4 Nc6. White's bishop takes its usual diagonal at f7; Black's knight defends e5 a second time and looks at d4. The position is symmetrical in spirit — two bishops pointing at two weak squares — but White has the extra f-pawn move, which is either space or a loosened king depending on how the next ten moves go."
+    },
+    {
+      "moves": ["e4", "e5", "f4", "Bc5", "Nf3", "d6", "Nc3", "Nf6", "Bc4", "Nc6", "d3"],
+      "note": "6.d3 is the standard setup against the Declined, and the main line ends here in a quiet position. White has covered e4 and opened the c1 bishop, and will follow with Na4 to remove the bishop on c5 before castling; Black plays ...Bg4 or ...a6 and ...Be6 and is entirely comfortable. The lesson is that the gambit declined is not a gambit at all — it is a Vienna-like position where White has to work for the right to castle, and a King's Gambit player has to be happy in it, because a good opponent will choose it every time."
+    }
+  ],
+  "lines": [
+    {
+      "name": "King's Gambit Accepted, Kieseritzky",
+      "moves": ["e4", "e5", "f4", "exf4", "Nf3", "g5", "h4", "g4", "Ne5", "Nf6", "d4", "d6", "Nd3", "Nxe4", "Bxf4"]
+    },
+    {
+      "name": "King's Gambit Declined, Classical",
+      "moves": ["e4", "e5", "f4", "Bc5", "Nf3", "d6", "Nc3", "Nf6", "Bc4", "Nc6", "d3"]
+    }
+  ]
+}

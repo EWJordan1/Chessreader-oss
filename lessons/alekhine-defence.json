@@ -1,0 +1,95 @@
+{
+  "id": "alekhine-defence",
+  "name": "Alekhine's Defence",
+  "color": "b",
+  "eco": "B02",
+  "blurb": "Put a knight on f6 and invite the pawns to chase it, on the theory that pawns that have advanced can be attacked.",
+  "steps": [
+    {
+      "moves": ["e4"],
+      "note": "1.e4. Alekhine's Defence is the most provocative answer there is: Black does not contest the centre, and does not decline it either. Black offers White the chance to overextend, and hopes it is taken."
+    },
+    {
+      "moves": ["e4", "Nf6"],
+      "note": "1...Nf6 attacks e4 with a piece that can be kicked, and that is the point. White's natural reply gains a tempo on the knight; the knight moves and White gains another. What Black is counting on is that each of those tempi is a pawn move, and pawns that have moved forward cannot come back to defend each other."
+    },
+    {
+      "moves": ["e4", "Nf6", "e5"],
+      "note": "2.e5 kicks the knight. White could decline the invitation with 2.Nc3, when 2...e5 or 2...d5 leads to normal openings — but most players take the space on offer, and the defence is designed for them."
+    },
+    {
+      "moves": ["e4", "Nf6", "e5", "Nd5"],
+      "note": "2...Nd5 goes to the centre. The knight will be kicked again, by c4, and it will retreat again, to b6. Black does not mind: every pawn White pushes is a pawn that will need defending, and the knight on b6 will be looking at c4 for the rest of the game."
+    },
+    {
+      "moves": ["e4", "Nf6", "e5", "Nd5", "d4"],
+      "note": "3.d4 takes the centre. This is the sensible order and the Modern main line: White builds without overdoing it, and holds the pawns in place with pieces rather than pushing them all forward. The greedier version — 3.c4 and 4.d4 and 5.f4 — is the lesson's second road."
+    },
+    {
+      "moves": ["e4", "Nf6", "e5", "Nd5", "d4", "d6"],
+      "note": "3...d6 attacks e5, the pawn at the head of White's centre. Black wants to trade it off, or make White spend more moves holding it, and the pawn on d6 also opens a route for the light-squared bishop."
+    },
+    {
+      "moves": ["e4", "Nf6", "e5", "Nd5", "d4", "d6", "Nf3"],
+      "note": "4.Nf3 defends e5 with a piece and develops. This is the Modern Variation, and it is White's most reliable answer: hold what has been gained, and let Black prove the pawns are weak."
+    },
+    {
+      "moves": ["e4", "Nf6", "e5", "Nd5", "d4", "d6", "Nf3", "Bg4"],
+      "note": "4...Bg4 pins the knight that defends e5. It is the standard move and it does two things at once: the bishop is developed outside the pawn chain before ...e6 shuts it in, and the pressure on e5 goes up by one attacker."
+    },
+    {
+      "moves": ["e4", "Nf6", "e5", "Nd5", "d4", "d6", "Nf3", "Bg4", "Be2"],
+      "note": "5.Be2 breaks the pin the simple way and prepares to castle. White is not going to be dragged into complications by a knight on d5; the plan is to develop and keep the centre."
+    },
+    {
+      "moves": ["e4", "Nf6", "e5", "Nd5", "d4", "d6", "Nf3", "Bg4", "Be2", "e6"],
+      "note": "5...e6 now, with the bishop already out. The pawn supports d5, opens the f8 bishop, and gives Black the compact structure the Caro-Kann and the French would recognise — with the important difference that the light-squared bishop is on g4 and not behind it."
+    },
+    {
+      "moves": ["e4", "Nf6", "e5", "Nd5", "d4", "d6", "Nf3", "Bg4", "Be2", "e6", "O-O", "Be7"],
+      "note": "6.O-O Be7 is the Modern main line of Alekhine's Defence. Black will castle, play ...Nc6 and ...dxe5 or ...O-O and ...Nd7, and White's e5 pawn is a target that must be defended for the rest of the game. White has more space and a comfortable position; Black has no weaknesses and a plan. It is a quieter game than the opening's reputation suggests — and if you play the Alekhine, this is the position you will reach against a sensible opponent."
+    },
+    {
+      "moves": ["e4", "Nf6", "e5", "Nd5", "c4"],
+      "note": "Back to move three, for the opponent who is not sensible. 3.c4 kicks the knight again, and White is about to take everything on offer."
+    },
+    {
+      "moves": ["e4", "Nf6", "e5", "Nd5", "c4", "Nb6"],
+      "note": "3...Nb6 retreats to the square it was always going to. The knight now attacks c4 — White's second pushed pawn — and will keep attacking it. Every tempo White gained has been spent on a pawn that is now a target."
+    },
+    {
+      "moves": ["e4", "Nf6", "e5", "Nd5", "c4", "Nb6", "d4", "d6"],
+      "note": "4.d4 d6. White takes the centre with a third pawn; Black hits the head of it, as before. So far this is the Modern line with c4 thrown in, and if White now plays 5.Nf3 or 5.exd6 it stays that way. The Four Pawns Attack does not."
+    },
+    {
+      "moves": ["e4", "Nf6", "e5", "Nd5", "c4", "Nb6", "d4", "d6", "f4"],
+      "note": "5.f4 is the Four Pawns Attack. White supports e5 with a fourth pawn, and now has c4, d4, e5 and f4 all advanced — the biggest centre any opening allows. It is exactly what the Alekhine invites. If White can hold it, Black is crushed for space; if Black can break it, the pawns are all loose at once."
+    },
+    {
+      "moves": ["e4", "Nf6", "e5", "Nd5", "c4", "Nb6", "d4", "d6", "f4", "dxe5", "fxe5"],
+      "note": "5...dxe5 6.fxe5. Black trades to open the d-file and fix e5 as the target; White recaptures with the f-pawn to keep the centre intact. Now Black has to bring pieces to bear on it quickly, before White's development catches up."
+    },
+    {
+      "moves": ["e4", "Nf6", "e5", "Nd5", "c4", "Nb6", "d4", "d6", "f4", "dxe5", "fxe5", "Nc6"],
+      "note": "6...Nc6 attacks d4, the base of the e5 pawn. With the d-file open, the pawn on d4 is defended only by the queen, and Black threatens to add more attackers than White can find defenders."
+    },
+    {
+      "moves": ["e4", "Nf6", "e5", "Nd5", "c4", "Nb6", "d4", "d6", "f4", "dxe5", "fxe5", "Nc6", "Be3"],
+      "note": "7.Be3 defends d4 and is forced, or nearly: 7.d5 sends the knight to b4 and the centre starts to leak, and 7.Nf3 Bg4 is the pin Black wants."
+    },
+    {
+      "moves": ["e4", "Nf6", "e5", "Nd5", "c4", "Nb6", "d4", "d6", "f4", "dxe5", "fxe5", "Nc6", "Be3", "Bf5"],
+      "note": "7...Bf5 is the main line of the Four Pawns Attack. The bishop develops outside the pawn chain, covers the square in front of White's centre, and takes away the d3 square White's bishop wanted. Black's next moves are ...e6, ...Be7 and ...O-O, and then the centre comes under siege — ...f6 to hit e5, ...Qd7 and ...Rd8 down the d-file. White's next are Nc3, Nf3, Be2 and O-O, after which the pawns are held and the space tells. It is the sharpest position in the Alekhine and the honest test of its idea: four pawns, and the whole game is about whether they are strong or weak."
+    }
+  ],
+  "lines": [
+    {
+      "name": "Alekhine's Defence, Modern Variation",
+      "moves": ["e4", "Nf6", "e5", "Nd5", "d4", "d6", "Nf3", "Bg4", "Be2", "e6", "O-O", "Be7"]
+    },
+    {
+      "name": "Alekhine's Defence, Four Pawns Attack",
+      "moves": ["e4", "Nf6", "e5", "Nd5", "c4", "Nb6", "d4", "d6", "f4", "dxe5", "fxe5", "Nc6", "Be3", "Bf5"]
+    }
+  ]
+}

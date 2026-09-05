@@ -1,0 +1,95 @@
+{
+  "id": "scandinavian-defence",
+  "name": "The Scandinavian Defence",
+  "color": "b",
+  "eco": "B01",
+  "blurb": "Hit e4 on move one, bring the queen out early, and have the whole opening learned by lunchtime.",
+  "steps": [
+    {
+      "moves": ["e4"],
+      "note": "1.e4. Most defences prepare to attack this pawn. The Scandinavian just attacks it, and accepts what follows."
+    },
+    {
+      "moves": ["e4", "d5"],
+      "note": "1...d5 is the Scandinavian, or the Centre Counter. The pawn hits e4 at once, and White has no good way to keep the tension: defending with 2.Nc3 allows 2...d4, advancing with 2.e5 gives Black a French with the bishop free, and so White takes. What Black gets is an open game with no theory to speak of, and a structure that is almost impossible to lose quickly."
+    },
+    {
+      "moves": ["e4", "d5", "exd5"],
+      "note": "2.exd5. The pawn is taken, and Black now chooses how to take it back. The queen recaptures at once and comes out early, which breaks a rule you were taught — or the knight goes first and the pawn is recovered a move later. The lesson takes the queen's road first."
+    },
+    {
+      "moves": ["e4", "d5", "exd5", "Qxd5"],
+      "note": "2...Qxd5 brings the queen to the centre on move two, and yes, White will attack it with tempo. The point is that it costs White exactly one useful move — Nc3 — and after that the queen sits on a safe square from which it is never troubled again. Black has traded a pawn for a pawn and has an open diagonal for the c8 bishop, which is more than the French can say."
+    },
+    {
+      "moves": ["e4", "d5", "exd5", "Qxd5", "Nc3"],
+      "note": "3.Nc3 develops with the expected attack on the queen. This is the free move White gets, and White should take it: the alternatives let Black play ...Nf6 and ...c6 unbothered."
+    },
+    {
+      "moves": ["e4", "d5", "exd5", "Qxd5", "Nc3", "Qa5"],
+      "note": "3...Qa5 is the classical square, and it is chosen because it keeps doing something. From a5 the queen pins the c3 knight to the king once Black's bishop goes to b4, and it eyes the e5 square; it cannot be attacked again without a pawn move that weakens White. The modern 3...Qd6 is a fine alternative and worth knowing — but this is the move the opening was built on."
+    },
+    {
+      "moves": ["e4", "d5", "exd5", "Qxd5", "Nc3", "Qa5", "d4"],
+      "note": "4.d4 claims the centre. White has one pawn there to Black's none, which is the price Black paid, and the bishop on c1 now has a diagonal to d2 — the square from which it will later ask the queen to leave."
+    },
+    {
+      "moves": ["e4", "d5", "exd5", "Qxd5", "Nc3", "Qa5", "d4", "Nf6"],
+      "note": "4...Nf6 develops toward the centre and covers d5, the square White's pieces would like to use. Black's setup from here is a fixed one — ...c6, ...Bf5, ...e6 — and it can be played in almost any order against almost anything."
+    },
+    {
+      "moves": ["e4", "d5", "exd5", "Qxd5", "Nc3", "Qa5", "d4", "Nf6", "Nf3"],
+      "note": "5.Nf3 develops the other knight. White has three pieces out to Black's two and a pawn in the centre; this is as much as the early queen move costs, and it is not very much."
+    },
+    {
+      "moves": ["e4", "d5", "exd5", "Qxd5", "Nc3", "Qa5", "d4", "Nf6", "Nf3", "c6"],
+      "note": "5...c6 is the move that makes the Scandinavian solid. It gives the queen a retreat on c7 for the day White plays Bd2 and Nd5, it takes d5 and b5 away from White's knights, and it means the pawn on d4 can never be supported by a pawn on c4 without a fight. Modest and essential."
+    },
+    {
+      "moves": ["e4", "d5", "exd5", "Qxd5", "Nc3", "Qa5", "d4", "Nf6", "Nf3", "c6", "Bc4"],
+      "note": "6.Bc4 develops the bishop to its most active square, pointing at f7 and e6. White is ready to castle and has every piece on a good square. The question is what Black's extra time — the queen came out early, but everything else is in order — buys in the next two moves."
+    },
+    {
+      "moves": ["e4", "d5", "exd5", "Qxd5", "Nc3", "Qa5", "d4", "Nf6", "Nf3", "c6", "Bc4", "Bf5"],
+      "note": "6...Bf5 is the point of playing 1...d5 rather than 1...e6: the light-squared bishop gets out before the e-pawn locks it in. It sits outside the pawn chain, covers e4, and stops White's knight from settling there. After this move Black has no bad pieces at all."
+    },
+    {
+      "moves": ["e4", "d5", "exd5", "Qxd5", "Nc3", "Qa5", "d4", "Nf6", "Nf3", "c6", "Bc4", "Bf5", "Bd2"],
+      "note": "7.Bd2 develops with a hidden threat: the knight on c3 can now move with discovered attack on the queen, and Nd5 in particular would hit the queen and threaten a fork on c7. Black has to see this coming, and the next move is the answer to it."
+    },
+    {
+      "moves": ["e4", "d5", "exd5", "Qxd5", "Nc3", "Qa5", "d4", "Nf6", "Nf3", "c6", "Bc4", "Bf5", "Bd2", "e6"],
+      "note": "7...e6 is the main line of the Scandinavian. The pawn covers d5, so the knight cannot jump there, and it opens the f8 bishop's diagonal so Black can play ...Bb4 and use the pin the queen has been preparing since move three. Black is fully developed by move ten, has no weaknesses, and has spent about a tempo for the privilege. That is the trade the Scandinavian makes, and for a player who wants to reach a middlegame they understand every single game, it is a good one."
+    },
+    {
+      "moves": ["e4", "d5", "exd5", "Nf6"],
+      "note": "Back to move two for the other recapture. 2...Nf6 is the Modern Scandinavian: the knight goes first, the pawn is recovered next move, and the queen stays home. White can try to hold the pawn with 3.c4, but after 3...c6 or 3...e6 Black gets enormous development for it, so most players give it back."
+    },
+    {
+      "moves": ["e4", "d5", "exd5", "Nf6", "d4"],
+      "note": "3.d4 lets the pawn go and takes the centre instead. This is the sound reply, and the resulting position is a normal open game in which Black is not behind at all."
+    },
+    {
+      "moves": ["e4", "d5", "exd5", "Nf6", "d4", "Nxd5"],
+      "note": "3...Nxd5. The knight sits in the centre, ready to be kicked and happy to go back to b6, where it watches c4 and d5 for the rest of the game."
+    },
+    {
+      "moves": ["e4", "d5", "exd5", "Nf6", "d4", "Nxd5", "c4", "Nb6"],
+      "note": "4.c4 Nb6. White gains space with tempo; Black retreats to the square that was always the plan. Now the pawns on c4 and d4 are a target — Black will play ...g6 and ...Bg7 and hit d4 down the long diagonal, the same idea as the Grünfeld."
+    },
+    {
+      "moves": ["e4", "d5", "exd5", "Nf6", "d4", "Nxd5", "c4", "Nb6", "Nf3", "g6"],
+      "note": "5.Nf3 g6 is the Modern Scandinavian main line. The fianchetto is coming, the knight on b6 pressures c4, and White's big centre is either a strength to be pushed forward or a pair of targets, depending on who plays better. Compare the two roads: the queen line is the same setup every time with no surprises, and this one is a fight over a big centre. Pick the one that suits you — either is a complete answer to 1.e4, learned in an afternoon."
+    }
+  ],
+  "lines": [
+    {
+      "name": "Scandinavian Defence, Main Line",
+      "moves": ["e4", "d5", "exd5", "Qxd5", "Nc3", "Qa5", "d4", "Nf6", "Nf3", "c6", "Bc4", "Bf5", "Bd2", "e6"]
+    },
+    {
+      "name": "Scandinavian Defence, Modern",
+      "moves": ["e4", "d5", "exd5", "Nf6", "d4", "Nxd5", "c4", "Nb6", "Nf3", "g6"]
+    }
+  ]
+}

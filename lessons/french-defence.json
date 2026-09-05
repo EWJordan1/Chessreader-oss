@@ -1,0 +1,99 @@
+{
+  "id": "french-defence",
+  "name": "The French Defence",
+  "color": "b",
+  "eco": "C00",
+  "blurb": "Answer 1.e4 with 1...e6 and 2...d5: a pawn chain, a bad bishop, and a counter-attack that arrives on move three.",
+  "steps": [
+    {
+      "moves": ["e4"],
+      "note": "1.e4. The French is the oldest of the defences that refuse 1...e5, and it is the one that makes the plainest bargain: Black accepts a cramped bishop for a pawn structure that cannot be broken."
+    },
+    {
+      "moves": ["e4", "e6"],
+      "note": "1...e6 prepares ...d5. On its own it does nothing; its whole purpose is that the d-pawn will arrive next move supported, so that White's e4 pawn is attacked by something it cannot simply take. The price is already visible: the bishop on c8 has just lost its diagonal, and the French is the story of what Black does about that."
+    },
+    {
+      "moves": ["e4", "e6", "d4"],
+      "note": "2.d4 takes the centre. White is given a free move to build with, and uses it in the obvious way. Both centre pawns are in place; Black is about to hit one of them."
+    },
+    {
+      "moves": ["e4", "e6", "d4", "d5"],
+      "note": "2...d5, and White has to decide what to do with e4. It can advance, trade, or be defended — and every main line of the French is named for that choice. What Black has is a pawn chain, d5 and e6, pointing at the queenside. That chain says where Black will attack: at its head White's pawns are strong, at their base they can be hit."
+    },
+    {
+      "moves": ["e4", "e6", "d4", "d5", "e5"],
+      "note": "3.e5 is the Advance Variation, the most common choice at club level. White takes space, cramps Black's kingside — the knight on g8 has lost its best square — and fixes the pawn chain. In doing so, White also tells Black exactly where to play: the base of the chain is on d4, and Black attacks it now."
+    },
+    {
+      "moves": ["e4", "e6", "d4", "d5", "e5", "c5"],
+      "note": "3...c5 is the move the French is built on. The pawn attacks d4, the base of White's chain, and every Black piece will join it there: knight to c6, queen to b6, and the pressure builds until White has to give something. In a pawn chain, you attack the base."
+    },
+    {
+      "moves": ["e4", "e6", "d4", "d5", "e5", "c5", "c3"],
+      "note": "4.c3 supports d4 with a pawn. It is the only way to hold the chain, and it costs White the knight's natural square on c3 — the same price the Italian pays for the same move."
+    },
+    {
+      "moves": ["e4", "e6", "d4", "d5", "e5", "c5", "c3", "Nc6"],
+      "note": "4...Nc6 attacks d4 a second time. Black is not developing for its own sake; every piece goes to a square from which it hits the base of the chain."
+    },
+    {
+      "moves": ["e4", "e6", "d4", "d5", "e5", "c5", "c3", "Nc6", "Nf3"],
+      "note": "5.Nf3 defends d4 a second time. White's pieces, too, are being placed by the pawn structure: the knight has to be here, and the bishop that would like to be on e3 cannot go there yet because ...Qb6 will hit b2."
+    },
+    {
+      "moves": ["e4", "e6", "d4", "d5", "e5", "c5", "c3", "Nc6", "Nf3", "Qb6"],
+      "note": "5...Qb6 attacks d4 a third time and b2 at the same time. This is the standard Advance French position: three attackers on d4, two defenders, and the b2 pawn tying White's bishop to c1. White's most common answers are 6.Be2, 6.a3 and 6.Bd3 — the last of which is the Milner-Barry Gambit, giving up d4 for a lead in development, and worth knowing before you meet it."
+    },
+    {
+      "moves": ["e4", "e6", "d4", "d5", "e5", "c5", "c3", "Nc6", "Nf3", "Qb6", "Be2"],
+      "note": "6.Be2 is the quiet way. The bishop develops and prepares to castle without weakening anything. It does not solve d4's problem; it accepts it, and plans to hold the pawn for as long as Black keeps attacking it."
+    },
+    {
+      "moves": ["e4", "e6", "d4", "d5", "e5", "c5", "c3", "Nc6", "Nf3", "Qb6", "Be2", "cxd4", "cxd4"],
+      "note": "6...cxd4 7.cxd4. Black releases the tension at the moment White's bishop has committed itself. Now the c-file is open for Black's rook, the d4 pawn is fixed as a target forever, and the knight on b1 has its square back — which is why Black waited until the bishop was developed before trading."
+    },
+    {
+      "moves": ["e4", "e6", "d4", "d5", "e5", "c5", "c3", "Nc6", "Nf3", "Qb6", "Be2", "cxd4", "cxd4", "Nge7"],
+      "note": "7...Nge7 finds the knight a route. It cannot go to f6 — e5 covers it — so it goes around, to e7 and then to f5, where it will attack d4 once more. This is the French's answer to being cramped: every piece has a square, it just takes an extra move to get there."
+    },
+    {
+      "moves": ["e4", "e6", "d4", "d5", "e5", "c5", "c3", "Nc6", "Nf3", "Qb6", "Be2", "cxd4", "cxd4", "Nge7", "Nc3", "Nf5"],
+      "note": "8.Nc3 Nf5, and the Advance French main line is on the board. Count the attackers on d4: knight, knight, queen. Count the defenders: knight, queen, and a bishop that cannot come to e3 without dropping b2. White has space and a kingside to attack on; Black has a target that will not go away and a queenside that is about to open. If you play the French, this is the position you are playing for, and you should know it well enough to find it with your eyes closed."
+    },
+    {
+      "moves": ["e4", "e6", "d4", "d5", "Nc3"],
+      "note": "Back to move three, and the other main road. 3.Nc3 defends e4 with a piece, keeps every option open, and is the choice of players who want a sharper game than the Advance. Black's answer is the one that gives the French its reputation for being unbalanced."
+    },
+    {
+      "moves": ["e4", "e6", "d4", "d5", "Nc3", "Bb4"],
+      "note": "3...Bb4 is the Winawer. The bishop pins the knight, so e4 is attacked and its defender cannot move; White has to advance, trade or protect the pawn some other way. Black is offering to give up this bishop for the knight, and the doubled pawns that leaves White with are the whole of the coming argument."
+    },
+    {
+      "moves": ["e4", "e6", "d4", "d5", "Nc3", "Bb4", "e5"],
+      "note": "4.e5 advances again. Now the Winawer looks like the Advance with an extra pair of moves each — and those two moves change everything, because White's knight is pinned and Black's bishop is about to be exchanged for it."
+    },
+    {
+      "moves": ["e4", "e6", "d4", "d5", "Nc3", "Bb4", "e5", "c5"],
+      "note": "4...c5 attacks the base of the chain, the French's move in every version. White's most common reply asks the bishop to make up its mind."
+    },
+    {
+      "moves": ["e4", "e6", "d4", "d5", "Nc3", "Bb4", "e5", "c5", "a3", "Bxc3+", "bxc3"],
+      "note": "5.a3 Bxc3+ 6.bxc3. The trade is made, and the position is one of the great imbalances in chess. White has the bishop pair and a big centre; Black has given up the bishop that was never going to be a problem and left White with doubled c-pawns that cannot be undoubled. White will attack on the kingside — Qg4 next, hitting g7, is the standard move — and Black will attack the c3 pawn and everything around it."
+    },
+    {
+      "moves": ["e4", "e6", "d4", "d5", "Nc3", "Bb4", "e5", "c5", "a3", "Bxc3+", "bxc3", "Ne7"],
+      "note": "6...Ne7 is the main line, and it does the same job the knight did in the Advance: goes around e5, and gets ready to defend g7 against Qg4 by covering g6 and f5. From here White chooses between 7.Qg4, the sharpest move in the French, and the calmer 7.Nf3 and 7.h4; Black plays ...Nbc6, ...Qa5 and ...Bd7, and the c3 pawn is under siege by move ten. The Winawer is the French for players who want the structure and the fight both — and if the Advance is the opening's bargain, this is its argument."
+    }
+  ],
+  "lines": [
+    {
+      "name": "French Defence, Advance Variation",
+      "moves": ["e4", "e6", "d4", "d5", "e5", "c5", "c3", "Nc6", "Nf3", "Qb6", "Be2", "cxd4", "cxd4", "Nge7", "Nc3", "Nf5"]
+    },
+    {
+      "name": "French Defence, Winawer",
+      "moves": ["e4", "e6", "d4", "d5", "Nc3", "Bb4", "e5", "c5", "a3", "Bxc3+", "bxc3", "Ne7"]
+    }
+  ]
+}

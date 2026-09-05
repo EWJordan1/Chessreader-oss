@@ -1,0 +1,91 @@
+{
+  "id": "scotch-game",
+  "name": "The Scotch Game",
+  "color": "w",
+  "eco": "C45",
+  "blurb": "Open the centre on move three and make Black solve it at once.",
+  "steps": [
+    {
+      "moves": ["e4"],
+      "note": "1.e4. The Scotch is for the 1.e4 player who wants an open position early — the same first three moves as the Italian and the Lopez, and a completely different third one."
+    },
+    {
+      "moves": ["e4", "e5"],
+      "note": "1...e5. Black stakes the same claim, and the pawn on e5 is the piece of the board White is about to remove rather than pressure."
+    },
+    {
+      "moves": ["e4", "e5", "Nf3", "Nc6"],
+      "note": "2.Nf3 Nc6. The attack on e5 and its defence, the same as in every open game. The Italian now plays a bishop and the Lopez plays a bishop; the Scotch plays a pawn."
+    },
+    {
+      "moves": ["e4", "e5", "Nf3", "Nc6", "d4"],
+      "note": "3.d4 is the Scotch Game. White attacks e5 a second time, with a pawn, and there is no good way to hold the pawn: 3...d6 gives up the centre after 4.dxe5, and defending it with a piece just loses it. Black is going to have to take."
+    },
+    {
+      "moves": ["e4", "e5", "Nf3", "Nc6", "d4", "exd4"],
+      "note": "3...exd4 is nearly forced, and look at what it has done to the position. The e-file is half open, the d-file is half open, and after the recapture White will have a knight in the centre with nothing on d4 or e5 to argue with it. That is the Scotch: not a gambit, just an open board on move four."
+    },
+    {
+      "moves": ["e4", "e5", "Nf3", "Nc6", "d4", "exd4", "Nxd4"],
+      "note": "4.Nxd4. The knight recaptures and sits in the centre. It is exposed there — Black's next move will attack it — but every square it can retreat to is a reasonable one, which is why the exposure costs nothing."
+    },
+    {
+      "moves": ["e4", "e5", "Nf3", "Nc6", "d4", "exd4", "Nxd4", "Bc5"],
+      "note": "4...Bc5 is the Classical Scotch. The bishop develops with a hit on d4, and its real target is the pin down the a7–g1 diagonal: if the knight moves carelessly, the bishop looks straight at the king's castling square."
+    },
+    {
+      "moves": ["e4", "e5", "Nf3", "Nc6", "d4", "exd4", "Nxd4", "Bc5", "Be3"],
+      "note": "5.Be3 defends the knight and blocks the diagonal at once. Taking on c6 instead, 5.Nxc6, gives Black a free developing move after 5...Qf6 and helps the recapture toward the centre. The bishop move is the one that keeps every option open."
+    },
+    {
+      "moves": ["e4", "e5", "Nf3", "Nc6", "d4", "exd4", "Nxd4", "Bc5", "Be3", "Qf6"],
+      "note": "5...Qf6 puts a queen on the same diagonal as the bishop, and the threat is concrete: 6...Bxd4 7.Bxd4 Nxd4 and the queen on f6 defends the knight, so Black wins a piece. It looks like a beginner's queen move. It is the main line."
+    },
+    {
+      "moves": ["e4", "e5", "Nf3", "Nc6", "d4", "exd4", "Nxd4", "Bc5", "Be3", "Qf6", "c3"],
+      "note": "6.c3 is the calm answer: the pawn defends d4 a second time, so the capture sequence no longer wins anything, and the queen on f6 starts to look a little early. The same pawn also gives the knight a retreat on c2 and prepares to build the centre with f4 later."
+    },
+    {
+      "moves": ["e4", "e5", "Nf3", "Nc6", "d4", "exd4", "Nxd4", "Bc5", "Be3", "Qf6", "c3", "Nge7"],
+      "note": "6...Nge7 develops the other knight without walking into e5. On f6 the knight would sit on the queen's square and invite e5 with tempo; on e7 it covers d5 and g6 and can drop back to defend. Black is aiming for ...d5 to open the game while everything is out."
+    },
+    {
+      "moves": ["e4", "e5", "Nf3", "Nc6", "d4", "exd4", "Nxd4", "Bc5", "Be3", "Qf6", "c3", "Nge7", "Bc4"],
+      "note": "7.Bc4 is the main line of the Classical Scotch. The bishop takes the same diagonal it takes in the Italian, and for the same reason — f7 — but here the centre is already open and the pieces already active, so the game is sharper from the start. White's plan is O-O, f4 and a kingside attack; Black's is ...d5 or ...Ne5 hitting the bishop. If you play the Scotch, this is the position you are playing for."
+    },
+    {
+      "moves": ["e4", "e5", "Nf3", "Nc6", "d4", "exd4", "Nxd4", "Nf6"],
+      "note": "Back to move four for the other main answer. 4...Nf6 develops with a hit on e4 rather than on d4, and it invites White into the sharpest line in the opening."
+    },
+    {
+      "moves": ["e4", "e5", "Nf3", "Nc6", "d4", "exd4", "Nxd4", "Nf6", "Nxc6", "bxc6"],
+      "note": "5.Nxc6 bxc6. White trades to spoil Black's pawns — the b-pawn is now on c6 and doubled — and the price is that Black's centre pawns are ready to advance. Both sides have something."
+    },
+    {
+      "moves": ["e4", "e5", "Nf3", "Nc6", "d4", "exd4", "Nxd4", "Nf6", "Nxc6", "bxc6", "e5"],
+      "note": "6.e5 is the Mieses Variation, and it is the point of taking on c6 first. The pawn kicks the knight, and there is only one good square for it. Do not play 6.Bd3, which is comfortable and gives Black nothing to think about."
+    },
+    {
+      "moves": ["e4", "e5", "Nf3", "Nc6", "d4", "exd4", "Nxd4", "Nf6", "Nxc6", "bxc6", "e5", "Qe7"],
+      "note": "6...Qe7 pins the e5 pawn against the king rather than moving the knight, and it is the only move that keeps Black in the game — after 6...Nd5, 7.c4 forces the knight to the edge. The queen is awkward on e7, and Black knows it."
+    },
+    {
+      "moves": ["e4", "e5", "Nf3", "Nc6", "d4", "exd4", "Nxd4", "Nf6", "Nxc6", "bxc6", "e5", "Qe7", "Qe2"],
+      "note": "7.Qe2 defends the pawn with the queen, and now both queens sit in front of their kings on a half-open file. White's position looks strange too. The difference is that White is about to push the knight around, and Black has to spend the next several moves finding it a home."
+    },
+    {
+      "moves": ["e4", "e5", "Nf3", "Nc6", "d4", "exd4", "Nxd4", "Nf6", "Nxc6", "bxc6", "e5", "Qe7", "Qe2", "Nd5", "c4", "Ba6"],
+      "note": "7...Nd5 8.c4 Ba6 is the Mieses main line. The knight goes to the centre, the pawn attacks it, and Black pins the c4 pawn against the queen rather than retreat. Both sides have played strange-looking moves and both are correct. White will play Nd2 or b3 and unravel; Black will play ...Nb6 and ...g6 and hope the two bishops tell. This line is why the Scotch was worth reviving — it is one of the very few 1.e4 e5 openings where Black is uncomfortable on move eight."
+    }
+  ],
+  "lines": [
+    {
+      "name": "Scotch Game, Classical",
+      "moves": ["e4", "e5", "Nf3", "Nc6", "d4", "exd4", "Nxd4", "Bc5", "Be3", "Qf6", "c3", "Nge7", "Bc4"]
+    },
+    {
+      "name": "Scotch Game, Mieses Variation",
+      "moves": ["e4", "e5", "Nf3", "Nc6", "d4", "exd4", "Nxd4", "Nf6", "Nxc6", "bxc6", "e5", "Qe7", "Qe2", "Nd5", "c4", "Ba6"]
+    }
+  ]
+}

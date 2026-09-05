@@ -1,0 +1,49 @@
+/* review — styles for this module only. Tokens come from tokens.css; never a raw colour. */
+
+/* The two accuracy tiles side by side; the name under the number is the label. */
+.rev-sides .stat-tile { flex: 1; min-width: 0; }
+.rev-sides .stat-tile .label { text-transform: none; letter-spacing: 0; font-size: var(--fs-sm); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+/* The counts: word left, one column per player, tabular figures. */
+.rev-counts th, .rev-counts td { padding: var(--sp-4) var(--sp-8); text-align: right; font-weight: 400; }
+.rev-counts th:first-child, .rev-counts td:first-child { text-align: left; }
+.rev-counts thead th { color: var(--text-muted); font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: .04em; border-bottom: 1px solid var(--hairline); }
+.rev-counts tbody tr + tr td, .rev-counts tbody tr + tr th { border-top: 1px solid var(--hairline); }
+.rev-counts td { color: var(--text); }
+.rev-zero { color: var(--text-muted); opacity: .6; }
+.rev-mark { font-weight: 650; margin-left: 1px; }
+
+/*
+ * The vocabulary in its colours, shared by the table, the chips and the tree: praise is
+ * good, the ordinary words are text, a book move is muted, and the errors climb from muted
+ * through warn to danger — the same ramp the tree's marks use, so a `??` in the score
+ * and a Blunder in the table are one colour.
+ */
+.rev-brilliant, .rev-great { color: var(--good); font-weight: 650; }
+.rev-best, .rev-excellent { color: var(--good); }
+.rev-good { color: var(--text); }
+.rev-book { color: var(--text-muted); }
+.rev-inaccuracy { color: var(--text-muted); }
+.rev-mistake { color: var(--warn); }
+.rev-blunder, .rev-miss { color: var(--danger); }
+
+.rev-block { margin-top: var(--sp-4); padding-top: var(--sp-12); border-top: 1px solid var(--border); display: flex; flex-direction: column; gap: var(--sp-8); }
+
+/* A moment is a door to a position, so it is a button wearing a chip; the mark rather
+   than the whole chip carries the colour — three red pills is a warning strip, three
+   moves with red marks is a score. */
+.rev-moments { display: flex; flex-wrap: wrap; gap: var(--sp-6); }
+.rev-chip { font-family: var(--font-sans); color: var(--text-bright); gap: var(--sp-2); }
+.rev-chip.chip-danger { color: var(--text-bright); }
+.rev-chip .san { font-size: var(--fs-xs); }
+.rev-chip.rev-inaccuracy .rev-mark { color: var(--text-muted); }
+.rev-chip.rev-mistake .rev-mark { color: var(--warn); }
+.rev-chip.rev-blunder .rev-mark, .rev-chip.rev-miss .rev-mark { color: var(--danger); }
+.rev-chip:hover { border-color: var(--primary); }
+
+/* What the card says, as against what it counts: the sentences take the serif. */
+.rev-sentence { margin: 0; font-family: var(--font-serif); font-size: var(--fs-md); line-height: 1.55; color: var(--text-muted); }
+.rev-opening { color: var(--text); }
+.rev-eco { font-family: var(--font-sans); font-size: var(--fs-xs); color: var(--text-muted); border: 1px solid var(--border-hi); border-radius: var(--radius-xs); padding: 0 var(--sp-4); vertical-align: middle; }
+
+#review-note { font-size: var(--fs-sm); }

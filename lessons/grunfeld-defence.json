@@ -1,0 +1,103 @@
+{
+  "id": "grunfeld-defence",
+  "name": "The Grünfeld Defence",
+  "color": "b",
+  "eco": "D80",
+  "blurb": "Fianchetto, then strike with ...d5 on move three: give White a huge centre and spend the whole game attacking it.",
+  "steps": [
+    {
+      "moves": ["d4", "Nf6", "c4", "g6"],
+      "note": "1.d4 Nf6 2.c4 g6. The fianchetto, and up to here this is the King's Indian. The two openings part on the next move, and the difference is one pawn: the King's Indian keeps it on d7 and plays ...e5 later; the Grünfeld plays it to d5 now."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "g6", "Nc3"],
+      "note": "3.Nc3 prepares e4. Against the King's Indian setup that is exactly right; against what Black is about to play, the knight on c3 becomes a target, and that is why the Grünfeld waits for it."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "g6", "Nc3", "d5"],
+      "note": "3...d5 is the Grünfeld. The pawn hits c4 and takes e4 away, and it invites White to take on d5 and build the biggest centre in the book. Black wants that: the pawns on d4 and e4 will be the targets of every Black piece, the g7 bishop first among them. It is an opening built on a paradox — the more centre White has, the more there is to attack — and it only works if Black attacks it at once."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "g6", "Nc3", "d5", "cxd5"],
+      "note": "4.cxd5 is the Exchange Variation, White's most direct reply. The pawn is taken, the knight will recapture, and White is going to kick it with e4 and get the centre. Everything from here is about whether that centre stands."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "g6", "Nc3", "d5", "cxd5", "Nxd5"],
+      "note": "4...Nxd5. The knight sits in the centre, and it will be kicked off next move. That is fine — Black's plan is to trade it for the knight on c3, so that White's recapture doubles a pawn and blocks the c-file for White's own rook."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "g6", "Nc3", "d5", "cxd5", "Nxd5", "e4"],
+      "note": "5.e4 takes the centre and attacks the knight. White now has pawns on d4 and e4 with nothing of Black's in the middle at all. On the face of it, Black has been pushed off the board. Look at the g7 square before agreeing."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "g6", "Nc3", "d5", "cxd5", "Nxd5", "e4", "Nxc3", "bxc3"],
+      "note": "5...Nxc3 6.bxc3. The trade Black wanted. White's pawn structure is c3–d4–e4, which is a wall — and a wall with a base on c3 that can be attacked from c5 and down the c-file. Black has given up two knight moves for that structure; it is worth it."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "g6", "Nc3", "d5", "cxd5", "Nxd5", "e4", "Nxc3", "bxc3", "Bg7"],
+      "note": "6...Bg7 completes the fianchetto, and the bishop is looking straight at d4 through nothing. This bishop is the Grünfeld. Every plan Black has is built on its diagonal, and it is never exchanged willingly."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "g6", "Nc3", "d5", "cxd5", "Nxd5", "e4", "Nxc3", "bxc3", "Bg7", "Nf3"],
+      "note": "7.Nf3 develops and defends d4. The alternative 7.Bc4, with Ne2 behind it, is the older main line and keeps the f-pawn free; both are good, and this one is the more common today."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "g6", "Nc3", "d5", "cxd5", "Nxd5", "e4", "Nxc3", "bxc3", "Bg7", "Nf3", "c5"],
+      "note": "7...c5 is the strike. The pawn attacks d4, the c-file is about to open, and the whole of Black's position points at one square. This is the move every Grünfeld line has in common, and if you remember one thing from the lesson, remember that ...c5 comes as early as it can."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "g6", "Nc3", "d5", "cxd5", "Nxd5", "e4", "Nxc3", "bxc3", "Bg7", "Nf3", "c5", "Rb1"],
+      "note": "8.Rb1 is the modern main line, and it is a strange-looking move with a clear idea: the rook leaves the long diagonal before the g7 bishop can ever hit it, and it attacks b7 down the half-open file. White is going to play Be2 and O-O and hold the centre; the rook on b1 is the piece that makes the queenside safe while that happens."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "g6", "Nc3", "d5", "cxd5", "Nxd5", "e4", "Nxc3", "bxc3", "Bg7", "Nf3", "c5", "Rb1", "O-O"],
+      "note": "8...O-O castles. Black could take on d4 first, but the king should be safe before the centre opens, and the tension on d4 is Black's to keep — White cannot resolve it favourably."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "g6", "Nc3", "d5", "cxd5", "Nxd5", "e4", "Nxc3", "bxc3", "Bg7", "Nf3", "c5", "Rb1", "O-O", "Be2"],
+      "note": "9.Be2 develops and prepares to castle. Every piece White has is now defending the centre or the king, which is the Exchange Grünfeld from White's side: hold the wall, and the space behind it wins."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "g6", "Nc3", "d5", "cxd5", "Nxd5", "e4", "Nxc3", "bxc3", "Bg7", "Nf3", "c5", "Rb1", "O-O", "Be2", "cxd4", "cxd4", "Qa5+"],
+      "note": "9...cxd4 10.cxd4 Qa5+ is the main line. Black opens the c-file and checks, and the check matters: White cannot castle for a move, and 11.Bd2 Qxa2 hands Black a pawn, while 11.Qd2 Qxd2+ trades queens into an endgame where Black's pieces are more active than White's centre. The Grünfeld is not a defence in which Black waits; it is one in which Black has a target from move three and hits it every move, and this position is the whole opening in one picture — a big white centre, and every black piece aimed at it."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "g6", "Nc3", "d5", "Bf4"],
+      "note": "Back to move four for the other main road. 4.Bf4 declines the exchange and develops instead — White keeps the tension on d5, brings the bishop out before e3, and aims at c7. It is the London bishop against the Grünfeld, and it is more dangerous than it looks."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "g6", "Nc3", "d5", "Bf4", "Bg7"],
+      "note": "4...Bg7 completes the fianchetto. Black does not take on c4 — the pawn cannot be held and the capture wastes a move — and does not defend d5 either. The Grünfeld's pawn on d5 is bait, and the bishop on g7 is the reason it is safe to leave it there."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "g6", "Nc3", "d5", "Bf4", "Bg7", "e3"],
+      "note": "5.e3 supports d4 and opens the f1 bishop. Now White threatens cxd5 followed by Bxc7, winning a pawn, and Black must answer it."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "g6", "Nc3", "d5", "Bf4", "Bg7", "e3", "O-O"],
+      "note": "5...O-O castles and ignores the threat, and the reason it can is concrete: after 6.cxd5 Nxd5 7.Nxd5 Qxd5 8.Bxc7, 8...Na6 hits the bishop and the b2 pawn falls to the g7 bishop a move later, with Black's pieces far more active than White's. Black's pieces are aimed at the queenside, and White cannot go pawn-hunting there."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "g6", "Nc3", "d5", "Bf4", "Bg7", "e3", "O-O", "Nf3"],
+      "note": "6.Nf3 develops and defends d4. White is not going to win the c7 pawn, and settles for a solid setup with Be2, O-O and Rc1. Black's answer is the move it always is."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "g6", "Nc3", "d5", "Bf4", "Bg7", "e3", "O-O", "Nf3", "c5"],
+      "note": "6...c5 strikes at d4 again. With White's bishop on f4 rather than in the centre, the strike is even more effective: the d4 pawn is defended by the queen and the knight, and Black is about to add ...Nc6 and ...Qa5."
+    },
+    {
+      "moves": ["d4", "Nf6", "c4", "g6", "Nc3", "d5", "Bf4", "Bg7", "e3", "O-O", "Nf3", "c5", "dxc5", "Qa5"],
+      "note": "7.dxc5 Qa5 is the main line against the Bf4 Grünfeld. White takes to remove the tension; Black's queen comes out to a5, pinning the c3 knight to the king and attacking c5 at the same time, and the pawn will be recovered with ...dxc4, ...Qxc5 or ...Ne4 as the position allows. White's centre is gone, the g7 bishop has the whole diagonal, and Black's pieces are more active than White's — which is what the Grünfeld promises whenever White declines the fight over the big centre. Two roads: one where White builds the wall and Black attacks it, one where White declines to build it and Black is simply freer. Both are the same opening, and in both the answer to every question is ...c5."
+    }
+  ],
+  "lines": [
+    {
+      "name": "Grünfeld Defence, Exchange Variation",
+      "moves": ["d4", "Nf6", "c4", "g6", "Nc3", "d5", "cxd5", "Nxd5", "e4", "Nxc3", "bxc3", "Bg7", "Nf3", "c5", "Rb1", "O-O", "Be2", "cxd4", "cxd4", "Qa5+"]
+    },
+    {
+      "name": "Grünfeld Defence, 4.Bf4",
+      "moves": ["d4", "Nf6", "c4", "g6", "Nc3", "d5", "Bf4", "Bg7", "e3", "O-O", "Nf3", "c5", "dxc5", "Qa5"]
+    }
+  ]
+}
