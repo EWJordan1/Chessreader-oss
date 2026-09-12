@@ -1,7 +1,7 @@
 # ChessReader
 
-
 **Live at [chessreader.pro](https://chessreader.pro)** — the app is at [chessreader.pro/app](https://chessreader.pro/app).
+
 Free, open-source, desktop chess analysis and training. Paste a PGN, fetch one from a
 URL, or pull your public Chess.com or Lichess archive, and the app reads your games back
 to you the way a coach would: what you got wrong, what you keep getting wrong, and what to
