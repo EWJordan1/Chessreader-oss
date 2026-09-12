@@ -3,8 +3,7 @@
 Free, open-source, desktop chess analysis and training. Paste a PGN, fetch one from a
 URL, or pull your public Chess.com or Lichess archive, and the app reads your games back
 to you the way a coach would: what you got wrong, what you keep getting wrong, and what to
-do about it. Games can also be read *aloud*, move by move — an optional feature, not the
-point.
+do about it. Games can also be read aloud, move by move.
 
 Everything is computed in your browser. Games live in IndexedDB on your device. Nothing is
 uploaded unless you configure an endpoint to upload it to.
