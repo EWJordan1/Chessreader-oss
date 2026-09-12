@@ -32,8 +32,10 @@ archive sweep, local for questions*, URL `http://your-machine:8020` (or
 | `CR_HASH` | `128` | `Hash` MB per engine process |
 | `CR_ENGINES` | `2` | size of the HTTP engine pool (a WebSocket gets its own) |
 | `CR_ORIGIN` | `*` | `Access-Control-Allow-Origin` |
+| `CR_SYNC_DIR` | *(empty)* | where the optional sync shelves are written. Empty means sync is **not** mounted, so an engine server never quietly becomes a blob store — see [../docs/sync.md](../docs/sync.md) |
 
-**Least privilege.** The process runs one child per engine and never touches the disk.
+**Least privilege.** The engine half runs one child per engine and never touches the disk;
+only sync writes files, and only when `CR_SYNC_DIR` is set.
 Put a token on anything reachable off your own network, and prefer a reverse proxy with
 TLS over exposing it directly — the token travels in a header, and over plain `http://`
 so does everything else. `CR_ORIGIN` should name your ChessReader origin rather than

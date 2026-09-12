@@ -16,7 +16,13 @@ a { color: var(--primary); }
    marked .hint — which is a serif selector — and then un-serifed by hand, which is how
    the two faces drift apart. */
 .meta { font-family: var(--font-sans); font-size: var(--fs-xs); color: var(--text-muted); }
-.num, .stat, td, .tab, .count { font-variant-numeric: tabular-nums; }
+/*
+ * Data is always the sans, wherever it stands — including inside a serif sentence, where
+ * a figure would otherwise inherit the prose face and stop reading as a figure. Naming
+ * the family here rather than in each room is what keeps the type rule one rule: the
+ * serif carries what the app says, the sans what a reader operates or reads as data.
+ */
+.num, .stat, td, .tab, .count { font-family: var(--font-sans); font-variant-numeric: tabular-nums; }
 kbd { font-family: var(--font-sans); font-size: var(--fs-xs); border: 1px solid var(--border-hi); border-bottom-width: 2px; border-radius: var(--radius-xs); padding: 0 var(--sp-6); background: var(--surface2); color: var(--text-bright); }
 
 /* ===== SAN is a typographic object, and one rule typesets it everywhere ===== */
@@ -176,6 +182,8 @@ dialog h2 { margin-bottom: var(--sp-12); }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
 .progress { height: 6px; border-radius: 3px; background: var(--surface3); overflow: hidden; }
 .progress > i { display: block; height: 100%; background: var(--primary); width: 0; transition: width .2s; }
+/* The same bar inside a row rather than across a dialog: a status line's own progress. */
+.progress-sm { height: 3px; border-radius: 2px; }
 
 /* ===== Home ===== */
 .greeting { font-size: var(--fs-2xl); color: var(--text-bright); }

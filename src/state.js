@@ -12,7 +12,7 @@ export const SKEY = 'chessReaderSettings';
  * The only list that says what a valid theme is. A stored value not in it is ignored
  * rather than applied, so a hand-edited blob cannot leave <html> wearing an attribute
  * no stylesheet answers. First is the default — and it is also the one on bare :root
- * and the one the pre-paint lines in index.html know about. Three places, on purpose.
+ * and the one the pre-paint lines in app.html know about. Three places, on purpose.
  */
 export const THEMES = ['analysis', 'midnight', 'wood', 'green'];
 export const THEME_NAMES = { analysis: 'Analysis', midnight: 'Midnight board', wood: 'Wood & ink', green: 'Tournament green' };
@@ -150,7 +150,7 @@ export function saveSettings(storage = globalThis.localStorage) {
 /*
  * One attribute on <html> is the whole mechanism. Every colour comes from a custom
  * property, so the stylesheet does the rest and nothing needs re-rendering — not the
- * board, not the pieces. The pre-paint lines in index.html did the same thing a frame
+ * board, not the pieces. The pre-paint lines in app.html did the same thing a frame
  * earlier from localStorage directly; this call is what makes S and the document
  * agree even when storage was unreadable.
  */

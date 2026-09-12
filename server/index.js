@@ -18,6 +18,7 @@ import { spawn } from 'node:child_process';
 import { createServer } from 'node:http';
 import { WebSocketServer } from 'ws';
 import { newSearch, goCommand } from '../src/engine/uci.js';
+import { mountSync } from './sync.js';
 
 const PORT = Number(process.env.PORT || 8020);
 const BIN = process.env.STOCKFISH || 'stockfish';
@@ -129,6 +130,11 @@ async function runJob(j) {
  */
 export const routes = new Map();
 
+/* Optional sync (§9) joins here, so one process can serve both features behind one port
+   and one token. It mounts only when a directory is named, which is how a server that
+   was asked for an engine never quietly becomes a place to store somebody's deck. */
+mountSync(routes);
+
 const json = (res, code, body) => {
   const s = JSON.stringify(body);
   res.writeHead(code, { 'Content-Type': 'application/json', 'Content-Length': Buffer.byteLength(s), 'Access-Control-Allow-Origin': ORIGIN });
@@ -178,7 +184,11 @@ const server = createServer(async (req, res) => {
   if (req.method === 'OPTIONS') {
     res.writeHead(204, {
       'Access-Control-Allow-Origin': ORIGIN,
-      'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+      // PUT and DELETE are the sync routes' verbs (server/sync.js). They are advertised
+      // here even when sync is not mounted, because this is the one preflight the whole
+      // process answers: a browser asks before it knows which route it is calling, and a
+      // preflight that omits a verb fails the request with no error the page can read.
+      'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
       'Access-Control-Allow-Headers': 'Content-Type, Authorization',
       'Access-Control-Max-Age': '86400',
     });

@@ -1,0 +1,73 @@
+/*
+ * The landing page. It shares css/tokens.css with the app and nothing else: the app's
+ * layout assumes a 1100px desk, and this page has to read on a phone. Colours are the
+ * Analysis theme's tokens, the serif carries what the page says, the sans what it
+ * operates — the same split as inside.
+ */
+* { box-sizing: border-box; }
+html { color-scheme: dark; scroll-behavior: smooth; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font-family: var(--font-sans); font-size: var(--fs-md); line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--primary); text-decoration: none; }
+a:hover { color: var(--primary-hi); }
+h1, h2, h3 { font-family: var(--font-serif); color: var(--text-bright); margin: 0; font-weight: 600; letter-spacing: -0.01em; }
+p { margin: 0; }
+img { max-width: 100%; height: auto; display: block; }
+
+.top, main, .foot { width: min(100% - 2 * var(--sp-24), 1080px); margin-inline: auto; }
+
+/* ----- Header ----- */
+.top { display: flex; align-items: center; justify-content: space-between; gap: var(--sp-16); padding-block: var(--sp-20); flex-wrap: wrap; }
+.brand { display: flex; align-items: center; gap: var(--sp-8); color: var(--text-bright); }
+.brand-mark { color: var(--primary); font-size: 28px; line-height: 1; }
+.brand-name { font-family: var(--font-serif); font-size: var(--fs-xl); font-weight: 600; }
+.brand-name span { color: var(--primary); }
+.top-nav { display: flex; align-items: center; gap: var(--sp-20); flex-wrap: wrap; font-size: var(--fs-base); }
+.top-nav a:not(.btn) { color: var(--text); }
+.top-nav a:not(.btn):hover { color: var(--text-bright); }
+
+/* ----- Buttons, spelled like the app's ----- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; height: var(--control-h);
+  padding: 0 var(--sp-16); border: 1px solid var(--border-hi); border-radius: var(--radius-sm);
+  background: var(--surface2); color: var(--text-bright); font-size: var(--fs-base); white-space: nowrap;
+}
+.btn:hover { background: var(--surface3); color: var(--text-bright); }
+.btn-primary { background: var(--primary); border-color: var(--primary); color: var(--on-primary); font-weight: 600; }
+.btn-primary:hover { background: var(--primary-hi); color: var(--on-primary); }
+.btn-lg { height: 44px; padding: 0 var(--sp-24); font-size: var(--fs-md); }
+.acts { display: flex; gap: var(--sp-12); flex-wrap: wrap; }
+
+/* ----- Hero ----- */
+.hero { padding-block: var(--sp-48) var(--sp-64); display: flex; flex-direction: column; gap: var(--sp-24); }
+.hero h1 { font-size: clamp(var(--fs-3xl), 5vw, 52px); line-height: 1.1; max-width: 18ch; }
+.lede { font-family: var(--font-serif); font-size: clamp(var(--fs-lg), 2.2vw, var(--fs-xl)); color: var(--text); max-width: 62ch; }
+.note { font-size: var(--fs-sm); color: var(--text-muted); }
+.shot {
+  margin: var(--sp-24) 0 0; border: 1px solid var(--border-hi); border-radius: var(--radius);
+  overflow: hidden; background: var(--surface); box-shadow: var(--shadow-lg);
+}
+.shot-sm { margin-top: var(--sp-32); }
+
+/* ----- The rooms ----- */
+section { padding-block: var(--sp-48); border-top: 1px solid var(--border); }
+section h2 { font-size: var(--fs-2xl); margin-bottom: var(--sp-24); }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--sp-16); }
+.grid article { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: var(--sp-20); }
+.grid h3 { font-size: var(--fs-lg); margin-bottom: var(--sp-8); }
+.grid p { color: var(--text-muted); font-size: var(--fs-base); }
+
+/* ----- About ----- */
+.prose { display: flex; flex-direction: column; gap: var(--sp-16); max-width: var(--measure); font-family: var(--font-serif); font-size: var(--fs-lg); margin-bottom: var(--sp-32); }
+.prose strong { color: var(--text-bright); font-weight: 600; }
+
+/* ----- Footer ----- */
+.foot { padding-block: var(--sp-32) var(--sp-48); border-top: 1px solid var(--border); font-size: var(--fs-sm); color: var(--text-muted); display: flex; flex-direction: column; gap: var(--sp-8); }
+
+@media (max-width: 640px) {
+  .hero { padding-block: var(--sp-32) var(--sp-48); }
+  .top-nav a:not(.btn) { display: none; }
+}

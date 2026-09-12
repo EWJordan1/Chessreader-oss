@@ -162,7 +162,7 @@ has a working shim in place.
    (`ENGINE_URL` is root-relative on purpose: a `new URL(…, import.meta.url)` would let
    Vite hash-rename the loader, and the loader derives its `.wasm` path from its own
    filename.)
-2. **`index.html`: the analysis tools live outside the panel head.** `#analysis-tools`
+2. **`app.html`: the analysis tools live outside the panel head.** `#analysis-tools`
    sits in the transport row, so the depth buttons stand beside ⇅ Flip rather than with
    the Engine panel they feed. Not wrong, but a `.tools` span in the Engine panel's
    header would read better once one exists.

@@ -37,6 +37,9 @@ import {
   renderReport, computeStats, gameFacts, buildExplorer, patternReport,
   timeClassOf, playerKey, scorePct, endingLabel,
 } from './insights.js';
+import {
+  encodeEvalList, decodeEvalList, encodeLines, decodeLines,
+} from './engine/codec.js';
 import { bookTrie, walkLine } from './learn/book.js';
 import { moveToSpeech } from './speech/grammar.js';
 import { speak, cancelSpeech } from './speech/provider.js';
@@ -390,18 +393,28 @@ export function crossing(oppGames, trie, opts = {}) {
     // Ply 0 is White to move. The book's colour decides whose choice this ply is.
     const mineToMove = (ply % 2 === 0) === (color === 'w');
     let descended = false;
+    /*
+     * The floor is applied at the *descent*, not at the row. Walking into a node below it
+     * and finding nothing worth writing there would also clear `descended` on the way
+     * back up — and the honest row above, reached by enough games to mean something,
+     * would vanish with the one-game branch that swallowed it. The other half of the
+     * same rule: `deepest` can then only ever name a node that clears the floor, so the
+     * briefing cannot open with a confident 100% over a single game.
+     */
     if (mineToMove) {
       for (const [san, kidMine] of mine.children) {
         const kidThem = them.children.get(san);
-        if (!kidThem) continue;    // a move of yours they have never faced is not a crossing
+        if (!kidThem) continue;                 // a move of yours they have never faced is not a crossing
+        if (kidThem.n < minGames) continue;
         descended = true;
         walk(kidMine, kidThem, [...path, san]);
       }
     } else {
       for (const [san, kidThem] of them.children) {
+        if (kidThem.n < minGames) continue;     // one game is not a line, neither shared nor missing
         const kidMine = mine.children.get(san);
         if (kidMine) { descended = true; walk(kidMine, kidThem, [...path, san]); }
-        else if (kidThem.n >= minGames) out.gaps.push(crossRow([...path, san], kidThem, true));
+        else out.gaps.push(crossRow([...path, san], kidThem, true));
       }
     }
     // The crossing ends here: this is the deepest the two have in common down this branch,
@@ -486,8 +499,11 @@ function passSummary(games, oppKey) {
 }
 
 const pct = v => Math.round(v) + '%';
+/* "3 of their games", and "1 of their games" too: plural() would pluralise the whole
+   phrase and write "gamess". The count is the thing that varies here, not the noun. */
+const theirGames = n => n + ' of their games';
 
-/** A line of SAN as a person reads it: "1.e4 c5 2.Nf3". */
+/** A line of SAN as a person reads it: "1. e4 c5 2. Nf3". */
 export function lineText(path) {
   let out = '';
   (path || []).forEach((san, i) => {
@@ -507,7 +523,12 @@ export function lineText(path) {
 export function lineSpeech(path) {
   const w = walkLine(path || []);
   if (!w) return (path || []).join(' ');
-  return w.verbose.map(m => moveToSpeech(m, 'short').replace(/\.$/, '')).join(', ');
+  // 'natural', not 'short': 'short' *is* the SAN with a capital letter on it, which is
+  // the "N f 3" this function exists to avoid. The line is read mid-sentence, so the
+  // grammar's leading capital comes back off again.
+  return w.verbose
+    .map(m => moveToSpeech(m, 'natural').replace(/\.$/, '').replace(/^./, c => c.toLowerCase()))
+    .join(', ');
 }
 
 /**
@@ -542,7 +563,7 @@ export function briefingParts(rep) {
 
   if (rep.pass.games) {
     const worst = rep.pass.lines[0];
-    out.push({ key: 'pass', text: 'The engine went through ' + plural(rep.pass.games, 'of their games') +
+    out.push({ key: 'pass', text: 'The engine went through ' + theirGames(rep.pass.games) +
       (worst ? '. Their mistakes come most often out of ' + lineSpeech(worst.path) + ' — ' +
         plural(worst.errors, 'error') + ' over ' + plural(worst.analysed, 'game') + '.' : '.') });
   }
@@ -566,7 +587,7 @@ function crossingParts(rep) {
     }
     const d = c.deepest;
     out.push({ key: 'cross-' + color, text: 'Your ' + mine + ' book and their games go as deep as ' +
-      lineSpeech(d.path) + ' — ' + plural(d.n, 'of their games') + ', and they score ' + pct(d.score) + ' there.' });
+      lineSpeech(d.path) + ' — ' + theirGames(d.n) + ', and they score ' + pct(d.score) + ' there.' });
     const worst = c.shared[0];
     if (worst && worst.path.join(' ') !== d.path.join(' ')) {
       out.push({ key: 'cross-worst-' + color, text: 'It goes worst for you after ' + lineSpeech(worst.path) +
@@ -620,50 +641,11 @@ function openingParts(rep) {
    contract), written out again here rather than imported: `oppevals` is Prep's store and
    this module must not reach into the scan queue to write it. See the Asks in
    docs/prep.md — this codec wants to live in a leaf both modules can read. */
-function encodeEval(ev) {
-  if (ev === null) return 'n';
-  if (ev === undefined) return '';
-  if (ev.mate !== undefined) return 'm' + ev.mate;
-  return String(ev.cp);
-}
-function decodeEval(s) {
-  if (s === '') return undefined;
-  if (s === 'n') return null;
-  if (s[0] === 'm') { const v = Number(s.slice(1)); return Number.isFinite(v) ? { mate: v } : undefined; }
-  const v = Number(s);
-  return Number.isFinite(v) ? { cp: v } : undefined;
-}
-function encodeList(list, n) {
-  const out = [];
-  for (let i = 0; i < n; i++) out.push(encodeEval(list ? list[i] : undefined));
-  while (out.length && out[out.length - 1] === '') out.pop();
-  return out.join(',');
-}
-function decodeList(str, n) {
-  const out = [];
-  out.length = n;
-  if (!str) return out;
-  const parts = String(str).split(',');
-  for (let i = 0; i < parts.length && i < n; i++) { const v = decodeEval(parts[i]); if (v !== undefined) out[i] = v; }
-  return out;
-}
-function encodeLines(pv, n) {
-  const out = [];
-  for (let i = 0; i < n; i++) out.push(pv && pv[i] && pv[i].length ? pv[i].join(' ') : '');
-  while (out.length && out[out.length - 1] === '') out.pop();
-  return out.join('|');
-}
-function decodeLines(str, n) {
-  const pv = []; pv.length = n;
-  const best = []; best.length = n;
-  if (!str) return { pv, best };
-  String(str).split('|').forEach((s, i) => {
-    if (i >= n || !s) return;
-    const moves = s.split(' ').filter(Boolean);
-    if (moves.length) { pv[i] = moves; best[i] = moves[0]; }
-  });
-  return { pv, best };
-}
+/*
+ * The stored-analysis codec is ./engine/codec.js — a leaf owned by neither this module
+ * nor the scan queue. `oppevals` is the same format as `evals`, and it was written out
+ * twice here until that file existed.
+ */
 
 function ensureAnalysis(game) {
   if (!game.analysis || game.analysis.build !== PASS_BUILD || game.analysis.depth !== PASS_DEPTH) {
@@ -680,7 +662,7 @@ export function passRow(oppId, game) {
   const row = {
     key: game.oppKey, oppId, pgnId: game.id,
     build: PASS_BUILD, depth: PASS_DEPTH, plies: n,
-    evals: encodeList(a.evals, n), lines: encodeLines(a.pv, n), alts: '',
+    evals: encodeEvalList(a.evals, n), lines: encodeLines(a.pv, n), alts: '',
   };
   row.bytes = JSON.stringify(row).length;
   return row;
@@ -691,7 +673,7 @@ export function applyPassRow(game, row) {
   if (!game || !game.fens || !row || row.build !== PASS_BUILD || row.depth !== PASS_DEPTH) return false;
   const n = game.fens.length;
   if (row.plies !== undefined && row.plies !== n) return false;   // a different game under the same key
-  const evals = decodeList(row.evals, n);
+  const evals = decodeEvalList(row.evals, n);
   const { pv, best } = decodeLines(row.lines, n);
   const a = ensureAnalysis(game);
   let done = 0;
@@ -790,7 +772,13 @@ let _report = null;        // the built report on screen
 function onPassChange() {
   if (!hasDOM() || currentRoom() !== 'prep' || !_painting) return;
   const el = document.querySelector('.prep-pass-status');
-  if (el) el.textContent = passText();
+  if (el) {
+    el.textContent = passText();
+    // The bar is drawn by the stylesheet off these two: it exists only while the pass
+    // runs, because a full track on an idle room reads as a press nobody has made.
+    el.classList.toggle('on', _pass.on);
+    el.style.setProperty('--frac', _pass.total ? _pass.done / _pass.total : 0);
+  }
   const btn = document.querySelector('[data-act="pass"]');
   if (btn) btn.textContent = _pass.on ? 'Stop' : 'Go through their games';
 }
@@ -851,7 +839,7 @@ function crossPanelHTML(rep) {
       continue;
     }
     body += '<p class="lede">You go as deep as <span class="cross-san">' + escHtml(lineText(rep.cross[color].deepest.path)) +
-      '</span> — ' + plural(c.deepest.n, 'of their games') + ', and they score <span class="num">' + pct(c.deepest.score) + '</span> there.</p>';
+      '</span> — ' + theirGames(c.deepest.n) + ', and they score <span class="num">' + pct(c.deepest.score) + '</span> there.</p>';
     const rows = [...c.shared.slice(0, CROSS_ROWS), ...c.gaps.slice(0, CROSS_ROWS)];
     body += '<table class="prep-cross-table"><thead><tr><th>Line</th><th class="num">Games</th><th class="num">Their score</th><th></th></tr></thead><tbody>' +
       rows.map(r => '<tr class="' + (r.gap ? 'prep-gap' : '') + '">' +

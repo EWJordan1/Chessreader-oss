@@ -134,11 +134,20 @@ export function weekReport(now = Date.now()) {
  * nothing (§15 — a guard that returns null over one that returns a plausible answer).
  */
 export function recentGames(games = S.games, heroKey = null, max = RECENT_MAX) {
-  const rows = games.map((g, gi) => {
+  const rows = [];
+  games.forEach((g, gi) => {
     const f = heroKey ? gameFacts(g, heroKey) : null;
+    /*
+     * With a subject, the strip is *their* last six games. A game they did not play has
+     * no result from their side, and a row that cannot say whether it was won or lost is
+     * a row with nothing on it — so it is dropped rather than drawn with a blank verdict.
+     * With no subject resolved yet there is nobody to have won, and every game belongs:
+     * the row says the two players instead, which is the honest reading of the same fact.
+     */
+    if (heroKey && !f) return;
     const h = g.headers || {};
     const end = gameEndMs(g);
-    return {
+    rows.push({
       gi,
       when: end || g.addedAt || 0,
       date: end || (f && f.date) || null,
@@ -147,7 +156,7 @@ export function recentGames(games = S.games, heroKey = null, max = RECENT_MAX) {
       opponent: (f && f.opponent) || '',
       players: (h.White || '?') + ' – ' + (h.Black || '?'),
       plies: g.moves ? g.moves.length : 0,
-    };
+    });
   });
   rows.sort((a, b) => b.when - a.when || b.gi - a.gi);
   return rows.slice(0, max);

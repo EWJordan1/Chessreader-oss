@@ -210,7 +210,7 @@ on a ply already shown.
   loop is holding". If a `onGuessHold(fn)` ever lands in `playback.js`, this should
   move onto it; the signature check that makes the current arrangement safe is the only
   thing standing between the reader and a field that clears itself mid-word.
-- **`index.html`** — `#drill-section` is always visible and carries an idle sentence
+- **`app.html`** — `#drill-section` is always visible and carries an idle sentence
   ("Choose a drill in Learn → Drills and it runs here"). If the integrator would rather
   the panel were hidden until a drill starts, the runner can toggle it; say which.
 - **`src/ai/explain.js`** — a drill card's `.card-why[data-key]` is in the DOM under

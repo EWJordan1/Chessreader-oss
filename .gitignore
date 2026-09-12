@@ -4,3 +4,5 @@ dist/
 test-results/
 playwright-report/
 test/walk/__screenshots__/*.png
+.vercel
+.env*

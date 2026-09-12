@@ -36,7 +36,13 @@ export function wireKeyboard() {
     const t = e.target;
     const typing = t && (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA' || t.tagName === 'SELECT' || t.isContentEditable);
     if (typing && e.key !== 'Escape') return;
-    if (document.querySelector('dialog[open]') && e.key !== 'Escape' && e.key !== '?') return;
+    /*
+     * A dialog owns the keyboard while it is open, with one binding passing through:
+     * `?` closes the map it opened. Escape is deliberately *not* handled — it is the
+     * browser's own way out of a dialog, and calling preventDefault() on it would be the
+     * app leaving a variation the reader was not in while the dialog stays put.
+     */
+    if (document.querySelector('dialog[open]') && e.key !== '?') return;
     const combo = comboOf(e);
     const hit = KEYS.find(k => k.keys.includes(combo));
     if (!hit) return;

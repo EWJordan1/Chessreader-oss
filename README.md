@@ -36,7 +36,7 @@ Desktop only: the window has to be at least 1100 pixels wide.
 
 ```sh
 npm install
-npm run dev        # http://localhost:5173
+npm run dev        # http://localhost:5173/app.html — the landing page is at /
 ```
 
 That is the whole environment. There are no accounts, no server, no keys required.

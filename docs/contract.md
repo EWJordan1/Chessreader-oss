@@ -37,13 +37,13 @@ Plus, for this codebase:
 ## File ownership
 
 Each module owns the files listed for it and **edits nothing else**. Shared files —
-`index.html`, `src/main.js`, `src/state.js`, `src/render.js`, `src/route.js`,
+`app.html`, `src/main.js`, `src/state.js`, `src/render.js`, `src/route.js`,
 `src/playback.js`, `src/dom.js`, `src/pgn.js`, `src/board.js`, `css/tokens.css`,
 `css/layout.css`, `css/components.css`, `docs/architecture.md` — are the integrator's.
 If you need a change in one, write it down in your `docs/<module>.md` under "Asks" and
 work around it for now (a module may append its own panels into its mount by JS).
 
-| Module | Owns | Mounts in `index.html` |
+| Module | Owns | Mounts in `app.html` |
 | --- | --- | --- |
 | memory | `src/memory.js`, `src/sync/export.js`, `test/memory.test.js`, `docs/memory.md` | `#settings-memory` card: `#set-remember`, `#mem-usage`, `#btn-erase`, `#btn-export`, `#file-import`; `#rail-status` |
 | sources | `src/sources.js` (extend), `css/sources.css`, `test/sources.test.js`, `docs/sources.md` | `#dlg-import`: `#pane-url`, `#pane-chesscom`, `#pane-lichess`, `#source-browser`; `#set-chesscom`, `#set-lichess` are settings fields already wired |
@@ -132,8 +132,8 @@ Custom events on `document` (dispatch with `new CustomEvent(name, {detail})`):
 | `cr:analysis` | engine | `detail.game`'s analysis progressed (a ply committed) |
 | `cr:analysis-done` | engine | `detail.game`'s scan is complete (every ply evaluated) |
 | `cr:alts-done` | engine | the MultiPV 2 second pass landed for `detail.game` |
-| `cr:deck-changed` | deck (also memory, after import/erase) | cards were added, graded or removed |
-| `cr:book-changed` | learn (also memory, after import/erase) | the book changed |
+| `cr:deck-changed` | deck (also memory and sync, after an import, an erase or a merge) | cards were added, graded or removed |
+| `cr:book-changed` | learn (also memory and sync, after an import, an erase or a merge) | the book changed |
 | `cr:setting` | settings | `detail.key` changed in Settings |
 | `cr:settings-painted` | settings | the Settings room repainted; add your own field paint here |
 | `cr:analyse`, `cr:lines`, `cr:import` | keys | the `a`, `L`, `i` keys |

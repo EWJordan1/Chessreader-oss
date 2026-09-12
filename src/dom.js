@@ -49,3 +49,11 @@ export function fmtDate(ms) {
 }
 
 export function plural(n, one, many) { return n + ' ' + (n === 1 ? one : (many || one + 's')); }
+
+/*
+ * A number in front of a phrase that is already the right shape — "3 of their games",
+ * "12 plies". plural() would try to inflect the last word and produce "gamess", which is
+ * exactly the bug this exists to make unavailable: if the phrase does not need
+ * inflecting, do not hand it to something that inflects.
+ */
+export function count(n, phrase) { return n + ' ' + phrase; }

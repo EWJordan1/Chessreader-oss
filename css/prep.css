@@ -1,1 +1,128 @@
-/* prep — styles for this module only. Tokens come from tokens.css; never a raw colour. */
+/*
+ * prep — styles for this module only. Tokens come from tokens.css; never a raw colour.
+ *
+ * Three decisions run through the file:
+ *
+ *  - **The list is a list, not a card wall.** Five handles you can retype do not need
+ *    five cards; they need one column of rows whose sentences line up under each other,
+ *    so "142 blitz games since March" and "no rapid games at all" are read down the page
+ *    in one movement. The card wall starts at the report, where there is something to
+ *    compare.
+ *  - **The crossing is the room's reason to exist, so it is the widest thing in it.** It
+ *    takes a `.span-2` pane at the top of the report and its table rides
+ *    `.panel-body.scroll-x`: a line ten plies long scrolls sideways rather than wrapping
+ *    SAN, because a wrapped line is unreadable and a squeezed column drops the figures.
+ *    The *Add one* rows — the finding a report about yourself cannot make — are marked
+ *    with --warn down their edge, so the half of the table that is missing repertoire is
+ *    visible before a word of it is read.
+ *  - **Type follows the contract.** Sentences in the serif (.hint, .lede, .empty, h2, h3
+ *    — set in components.css); handles, counts, percentages, SAN and every control in
+ *    the sans. Where a figure sits inside a serif sentence, the sans is put back by name.
+ */
+
+#prep-body { display: flex; flex-direction: column; gap: var(--sp-20); }
+
+/* ===== The list ===== */
+
+.prep-add .panel-body > .hint { max-width: var(--measure); }
+/* The handle is what the row is about, so it takes the room; site and format are picks. */
+.prep-form label { min-width: 140px; flex: 0 1 160px; }
+.prep-form label:nth-child(2) { flex: 1 1 240px; }
+.prep-form .btn { flex: 0 0 auto; }
+
+/* Rows, not cards: one hairline between neighbours and none at the ends. */
+.prep-list .panel-body { gap: 0; padding-block: var(--sp-4); }
+.prep-row {
+  display: grid;
+  grid-template-columns: minmax(140px, 220px) minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--sp-4) var(--sp-16);
+  padding: var(--sp-12) 0;
+  border-bottom: 1px solid var(--hairline);
+}
+.prep-row:last-child { border-bottom: 0; }
+.prep-who { display: flex; flex-direction: column; gap: var(--sp-2); min-width: 0; }
+/* A handle is something the reader typed and will retype: data, in the sans. */
+.prep-name {
+  font-family: var(--font-sans); font-size: var(--fs-md); font-weight: 600;
+  color: var(--text-bright); overflow-wrap: anywhere;
+}
+.prep-who .meta { text-transform: capitalize; }
+/* What the row read, as a sentence. .hint is already the serif. */
+.prep-said { margin: 0; font-size: var(--fs-base); }
+.prep-row-tools { display: flex; gap: var(--sp-6); flex-wrap: wrap; justify-content: flex-end; }
+.prep-list .empty { padding: var(--sp-8) 0 var(--sp-12); }
+
+/* ===== The report's header =====
+   Back, then who this is about, then what was read, then the four presses. The header
+   is a place you arrived at by URL, so the way out of it comes first. */
+
+.prep-head {
+  display: grid; grid-template-columns: auto minmax(0, 1fr);
+  align-items: baseline; gap: var(--sp-8) var(--sp-12);
+}
+/* The way back reads as a link rather than a fourth button competing with the presses. */
+.prep-head .btn[data-act="back"] {
+  background: transparent; border-color: transparent;
+  padding-left: 0; color: var(--text-muted);
+}
+.prep-head .btn[data-act="back"]:hover { color: var(--text-bright); background: transparent; }
+.prep-subject { font-size: var(--fs-2xl); color: var(--text-bright); margin: 0; }
+.prep-head > .hint { grid-column: 1 / -1; margin: 0; max-width: var(--measure); }
+.prep-head-tools {
+  grid-column: 1 / -1;
+  display: flex; align-items: center; flex-wrap: wrap; gap: var(--sp-8) var(--sp-12);
+}
+/* The briefing is the one press the room is for; the rest sit beside it. */
+.prep-head-tools .btn-primary { font-weight: 600; }
+
+/* The pass says where it is in words, and draws the same number as a rule under them.
+   The bar only exists while it runs: a full-width empty track on an idle room reads as
+   something waiting to be started, which is a press that has not been asked for. */
+.prep-pass-status {
+  flex: 1 1 220px; min-width: 160px; position: relative;
+  padding-bottom: var(--sp-6); line-height: 1.4;
+}
+.prep-pass-status.on::before,
+.prep-pass-status.on::after {
+  content: ''; position: absolute; left: 0; bottom: 0; height: 2px; border-radius: var(--radius-pill);
+}
+.prep-pass-status.on::before { right: 0; background: var(--surface3); }
+.prep-pass-status.on::after { width: calc(var(--frac, 0) * 100%); background: var(--primary); }
+
+/* ===== The crossing ===== */
+
+.prep-cross-wrap { align-items: start; }
+.prep-cross .panel-body { gap: var(--sp-12); }
+/* One heading per colour, the second one fenced off from the first. */
+.prep-cross-head {
+  margin: 0; font-size: var(--fs-md); color: var(--text-bright);
+  display: flex; align-items: baseline; flex-wrap: wrap; gap: var(--sp-8);
+}
+.prep-cross-head .meta { text-transform: none; }
+.prep-cross-head ~ .prep-cross-head {
+  margin-top: var(--sp-8); padding-top: var(--sp-16); border-top: 1px solid var(--hairline);
+}
+.prep-cross .lede, .prep-cross .hint { margin: 0; max-width: var(--measure); }
+/* A figure inside a serif sentence goes back to the sans, and the line reads as SAN. */
+.prep-cross .lede .num { font-family: var(--font-sans); color: var(--text-bright); font-weight: 600; }
+.prep-cross .lede .cross-san { color: var(--text-bright); }
+.prep-cross .hint .btn { margin-left: var(--sp-4); }
+
+/* Wide on purpose: the body scrolls sideways rather than wrapping a line of SAN. */
+.prep-cross-table { min-width: 560px; }
+.prep-cross-table td:first-child, .prep-cross-table th:first-child { width: 60%; }
+.prep-cross-table td.num { font-family: var(--font-sans); color: var(--text-bright); }
+.prep-cross-table td:last-child, .prep-cross-table th:last-child { width: 1%; text-align: right; }
+.prep-cross-table tbody tr:last-child td { border-bottom: 0; }
+.prep-cross-table tbody tr:hover td { background: var(--surface2); }
+/* The rows with no answer behind them. --warn, not --danger: a gap is work to do, not
+   a mistake that has been made. */
+.prep-gap td:first-child { box-shadow: inset 2px 0 0 var(--warn); padding-left: var(--sp-12); }
+.prep-gap .cross-san { color: var(--text); }
+.prep-gap td:last-child .btn { border-color: var(--warn); color: var(--warn); }
+.prep-gap td:last-child .btn:hover { background: var(--warn); color: var(--bg); }
+
+/* ===== The eight panes Insights draws underneath ===== */
+.prep-report { display: block; }
+.prep-report:empty { display: none; }
